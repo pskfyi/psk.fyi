@@ -1,6 +1,7 @@
 import Page from "../components/Page.tsx";
 import { Skewer } from "../components/Skewer.tsx";
 import { Link } from "../components/Link.tsx";
+import { Pic } from "../components/Pic.tsx";
 
 function Header() {
   return (
@@ -10,6 +11,32 @@ function Header() {
     >
       psk<span class="text-sm">{" "}</span>.fyi
     </Skewer>
+  );
+}
+
+function HeroImage() {
+  return (
+    <Pic
+      src="/sunset-beach.webp"
+      class="lg:(-ml-24 -mr-24) xl:(-ml-28 -mr-28)"
+      cardClass="sm:mx-auto max-w(sm:md md:lg)"
+      desc={
+        <>
+          <p class="my-0">
+            Created via <Link.DallE /> with prompt:
+          </p>
+          <blockquote class="my-2">
+            vibrant illustration of an orange sunset over the pacific ocean from
+            a brown beach, young boy standing in the sand staring outwards with
+            his back to us, digital art
+          </blockquote>
+          <p class="my-0">
+            Extended via <Link.Outpainting />.
+          </p>
+        </>
+      }
+      color="soot"
+    />
   );
 }
 
@@ -26,8 +53,7 @@ function ByLine() {
 export default function Home() {
   return (
     <Page tab="Patrick Sean Keenan's blog" header={<Header />}>
-      <img src="/sunset-beach.webp" />
-
+      <HeroImage />
       <ByLine />
     </Page>
   );

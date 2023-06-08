@@ -1,10 +1,15 @@
 import { Link } from "../../components/Link.tsx";
 import Page from "../../components/Page.tsx";
+import { Pic } from "../../components/Pic.tsx";
 
 export default function AboutTheSite() {
   return (
     <Page tab="About This Site">
-      <img src="/about/site.webp" class="mx-auto" />
+      <Pic.Prompted
+        color="soot"
+        src="/about/site.webp"
+        prompt="mdjrny-v4 style, (futuristic), software developer creating an app with both hands, gloved, using a holographic operating system"
+      />
 
       <p>
         This is my personal site. Its{" "}

@@ -3,6 +3,7 @@ import { SkewerDocs } from "../../components/Skewer.tsx";
 import { COLORS, isDark } from "../../data/colors.ts";
 import { Swatch } from "../../components/docs/Swatch.tsx";
 import { Link } from "../../components/Link.tsx";
+import { Pic, PicDocs } from "../../components/Pic.tsx";
 
 const ColorPalette = () => (
   <div className="grid grid-cols-2 gap-4 p-4">
@@ -31,7 +32,11 @@ const ColorPalette = () => (
 export default function DesignSystem() {
   return (
     <Page tab="Design System">
-      <img src="/about/design.webp" class="mx-auto" />
+      <Pic.Prompted
+        color="smoke"
+        src="/about/design.webp"
+        prompt="mdjrny-v4 style, gorgeous (floral) and filigree patterns prominently featuring (orange)"
+      />
 
       <p class="text-left mx-auto w-[fit-content] mt-6 italic">
         From what I've tasted of desire<br />
@@ -40,7 +45,7 @@ export default function DesignSystem() {
 
       <hr />
 
-      <div class="flex gap-2 justify-center text-lg">
+      <div class="flex gap-2 justify-center sm:text-lg">
         <a href="#color">Color</a>
         <span class="opacity-50">|</span> <a href="#typography">Typography</a>
         {" "}
@@ -257,6 +262,7 @@ export default function DesignSystem() {
 
       <h2 id="components">Components</h2>
       <SkewerDocs class="mt-16" />
+      <PicDocs class="mt-16" />
     </Page>
   );
 }
