@@ -58,15 +58,13 @@ function ByLine() {
   );
 }
 
-export default function Home() {
-  return (
-    <Page
-      tab="Patrick Sean Keenan's blog"
-      header={<Header />}
-      preview={preview}
-    >
-      <HeroImage />
-      <ByLine />
-    </Page>
-  );
-}
+export default () => (
+  <Page
+    tab="Patrick Sean Keenan's blog"
+    header={<Header />}
+    preview={preview}
+  >
+    <HeroImage />
+    <ByLine />
+  </Page>
+);
