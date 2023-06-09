@@ -35,22 +35,28 @@ export default () => (
     />
 
     <p>
-      I make websites and apps, and help others make them too, including at
-      Apple and Intel. I&nbsp;aspire to be a game developer, video producer, and
-      author.
+      I am an experienced software developer and tech lead specializing in web
+      technologies. At Intel my team built internal tools for hardware testing,
+      and at Apple we architected the future of{" "}
+      <Link to="apple.com" />. I am building a{" "}
+      <Link.Wiki
+        to="https://en.wikipedia.org/wiki/Personal_knowledge_management"
+        text="personal"
+      />{" "}
+      <Link.Wiki
+        to="https://en.wikipedia.org/wiki/Knowledge_management_software"
+        text="knowledge management system"
+      />, and I&nbsp;aspire to be a game developer, video producer, and author.
     </p>
 
     <p>
       I'm a lifelong learner with broad interests and many opinions. I've always
-      been passionate about experience design, philosophy, time, speculative
-      fiction, and folklore. In the early 2010s I studied{" "}
-      <Link.Wiki to="Linguistics" text="linguistics" />{" "}
-      and engineering at UC&nbsp;Berkeley. Recently I've become interested in
-      {" "}
-      <Link.Wiki to="Information_science" text="information science" />
-      and{" "}
-      <Link.Wiki to="Western_esotericism" text="western esotericism" />. Past
-      obsessions include Magic: the Gathering, theme parks, and NASA.
+      been passionate about experience design, philosophy, time, and media. In
+      the early 2010s I studied{" "}
+      <Link.Wiki to="Linguistics" text="linguistics" />, literature, and
+      engineering at UC&nbsp;Berkeley. Recently I've become interested in{" "}
+      <Link.Wiki to="Information_science" text="information science" /> and{" "}
+      <Link.Wiki to="Western_esotericism" text="western esotericism" />.
     </p>
   </Page>
 );
