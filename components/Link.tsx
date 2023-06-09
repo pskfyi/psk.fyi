@@ -10,11 +10,12 @@ export type LinkProps = Omit<JSX.HTMLAttributes<HTMLAnchorElement>, "href"> & {
 
 export function Link({ to, text, children, ...props }: LinkProps) {
   !to.startsWith("/") && (props.target = "_blank");
+  children ??= text ?? to;
 
   props.eternal && (props.class = `${props.class} 
       text-torch(flame hover:plasma visited:(flame hover:plasma))`);
 
-  return <a {...props} href={to}>{text ?? children}</a>;
+  return <a {...props} href={to}>{children}</a>;
 }
 
 Link.Wiki = function WikiLink(props: LinkProps) {
