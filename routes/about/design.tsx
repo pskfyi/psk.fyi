@@ -4,6 +4,14 @@ import { COLORS, isDark } from "../../data/colors.ts";
 import { Swatch } from "../../components/docs/Swatch.tsx";
 import { Link } from "../../components/Link.tsx";
 import { Pic, PicDocs } from "../../components/Pic.tsx";
+import { SocialMediaPreview } from "../../types.ts";
+
+const preview: SocialMediaPreview = {
+  description:
+    "Color palette, typography, components, and the thought process behind them.",
+  image: "/about/design.webp",
+  large: true,
+};
 
 const ColorPalette = () => (
   <div className="grid grid-cols-2 gap-4 p-4">
@@ -31,7 +39,7 @@ const ColorPalette = () => (
 
 export default function DesignSystem() {
   return (
-    <Page tab="Design System">
+    <Page tab="Design System" preview={preview}>
       <Pic.Prompted
         color="smoke"
         src="/about/design.webp"

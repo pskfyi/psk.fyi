@@ -1,13 +1,16 @@
 import { Link } from "../../components/Link.tsx";
 import Page from "../../components/Page.tsx";
 import { Pic } from "../../components/Pic.tsx";
+import { SocialMediaPreview } from "../../types.ts";
+
+const preview: SocialMediaPreview = {
+  image: "/about/me.jpg",
+  large: true,
+};
 
 export default function AboutMe() {
   return (
-    <Page
-      tab="About Me"
-      heading="Patrick Sean Keenan"
-    >
+    <Page tab="About Me" heading="Patrick Sean Keenan" preview={preview}>
       <Pic
         width="full"
         color="soot"

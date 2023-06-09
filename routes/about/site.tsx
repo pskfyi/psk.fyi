@@ -1,10 +1,17 @@
 import { Link } from "../../components/Link.tsx";
 import Page from "../../components/Page.tsx";
 import { Pic } from "../../components/Pic.tsx";
+import { SocialMediaPreview } from "../../types.ts";
+
+const preview: SocialMediaPreview = {
+  description: "The technologies used in the site's creation and deployment.",
+  image: "/about/site.webp",
+  large: true,
+};
 
 export default function AboutTheSite() {
   return (
-    <Page tab="About This Site">
+    <Page tab="About This Site" preview={preview}>
       <Pic.Prompted
         color="soot"
         src="/about/site.webp"

@@ -2,6 +2,14 @@ import Page from "../components/Page.tsx";
 import { Skewer } from "../components/Skewer.tsx";
 import { Link } from "../components/Link.tsx";
 import { Pic } from "../components/Pic.tsx";
+import { SocialMediaPreview } from "../types.ts";
+
+const preview: SocialMediaPreview = {
+  title: "psk.fyi",
+  description: "A blog by Patrick Sean Keenan",
+  image: "/sunset-beach.webp",
+  large: true,
+};
 
 function Header() {
   return (
@@ -52,7 +60,11 @@ function ByLine() {
 
 export default function Home() {
   return (
-    <Page tab="Patrick Sean Keenan's blog" header={<Header />}>
+    <Page
+      tab="Patrick Sean Keenan's blog"
+      header={<Header />}
+      preview={preview}
+    >
       <HeroImage />
       <ByLine />
     </Page>
