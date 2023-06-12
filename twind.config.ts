@@ -131,7 +131,7 @@ export default {
       text-shadow: 0.5px 0 0 currentColor, 1px 0 0 currentColor, -0.5px 0 0 currentColor;
     }
 
-    // HOT FIXES - these should be fixed after Fresh updates twind
+    /* HOT FIXES - these should be fixed after Fresh updates twind */
     .ratio-square {
       aspect-ratio: 1/1;
     }

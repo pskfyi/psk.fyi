@@ -3,6 +3,7 @@ import { Head } from "$fresh/runtime.ts";
 import { COLORS } from "../data/colors.ts";
 import { Skewer } from "./Skewer.tsx";
 import { SocialMediaPreview } from "../types.ts";
+import { Footer } from "./Footer.tsx";
 
 export type PageProps = {
   /** The text that should appear on the browser tab.
@@ -74,6 +75,8 @@ export default function Page(
         {header ? header : <Skewer>{heading}</Skewer>}
         {children}
       </main>
+
+      <Footer />
     </>
   );
 }
