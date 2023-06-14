@@ -2,6 +2,7 @@ import { DateLine } from "../../components/DateLine.tsx";
 import { Link } from "../../components/Link.tsx";
 import Page from "../../components/Page.tsx";
 import { Pic } from "../../components/Pic.tsx";
+import { Tag } from "../../components/Tag.tsx";
 import { SocialMediaPreview } from "../../types.ts";
 
 const preview: SocialMediaPreview = {
@@ -16,6 +17,11 @@ export default () => (
       color="soot"
       src="/about/site.webp"
       prompt="mdjrny-v4 style, (futuristic), software developer creating an app with both hands, gloved, using a holographic operating system"
+    />
+
+    <Tag.Block
+      tags={["deno", "fresh", "typescript", "tailwind", "dx"]}
+      class="mt-4 mb(2 sm:3)"
     />
 
     <DateLine dates={{ created: "2023-06-07" }} />
