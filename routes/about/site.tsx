@@ -1,3 +1,4 @@
+import { DateLine } from "../../components/DateLine.tsx";
 import { Link } from "../../components/Link.tsx";
 import Page from "../../components/Page.tsx";
 import { Pic } from "../../components/Pic.tsx";
@@ -16,6 +17,8 @@ export default () => (
       src="/about/site.webp"
       prompt="mdjrny-v4 style, (futuristic), software developer creating an app with both hands, gloved, using a holographic operating system"
     />
+
+    <DateLine dates={{ created: "2023-06-07" }} />
 
     <p>
       This is my personal site. Its{" "}
