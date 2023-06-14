@@ -126,6 +126,13 @@ Pic.Dynamic = function DynamicPic(
         <Img />
       </div>
     )
+    : typeof Img.prompt === "string"
+    ? (
+      <Pic.Prompted
+        {...(Img as Pic.PromptedProps)}
+        class={`${Img.class} ${className}`}
+      />
+    )
     : <Pic {...Img} class={`${Img.class} ${className}`} />;
 };
 

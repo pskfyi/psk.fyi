@@ -9,7 +9,10 @@ export type MediaImgDef =
   | (Omit<Pic.Props, "src"> & { badgeBorder?: Color; src?: string })
   | (() => JSX.Element);
 
-export type MediaImg = Pic.Props & { badgeBorder?: Color };
+export type MediaImg = Pic.Props & {
+  badgeBorder?: Color;
+  prompt?: string;
+};
 
 export type MediaType =
   | "book"
