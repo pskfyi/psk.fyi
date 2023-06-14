@@ -1,15 +1,15 @@
 import type { JSX } from "preact";
-import { PicProps } from "../components/Pic.tsx";
+import type { Pic } from "../components/Pic.tsx";
 import { basename } from "https://deno.land/std@0.187.0/path/mod.ts";
 import { WELL_KNOWN_TAGS } from "./tags.ts";
 import { Color } from "./colors.ts";
 
 export type MediaImgDef =
   | string
-  | (Omit<PicProps, "src"> & { badgeBorder?: Color; src?: string })
+  | (Omit<Pic.Props, "src"> & { badgeBorder?: Color; src?: string })
   | (() => JSX.Element);
 
-export type MediaImg = PicProps & { badgeBorder?: Color };
+export type MediaImg = Pic.Props & { badgeBorder?: Color };
 
 export type MediaType =
   | "book"

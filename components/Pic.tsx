@@ -5,17 +5,26 @@ import { Docs } from "./docs/Docs.tsx";
 import { Link } from "./Link.tsx";
 import { MediaImg } from "../data/media.ts";
 
-export type PicProps = {
-  class?: string;
-  cardClass?: string;
-  imgClass?: string;
-  src: string;
-  desc?: ComponentChildren;
-  color?: DarkColor;
-  /** Force showing the overlay. Useful for debugging. */
-  show?: boolean;
-  width?: "full";
-};
+export declare namespace Pic {
+  export type Props = {
+    class?: string;
+    cardClass?: string;
+    imgClass?: string;
+    src: string;
+    desc?: ComponentChildren;
+    color?: DarkColor;
+    /** Force showing the overlay. Useful for debugging. */
+    show?: boolean;
+    width?: "full";
+  };
+
+  export type PromptedProps = Pic.Props & { prompt: string };
+
+  export type DynamicProps = {
+    img: string | MediaImg | (() => JSX.Element);
+    class?: string;
+  };
+}
 
 function InfoButton({ bg: overlay, id }: { bg: DarkColor; id: string }) {
   return (
@@ -46,7 +55,7 @@ export function Pic(
     color = "soot",
     show = false,
     width,
-  }: PicProps,
+  }: Pic.Props,
 ) {
   const id = src.replace(/\W+/g, "-").replace(/^-+/g, "");
   const widthClass = width === "full" ? "w-full" : "w-[fit-content]";
@@ -100,14 +109,9 @@ export function Pic(
   );
 }
 
-export type ReviewPicProps = {
-  img: string | MediaImg | (() => JSX.Element);
-  class?: string;
-};
-
 /** Either just an img src, or a full PicProps */
 Pic.Dynamic = function DynamicPic(
-  { img: Img, class: className }: ReviewPicProps,
+  { img: Img, class: className }: Pic.DynamicProps,
 ) {
   return typeof Img === "string"
     ? (
@@ -125,9 +129,7 @@ Pic.Dynamic = function DynamicPic(
     : <Pic {...Img} class={`${Img.class} ${className}`} />;
 };
 
-export type PromptedPicProps = Omit<PicProps, "desc"> & { prompt: string };
-
-Pic.Prompted = function PromptedPic({ prompt, ...props }: PromptedPicProps) {
+Pic.Prompted = function PromptedPic({ prompt, ...props }: Pic.PromptedProps) {
   return (
     <Pic
       {...props}
