@@ -22,7 +22,7 @@ async function createIndexFile(mediaType: MediaType) {
 // This file SHOULD be checked into source version control.
 // This file is automatically updated when running \`dev.ts\`.
 
-import { ${mediaService} } from "../${mediaServiceFile}"
+import { ${mediaService} } from "../${mediaServiceFile}";
 ${
     entities
       .map((entity, i) => `import $${i} from "./${basename(entity)}";`)
@@ -35,7 +35,7 @@ ${
       .map((entity, i) => `  "${basename(entity, ".tsx")}": $${i}`)
       .join(",\n")
   }
-})
+});
 `.trimStart();
 
   await Deno.writeTextFile(filePath, fileText);
