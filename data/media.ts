@@ -3,10 +3,15 @@ import type { Pic } from "../components/Pic.tsx";
 import { basename } from "https://deno.land/std@0.187.0/path/mod.ts";
 import { WELL_KNOWN_TAGS } from "./tags.ts";
 import { Color } from "./colors.ts";
+import { SocialMediaPreview } from "../types.ts";
 
 export type MediaImgDef =
   | string
-  | (Omit<Pic.Props, "src"> & { badgeBorder?: Color; src?: string })
+  | (Omit<Pic.Props, "src"> & {
+    badgeBorder?: Color;
+    src?: string;
+    prompt?: string;
+  })
   | (() => JSX.Element);
 
 export type MediaImg = Pic.Props & {
@@ -24,21 +29,19 @@ export type MediaType =
 
 export type MediaItem = {
   /** The primary heading. */
-  name: string | JSX.Element | (() => JSX.Element);
+  name: string;
   img?: MediaImgDef;
-  previewImage?: string;
+  preview?: Omit<SocialMediaPreview, "large">;
   tags?: string[];
-  /** What should appear on the browser tab when on this entity's page.
-   * Falls back to the name. */
-  tab?: string;
 };
 
 export type Structured<T extends Record<string, unknown>> =
-  & Omit<T, "img">
+  & Omit<T, "img" | "preview">
   & {
     slug: string;
     path: string;
     tags: string[];
+    preview: SocialMediaPreview;
     img: MediaImg | (() => JSX.Element);
   };
 
@@ -51,7 +54,7 @@ export function mediaItem<M extends MediaType, T extends MediaItem>(
   const path = `/${type}/${slug}`;
   const tags = [WELL_KNOWN_TAGS[type], ...(media?.tags as [] || [])];
 
-  const { img: image } = media;
+  const { img: image, preview: _preview } = media;
   const img = image === undefined
     ? { src: `/${type}/${slug}.webp` }
     : typeof image === "string"
@@ -60,7 +63,21 @@ export function mediaItem<M extends MediaType, T extends MediaItem>(
     ? image
     : { src: `/${type}/${slug}.webp`, ...image };
 
-  return { ...media, slug, path, tags, type, img };
+  if (_preview === undefined && typeof img === "function") {
+    throw new Error(
+      `Media item ${slug} has a component as its image with no fallback for social media previews.`,
+    );
+  }
+
+  const preview: SocialMediaPreview = _preview ?? {};
+  preview.title ??= media.name;
+  preview.large = true;
+
+  if (!preview.image && typeof img !== "function") {
+    preview.image ??= img.src;
+  }
+
+  return { ...media, slug, path, tags, type, img, preview };
 }
 
 // deno-lint-ignore no-explicit-any

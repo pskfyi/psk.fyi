@@ -2,9 +2,9 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated when running `dev.ts`.
 
-import { MediaService } from "../media.ts"
-
+import { MediaService } from "../media.ts";
+import $0 from "./about-this-site.tsx";
 
 export const POSTS = new MediaService({
-
-})
+  "about-this-site": $0,
+});

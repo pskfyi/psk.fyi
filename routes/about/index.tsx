@@ -52,8 +52,8 @@ export default () => (
 
     <RiverTile
       swap
-      href="/about/site"
-      src="/about/site.webp"
+      href="/post/about-this-site"
+      src="/post/about-this-site.webp"
       alt="An AI generated image that looks like a robot melded with a 
           circuit board."
       text="the Tech"
