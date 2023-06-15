@@ -4,7 +4,9 @@
 
 import { MediaService } from "../media.ts";
 import $0 from "./about-this-site.tsx";
+import $1 from "./the-hard-problems.tsx";
 
 export const POSTS = new MediaService({
   "about-this-site": $0,
+  "the-hard-problems": $1
 });
