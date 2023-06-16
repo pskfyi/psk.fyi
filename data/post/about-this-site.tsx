@@ -7,11 +7,11 @@ export default post(import.meta, {
     prompt:
       "mdjrny-v4 style, (futuristic), software developer creating an app with both hands, gloved, using a holographic operating system",
   },
-  tags: ["deno", "fresh", "typescript", "tailwind", "dx"],
-  written: "2020-06-07",
-  posted: "2022-06-07",
+  tags: ["meta", "deno", "fresh", "dx", "typescript", "tailwind"],
+  written: "2023-06-07",
+  posted: "2023-06-07",
   updated: "2023-07-05",
-  teaser: "The technologies used in the site's creation and deployment.",
+  teaser: "The technologies used in its creation and deployment.",
   content: (
     <>
       <p>
