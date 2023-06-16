@@ -3,6 +3,7 @@ import { Link } from "./Link.tsx";
 
 export declare namespace Tag {
   export type Props = { for: string; class?: string };
+  export type HeaderProps = Pick<Props, "for">;
   export type BlockProps = { tags: string[]; class?: string };
 }
 
@@ -15,6 +16,14 @@ export function Tag({ for: tag, class: className }: Tag.Props) {
     />
   );
 }
+
+Tag.Header = function TagHeader({ for: tag }: Tag.HeaderProps) {
+  return (
+    <h2 class="group text-2xl" id={tag}>
+      <Tag for={tag} />
+    </h2>
+  );
+};
 
 Tag.Block = function TagBlock(
   { tags, class: className }: Tag.BlockProps,
@@ -32,5 +41,24 @@ Tag.Block = function TagBlock(
         <Tag for={finalPair[1]} class="pl-2" />
       </div>
     </div>
+  );
+};
+
+Tag.InlineBlock = function InlineTagBlock(
+  { tags, class: className }: Tag.BlockProps,
+) {
+  const [first, second, third, fourth] = tags;
+
+  return (
+    <span class={`inline-flex gap-2 leading-none ${className}`}>
+      <span for={first}>{format(first)}</span>
+      <span for={second} class="hidden sm:inline">{format(second)}</span>
+      {third && (
+        <span for={third} class="hidden md:inline">{format(third)}</span>
+      )}
+      {fourth && (
+        <span for={fourth} class="hidden lg:inline">{format(fourth)}</span>
+      )}
+    </span>
   );
 };
