@@ -4,12 +4,7 @@ import { Tag } from "../../components/Tag.tsx";
 import { Pic } from "../../components/Pic.tsx";
 import { full } from "../../utils/date.ts";
 import { POSTS } from "../../data/post/index.ts";
-import { SocialMediaPreview } from "../../types.ts";
 import { MediaItem, Structured } from "../../data/media.ts";
-
-const preview: SocialMediaPreview = {
-  description: "A blog post by Patrick Sean Keenan.",
-};
 
 export function previewImage(media: Structured<MediaItem>) {
   return media.preview?.image ||
