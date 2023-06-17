@@ -3,10 +3,12 @@
 // This file is automatically updated when running `dev.ts`.
 
 import { MediaService } from "../media.ts";
-import $0 from "./about-this-site.tsx";
-import $1 from "./the-hard-problems.tsx";
+import $0 from "./ratings-systems.tsx";
+import $1 from "./about-this-site.tsx";
+import $2 from "./the-hard-problems.tsx";
 
 export const POSTS = new MediaService({
-  "about-this-site": $0,
-  "the-hard-problems": $1
+  "ratings-systems": $0,
+  "about-this-site": $1,
+  "the-hard-problems": $2
 });
