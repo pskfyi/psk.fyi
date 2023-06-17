@@ -4,7 +4,7 @@ import { Tag } from "../../components/Tag.tsx";
 import { POSTS } from "../../data/post/index.ts";
 import { formatTag } from "../../data/tags.ts";
 
-export default function BlogPost({ params }: { params: { name: string } }) {
+export default ({ params }: { params: { name: string } }) => {
   const tag = params.name;
   const hasTag = (media: { tags: string[] }) => media.tags.includes(tag);
 
@@ -22,4 +22,4 @@ export default function BlogPost({ params }: { params: { name: string } }) {
       ))}
     </Page>
   );
-}
+};
