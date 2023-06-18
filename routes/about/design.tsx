@@ -6,6 +6,7 @@ import { Link } from "../../components/Link.tsx";
 import { Pic, PicDocs } from "../../components/Pic.tsx";
 import { SocialMediaPreview } from "../../types.ts";
 import { TierTileDocs } from "../../components/Char.tsx";
+import { PostTileSetDocs } from "../../components/PostTile.tsx";
 
 const preview: SocialMediaPreview = {
   description:
@@ -269,5 +270,6 @@ export default () => (
     <SkewerDocs class="mt-16" />
     <PicDocs class="mt-16" />
     <TierTileDocs class="mt-16" />
+    <PostTileSetDocs class="mt-16" />
   </Page>
 );
