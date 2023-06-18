@@ -28,8 +28,10 @@ export type MediaType =
   | "post";
 
 export type MediaItem = {
-  /** The primary heading. */
+  /** Used in the browser tab and as the default heading. */
   name: string;
+  /** Customize the heading's rendering. */
+  heading?: JSX.Element;
   img?: MediaImgDef;
   preview?: Omit<SocialMediaPreview, "large">;
   tags?: string[];

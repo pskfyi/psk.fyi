@@ -26,13 +26,14 @@ export function PostTile(
     tags,
     teaser,
     name,
+    heading,
     written,
   }: PostTile.Props,
 ) {
   const El = `h${headingLevel}` as const;
   [, ...tags] = tags;
 
-  const hasDescenders = /g|j|p|q|y|R/.test(String(name));
+  const hasDescenders = /g|j|p|q|y|R/.test(name);
   const nudge = hasDescenders
     ? "mb([0.4rem] md:[0.8rem])"
     : "mb([0.2rem] md:[0.3rem])";
@@ -53,7 +54,7 @@ export function PostTile(
           text(3xl sm:4xl md:5xl group-hover:torch-plasma) 
           ${nudge}`}
         >
-          {name}
+          {heading || name}
         </El>
         <div className="leading-none! my(1 sm:2) duration-500 flex items-center
           text(xs sm:sm md:base torch(ash group-hover:halo))">

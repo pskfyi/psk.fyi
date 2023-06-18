@@ -5,10 +5,12 @@
 import { MediaService } from "../media.ts";
 import $0 from "./ratings-systems.tsx";
 import $1 from "./about-this-site.tsx";
-import $2 from "./the-hard-problems.tsx";
+import $2 from "./tiers.tsx";
+import $3 from "./the-hard-problems.tsx";
 
 export const POSTS = new MediaService({
   "ratings-systems": $0,
   "about-this-site": $1,
-  "the-hard-problems": $2
+  "tiers": $2,
+  "the-hard-problems": $3
 });

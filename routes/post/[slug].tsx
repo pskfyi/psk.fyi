@@ -18,7 +18,7 @@ export default ({ params }: { params: { slug: string } }) => {
   return (
     <Page
       tab={post.name}
-      heading={post.name}
+      heading={post.heading}
       preview={post.preview}
     >
       <Pic.Dynamic img={post.img} />
