@@ -5,6 +5,7 @@ import { Swatch } from "../../components/docs/Swatch.tsx";
 import { Link } from "../../components/Link.tsx";
 import { Pic, PicDocs } from "../../components/Pic.tsx";
 import { SocialMediaPreview } from "../../types.ts";
+import { TierTileDocs } from "../../components/Char.tsx";
 
 const preview: SocialMediaPreview = {
   description:
@@ -267,5 +268,6 @@ export default () => (
     <h2 id="components">Components</h2>
     <SkewerDocs class="mt-16" />
     <PicDocs class="mt-16" />
+    <TierTileDocs class="mt-16" />
   </Page>
 );
