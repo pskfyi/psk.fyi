@@ -1,14 +1,20 @@
 import { JSX } from "preact";
 import Page from "../../components/Page.tsx";
+import { Char } from "../../components/Char.tsx";
 
-type RiverTileProps = {
-  class?: string;
-  href: string;
-  text: string;
-  swap?: boolean;
-  src: string;
-  alt: string;
-};
+type RiverTileProps =
+  & {
+    class?: string;
+    href: string;
+    text: string;
+    swap?: boolean;
+  }
+  & ({
+    src: string;
+    alt: string;
+  } | {
+    img: JSX.Element;
+  });
 
 function RiverTile(
   { href, text, class: className, swap, ...props }: RiverTileProps,
@@ -65,6 +71,21 @@ export default () => (
       alt="An AI generated image that looks like an orange flower from a 
           nightmare."
       text="the Design"
+    />
+
+    <RiverTile
+      swap
+      href="/about/ratings"
+      text="the Ratings"
+      class="mb-2 sm:mb-4"
+      img={
+        <div
+          class="center bg-black border-2 border-torch-ash rounded-xl"
+          style={{ aspectRatio: "1/1" }}
+        >
+          <Char.TierTile rating="F" class="w-24" />
+        </div>
+      }
     />
   </Page>
 );
