@@ -4,6 +4,19 @@ import { basename } from "https://deno.land/std@0.187.0/path/mod.ts";
 import { WELL_KNOWN_TAGS } from "./tags.ts";
 import { Color } from "./colors.ts";
 import { SocialMediaPreview } from "../types.ts";
+import { Day } from "../utils/date.ts";
+import { Tier } from "./tiers.ts";
+
+export type Review = {
+  img?:
+    | string
+    | (Omit<Pic.Props, "src"> & { src?: string; badgeBorder?: Color });
+  reviewed: Day;
+  modified?: Day;
+  content: string | JSX.Element;
+  rating: Tier;
+  tags?: string[];
+};
 
 export type MediaImgDef =
   | string
@@ -12,7 +25,7 @@ export type MediaImgDef =
     src?: string;
     prompt?: string;
   })
-  | (() => JSX.Element);
+  | ((() => JSX.Element) & { src: string });
 
 export type MediaImg = Pic.Props & {
   badgeBorder?: Color;
@@ -44,7 +57,7 @@ export type Structured<T extends Record<string, unknown>> =
     path: string;
     tags: string[];
     preview: SocialMediaPreview;
-    img: MediaImg | (() => JSX.Element);
+    img: MediaImg | ((() => JSX.Element) & { src: string });
   };
 
 export function mediaItem<M extends MediaType, T extends MediaItem>(

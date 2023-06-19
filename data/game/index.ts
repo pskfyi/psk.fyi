@@ -3,8 +3,8 @@
 // This file is automatically updated when running `dev.ts`.
 
 import { MediaService } from "../media.ts";
-
+import $0 from "./vampire-survivors.tsx";
 
 export const GAMES = new MediaService({
-
+  "vampire-survivors": $0
 });

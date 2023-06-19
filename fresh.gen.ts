@@ -10,14 +10,15 @@ import * as $3 from "./routes/about/ratings.tsx";
 import * as $4 from "./routes/books.tsx";
 import * as $5 from "./routes/contact.tsx";
 import * as $6 from "./routes/films.tsx";
-import * as $7 from "./routes/games.tsx";
-import * as $8 from "./routes/index.tsx";
-import * as $9 from "./routes/music.tsx";
-import * as $10 from "./routes/post/[slug].tsx";
-import * as $11 from "./routes/posts.tsx";
-import * as $12 from "./routes/reviews.tsx";
-import * as $13 from "./routes/tag/[name].tsx";
-import * as $14 from "./routes/tv.tsx";
+import * as $7 from "./routes/game/[slug].tsx";
+import * as $8 from "./routes/games.tsx";
+import * as $9 from "./routes/index.tsx";
+import * as $10 from "./routes/music.tsx";
+import * as $11 from "./routes/post/[slug].tsx";
+import * as $12 from "./routes/posts.tsx";
+import * as $13 from "./routes/reviews.tsx";
+import * as $14 from "./routes/tag/[name].tsx";
+import * as $15 from "./routes/tv.tsx";
 
 const manifest = {
   routes: {
@@ -28,14 +29,15 @@ const manifest = {
     "./routes/books.tsx": $4,
     "./routes/contact.tsx": $5,
     "./routes/films.tsx": $6,
-    "./routes/games.tsx": $7,
-    "./routes/index.tsx": $8,
-    "./routes/music.tsx": $9,
-    "./routes/post/[slug].tsx": $10,
-    "./routes/posts.tsx": $11,
-    "./routes/reviews.tsx": $12,
-    "./routes/tag/[name].tsx": $13,
-    "./routes/tv.tsx": $14,
+    "./routes/game/[slug].tsx": $7,
+    "./routes/games.tsx": $8,
+    "./routes/index.tsx": $9,
+    "./routes/music.tsx": $10,
+    "./routes/post/[slug].tsx": $11,
+    "./routes/posts.tsx": $12,
+    "./routes/reviews.tsx": $13,
+    "./routes/tag/[name].tsx": $14,
+    "./routes/tv.tsx": $15,
   },
   islands: {},
   baseUrl: import.meta.url,
