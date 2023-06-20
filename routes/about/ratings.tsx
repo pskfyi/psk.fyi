@@ -28,38 +28,36 @@ const preview: SocialMediaPreview = {
   large: true,
 };
 
-export default function AboutMediaRatings() {
-  return (
-    <Page tab="Media Ratings" preview={preview}>
-      <div
-        class="grid w-[fit-content] mx-auto gap-x(2 sm:4) gap-y-2 pl-4"
-        style={{ gridTemplateColumns: "auto 1fr" }}
-      >
-        {TIER_DESCRIPTIONS.map(([tier, text]) => (
-          <>
-            <Char.TierTile rating={tier} class="w(10 12)" />
-            <span class="self-center sm:text-xl">{text}</span>
-          </>
-        ))}
+export default () => (
+  <Page tab="Media Ratings" preview={preview}>
+    <div
+      class="grid w-[fit-content] mx-auto gap-x(2 sm:4) gap-y-2 pl-4"
+      style={{ gridTemplateColumns: "auto 1fr" }}
+    >
+      {TIER_DESCRIPTIONS.map(([tier, text]) => (
+        <>
+          <Char.TierTile rating={tier} class="w(10 12)" />
+          <span class="self-center sm:text-xl">{text}</span>
+        </>
+      ))}
 
-        {UNRATED_DESCRIPTIONS.map(([indicator, text], i) => (
-          <>
-            <Char.UnratedTile
-              indicator={indicator}
-              class="w(10 sm:12)"
-            />
-            <span class="self-center sm:text-xl">{text}</span>
-          </>
-        ))}
-      </div>
+      {UNRATED_DESCRIPTIONS.map(([indicator, text], i) => (
+        <>
+          <Char.UnratedTile
+            indicator={indicator}
+            class="w(10 sm:12)"
+          />
+          <span class="self-center sm:text-xl">{text}</span>
+        </>
+      ))}
+    </div>
 
-      <hr />
+    <hr />
 
-      <p>
-        The system is elaborated upon in this blog post:
-      </p>
+    <p>
+      The system is elaborated upon in this blog post:
+    </p>
 
-      <PostTile.Set posts={[tiers]} class="my-6" />
-    </Page>
-  );
-}
+    <PostTile.Set posts={[tiers]} class="my-6" />
+  </Page>
+);
