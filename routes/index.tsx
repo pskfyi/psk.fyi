@@ -6,6 +6,8 @@ import { SocialMediaPreview } from "../types.ts";
 import { PostTile } from "../components/PostTile.tsx";
 import aboutThisSite from "../data/post/about-this-site.tsx";
 import theHardProblems from "../data/post/the-hard-problems.tsx";
+import vampireSurvivors from "../data/game/vampire-survivors.tsx";
+import { ReviewTile } from "../components/ReviewTile.tsx";
 
 const preview: SocialMediaPreview = {
   title: "psk.fyi",
@@ -89,5 +91,20 @@ export default () => (
         theHardProblems,
       ]}
     />
+
+    <h2 class="flex justify-between items-center
+        mb-2 text(torch-ash lg sm:xl) leading([0.8] sm:[0.8])">
+      Latest Reviews
+      <Link
+        to="/reviews"
+        class="text(sm md:base torch(halo hover:flame visited(halo hover:flame)))"
+      >
+        All Reviews
+      </Link>
+    </h2>
+
+    <div className="mt-2 gap-2 grid(& cols-3)">
+      <ReviewTile.Game {...vampireSurvivors} />
+    </div>
   </Page>
 );

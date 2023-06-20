@@ -7,6 +7,7 @@ import { Pic, PicDocs } from "../../components/Pic.tsx";
 import { SocialMediaPreview } from "../../types.ts";
 import { TierTileDocs } from "../../components/Char.tsx";
 import { PostTileSetDocs } from "../../components/PostTile.tsx";
+import { ReviewTileSetDocs } from "../../components/ReviewTile.tsx";
 
 const preview: SocialMediaPreview = {
   description:
@@ -271,5 +272,6 @@ export default () => (
     <PicDocs class="mt-16" />
     <TierTileDocs class="mt-16" />
     <PostTileSetDocs class="mt-16" />
+    <ReviewTileSetDocs class="mt-16" />
   </Page>
 );

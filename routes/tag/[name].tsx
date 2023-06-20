@@ -1,6 +1,8 @@
 import Page from "../../components/Page.tsx";
 import { PostTile } from "../../components/PostTile.tsx";
+import { ReviewTile } from "../../components/ReviewTile.tsx";
 import { Tag } from "../../components/Tag.tsx";
+import { GAMES } from "../../data/game/index.ts";
 import { POSTS } from "../../data/post/index.ts";
 import { formatTag } from "../../data/tags.ts";
 
@@ -10,6 +12,7 @@ export default ({ params }: { params: { name: string } }) => {
 
   const mediaTypes = [
     ["Post", POSTS.sortedBy("written").filter(hasTag)] as const,
+    ["Game", GAMES.sortedBy("reviewed").filter(hasTag)] as const,
   ].filter(([, media]) => media.length > 0);
 
   return (
@@ -17,7 +20,9 @@ export default ({ params }: { params: { name: string } }) => {
       {mediaTypes.map(([type, media]) => (
         <>
           <Tag.Header for={type} />
-          <PostTile.Set posts={media} />
+          {type === "Post"
+            ? <PostTile.Set posts={media} />
+            : <ReviewTile.Set media={media} />}
         </>
       ))}
     </Page>
