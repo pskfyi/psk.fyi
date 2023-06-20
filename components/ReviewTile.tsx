@@ -1,13 +1,15 @@
 import type { JSX } from "preact";
 import type { Game } from "../data/games.ts";
+import type { Film } from "../data/films.ts";
 import type { Tier } from "../data/tiers.ts";
 import { year } from "../utils/date.ts";
 import { Char } from "./Char.tsx";
 import { MediaImg } from "../data/media.ts";
 import { Docs } from "./docs/Docs.tsx";
 import vampireSurvivors from "../data/game/vampire-survivors.tsx";
+import midsommar from "../data/film/midsommar.tsx";
 
-export function asComponent(
+function asComponent(
   stringLike: string | JSX.Element | (() => JSX.Element),
 ) {
   return typeof stringLike === "function"
@@ -86,7 +88,20 @@ ReviewTile.Game = function GameReviewTile({ path, rating, name, img }: Game) {
   );
 };
 
-export type DynamicReviewTileProps = Game;
+ReviewTile.Film = function FilmReviewTile(
+  { path, rating, name, img, released }: Film,
+) {
+  return (
+    <ReviewTile
+      href={path}
+      label={<>{name} ({year(released)})</>}
+      rating={rating}
+      img={img}
+    />
+  );
+};
+
+export type DynamicReviewTileProps = Game | Film;
 
 ReviewTile.Dynamic = function DynamicReviewTile(
   props: DynamicReviewTileProps,
@@ -94,6 +109,8 @@ ReviewTile.Dynamic = function DynamicReviewTile(
   switch (props.type) {
     case "game":
       return <ReviewTile.Game {...props} />;
+    case "film":
+      return <ReviewTile.Film {...props} />;
   }
 };
 
@@ -125,6 +142,7 @@ export function ReviewTileSetDocs(props: JSX.HTMLAttributes<HTMLElement>) {
           <ReviewTile.Set
             media={[
               vampireSurvivors,
+              midsommar,
             ]}
           />,
         ],
