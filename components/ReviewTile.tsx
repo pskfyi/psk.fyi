@@ -1,6 +1,7 @@
 import type { JSX } from "preact";
-import type { Game } from "../data/games.ts";
+import type { Book } from "../data/books.ts";
 import type { Film } from "../data/films.ts";
+import type { Game } from "../data/games.ts";
 import type { Tier } from "../data/tiers.ts";
 import { year } from "../utils/date.ts";
 import { Char } from "./Char.tsx";
@@ -101,12 +102,25 @@ ReviewTile.Film = function FilmReviewTile(
   );
 };
 
-export type DynamicReviewTileProps = Game | Film;
+ReviewTile.Book = function BookReviewTile({ path, rating, name, img }: Book) {
+  return (
+    <ReviewTile
+      href={path}
+      label={name}
+      rating={rating}
+      img={img}
+    />
+  );
+};
+
+export type DynamicReviewTileProps = Book | Game | Film;
 
 ReviewTile.Dynamic = function DynamicReviewTile(
   props: DynamicReviewTileProps,
 ) {
   switch (props.type) {
+    case "book":
+      return <ReviewTile.Book {...props} />;
     case "game":
       return <ReviewTile.Game {...props} />;
     case "film":
