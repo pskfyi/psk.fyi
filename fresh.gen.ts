@@ -7,19 +7,20 @@ import * as $0 from "./routes/about/design.tsx";
 import * as $1 from "./routes/about/index.tsx";
 import * as $2 from "./routes/about/me.tsx";
 import * as $3 from "./routes/about/ratings.tsx";
-import * as $4 from "./routes/books.tsx";
-import * as $5 from "./routes/contact.tsx";
-import * as $6 from "./routes/film/[slug].tsx";
-import * as $7 from "./routes/films.tsx";
-import * as $8 from "./routes/game/[slug].tsx";
-import * as $9 from "./routes/games.tsx";
-import * as $10 from "./routes/index.tsx";
-import * as $11 from "./routes/music.tsx";
-import * as $12 from "./routes/post/[slug].tsx";
-import * as $13 from "./routes/posts.tsx";
-import * as $14 from "./routes/reviews.tsx";
-import * as $15 from "./routes/tag/[name].tsx";
-import * as $16 from "./routes/tv.tsx";
+import * as $4 from "./routes/book/[slug].tsx";
+import * as $5 from "./routes/books.tsx";
+import * as $6 from "./routes/contact.tsx";
+import * as $7 from "./routes/film/[slug].tsx";
+import * as $8 from "./routes/films.tsx";
+import * as $9 from "./routes/game/[slug].tsx";
+import * as $10 from "./routes/games.tsx";
+import * as $11 from "./routes/index.tsx";
+import * as $12 from "./routes/music.tsx";
+import * as $13 from "./routes/post/[slug].tsx";
+import * as $14 from "./routes/posts.tsx";
+import * as $15 from "./routes/reviews.tsx";
+import * as $16 from "./routes/tag/[name].tsx";
+import * as $17 from "./routes/tv.tsx";
 
 const manifest = {
   routes: {
@@ -27,19 +28,20 @@ const manifest = {
     "./routes/about/index.tsx": $1,
     "./routes/about/me.tsx": $2,
     "./routes/about/ratings.tsx": $3,
-    "./routes/books.tsx": $4,
-    "./routes/contact.tsx": $5,
-    "./routes/film/[slug].tsx": $6,
-    "./routes/films.tsx": $7,
-    "./routes/game/[slug].tsx": $8,
-    "./routes/games.tsx": $9,
-    "./routes/index.tsx": $10,
-    "./routes/music.tsx": $11,
-    "./routes/post/[slug].tsx": $12,
-    "./routes/posts.tsx": $13,
-    "./routes/reviews.tsx": $14,
-    "./routes/tag/[name].tsx": $15,
-    "./routes/tv.tsx": $16,
+    "./routes/book/[slug].tsx": $4,
+    "./routes/books.tsx": $5,
+    "./routes/contact.tsx": $6,
+    "./routes/film/[slug].tsx": $7,
+    "./routes/films.tsx": $8,
+    "./routes/game/[slug].tsx": $9,
+    "./routes/games.tsx": $10,
+    "./routes/index.tsx": $11,
+    "./routes/music.tsx": $12,
+    "./routes/post/[slug].tsx": $13,
+    "./routes/posts.tsx": $14,
+    "./routes/reviews.tsx": $15,
+    "./routes/tag/[name].tsx": $16,
+    "./routes/tv.tsx": $17,
   },
   islands: {},
   baseUrl: import.meta.url,

@@ -3,8 +3,8 @@
 // This file is automatically updated when running `dev.ts`.
 
 import { MediaService } from "../media.ts";
-
+import $0 from "./how-to-read-a-book.tsx";
 
 export const BOOKS = new MediaService({
-
+  "how-to-read-a-book": $0
 });
