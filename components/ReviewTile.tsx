@@ -9,6 +9,7 @@ import { MediaImg } from "../data/media.ts";
 import { Docs } from "./docs/Docs.tsx";
 import vampireSurvivors from "../data/game/vampire-survivors.tsx";
 import midsommar from "../data/film/midsommar.tsx";
+import { TelevisionSeason, TelevisionShow } from "../data/tv.ts";
 
 function asComponent(
   stringLike: string | JSX.Element | (() => JSX.Element),
@@ -113,7 +114,30 @@ ReviewTile.Book = function BookReviewTile({ path, rating, name, img }: Book) {
   );
 };
 
-export type DynamicReviewTileProps = Book | Game | Film;
+export type TelevisionReviewTileProps = TelevisionShow & {
+  S: keyof TelevisionShow["seasons"];
+};
+
+ReviewTile.Television = function TelevisionReviewTile(
+  { S, seasons, name }: TelevisionReviewTileProps,
+) {
+  const { img, path, rating } = seasons[S] as TelevisionSeason;
+
+  return (
+    <ReviewTile
+      href={path}
+      label={<>{name} {S.toUpperCase()}</>}
+      rating={rating}
+      img={img}
+    />
+  );
+};
+
+export type DynamicReviewTileProps =
+  | Book
+  | Game
+  | Film
+  | TelevisionReviewTileProps;
 
 ReviewTile.Dynamic = function DynamicReviewTile(
   props: DynamicReviewTileProps,
@@ -125,6 +149,8 @@ ReviewTile.Dynamic = function DynamicReviewTile(
       return <ReviewTile.Game {...props} />;
     case "film":
       return <ReviewTile.Film {...props} />;
+    case "tv":
+      return <ReviewTile.Television {...props} />;
   }
 };
 
