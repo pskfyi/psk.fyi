@@ -21,6 +21,8 @@ import * as $14 from "./routes/posts.tsx";
 import * as $15 from "./routes/reviews.tsx";
 import * as $16 from "./routes/tag/[name].tsx";
 import * as $17 from "./routes/tv.tsx";
+import * as $18 from "./routes/tv/[showSlug]/[seasonSlug].tsx";
+import * as $19 from "./routes/tv/[showSlug]/index.tsx";
 
 const manifest = {
   routes: {
@@ -42,6 +44,8 @@ const manifest = {
     "./routes/reviews.tsx": $15,
     "./routes/tag/[name].tsx": $16,
     "./routes/tv.tsx": $17,
+    "./routes/tv/[showSlug]/[seasonSlug].tsx": $18,
+    "./routes/tv/[showSlug]/index.tsx": $19,
   },
   islands: {},
   baseUrl: import.meta.url,
