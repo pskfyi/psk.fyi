@@ -3,8 +3,12 @@
 // This file is automatically updated when running `dev.ts`.
 
 import { TelevisionMediaService } from "../tv.ts";
-import $0 from "./witcher.tsx";
+import $0 from "./lazarus-project.tsx";
+import $1 from "./witcher.tsx";
+import $2 from "./last-kingdom.tsx";
 
 export const TV = new TelevisionMediaService({
-  "witcher": $0
+  "lazarus-project": $0,
+  "witcher": $1,
+  "last-kingdom": $2
 });

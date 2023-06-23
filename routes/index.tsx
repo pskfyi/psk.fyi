@@ -8,6 +8,7 @@ import aboutThisSite from "../data/post/about-this-site.tsx";
 import theHardProblems from "../data/post/the-hard-problems.tsx";
 import vampireSurvivors from "../data/game/vampire-survivors.tsx";
 import { ReviewTile } from "../components/ReviewTile.tsx";
+import lazarusProject from "../data/tv/lazarus-project.tsx";
 
 const preview: SocialMediaPreview = {
   title: "psk.fyi",
@@ -105,6 +106,7 @@ export default () => (
 
     <div className="mt-2 gap-2 grid(& cols-3)">
       <ReviewTile.Game {...vampireSurvivors} />
+      <ReviewTile.Television {...lazarusProject} S="s1" />
     </div>
   </Page>
 );
