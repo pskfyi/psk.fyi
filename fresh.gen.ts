@@ -16,13 +16,15 @@ import * as $9 from "./routes/game/[slug].tsx";
 import * as $10 from "./routes/games.tsx";
 import * as $11 from "./routes/index.tsx";
 import * as $12 from "./routes/music.tsx";
-import * as $13 from "./routes/post/[slug].tsx";
-import * as $14 from "./routes/posts.tsx";
-import * as $15 from "./routes/reviews.tsx";
-import * as $16 from "./routes/tag/[name].tsx";
-import * as $17 from "./routes/tv.tsx";
-import * as $18 from "./routes/tv/[showSlug]/[seasonSlug].tsx";
-import * as $19 from "./routes/tv/[showSlug]/index.tsx";
+import * as $13 from "./routes/music/[artistSlug]/[releaseSlug].tsx";
+import * as $14 from "./routes/music/[artistSlug]/index.tsx";
+import * as $15 from "./routes/post/[slug].tsx";
+import * as $16 from "./routes/posts.tsx";
+import * as $17 from "./routes/reviews.tsx";
+import * as $18 from "./routes/tag/[name].tsx";
+import * as $19 from "./routes/tv.tsx";
+import * as $20 from "./routes/tv/[showSlug]/[seasonSlug].tsx";
+import * as $21 from "./routes/tv/[showSlug]/index.tsx";
 
 const manifest = {
   routes: {
@@ -39,13 +41,15 @@ const manifest = {
     "./routes/games.tsx": $10,
     "./routes/index.tsx": $11,
     "./routes/music.tsx": $12,
-    "./routes/post/[slug].tsx": $13,
-    "./routes/posts.tsx": $14,
-    "./routes/reviews.tsx": $15,
-    "./routes/tag/[name].tsx": $16,
-    "./routes/tv.tsx": $17,
-    "./routes/tv/[showSlug]/[seasonSlug].tsx": $18,
-    "./routes/tv/[showSlug]/index.tsx": $19,
+    "./routes/music/[artistSlug]/[releaseSlug].tsx": $13,
+    "./routes/music/[artistSlug]/index.tsx": $14,
+    "./routes/post/[slug].tsx": $15,
+    "./routes/posts.tsx": $16,
+    "./routes/reviews.tsx": $17,
+    "./routes/tag/[name].tsx": $18,
+    "./routes/tv.tsx": $19,
+    "./routes/tv/[showSlug]/[seasonSlug].tsx": $20,
+    "./routes/tv/[showSlug]/index.tsx": $21,
   },
   islands: {},
   baseUrl: import.meta.url,
