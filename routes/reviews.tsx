@@ -4,10 +4,16 @@ import { Tag } from "../components/Tag.tsx";
 import { BOOKS } from "../data/book/index.ts";
 import { FILMS } from "../data/film/index.ts";
 import { GAMES } from "../data/game/index.ts";
+import { ARTISTS } from "../data/music/index.ts";
 import { TV } from "../data/tv/index.ts";
 
 export default () => (
   <Page tab="Reviews">
+    <blockquote>
+      A backlog of hundreds of reviews are in the process of being migrated and
+      revised.
+    </blockquote>
+
     <Tag.Header for="Book" />
     <ReviewTile.Set media={BOOKS.sortedBy("reviewed")} />
 
@@ -23,9 +29,7 @@ export default () => (
     <Tag.Header for="Game" />
     <ReviewTile.Set media={GAMES.sortedBy("reviewed")} />
 
-    <blockquote>
-      A backlog of hundreds of reviews are in the process of being migrated and
-      revised.
-    </blockquote>
+    <Tag.Header for="Music" />
+    <ReviewTile.Set media={ARTISTS.reviewedAlbumsBy("reviewed")} />
   </Page>
 );

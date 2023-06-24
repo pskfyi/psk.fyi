@@ -27,6 +27,10 @@ Link.Wiki = function WikiLink(props: LinkProps) {
   return <Link {...props} to={`https://en.wikipedia.org/wiki/${props.to}`} />;
 };
 
+Link.YT = function YouTubeLink(props: LinkProps) {
+  return <Link {...props} to={`https://youtu.be/${props.to}`} />;
+};
+
 Link.DallE = () => (
   <Link to="https://openai.com/dall-e-2">
     DALL·E&nbsp;2

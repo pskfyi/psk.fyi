@@ -3,6 +3,7 @@ import type { Book } from "../data/books.ts";
 import type { Film } from "../data/films.ts";
 import type { Game } from "../data/games.ts";
 import type { Tier } from "../data/tiers.ts";
+import type { Album } from "../data/music.ts";
 import { year } from "../utils/date.ts";
 import { Char } from "./Char.tsx";
 import { MediaImg } from "../data/media.ts";
@@ -10,6 +11,7 @@ import { Docs } from "./docs/Docs.tsx";
 import vampireSurvivors from "../data/game/vampire-survivors.tsx";
 import midsommar from "../data/film/midsommar.tsx";
 import { TelevisionSeason, TelevisionShow } from "../data/tv.ts";
+import lazarusProject from "../data/tv/lazarus-project.tsx";
 
 function asComponent(
   stringLike: string | JSX.Element | (() => JSX.Element),
@@ -133,11 +135,25 @@ ReviewTile.Television = function TelevisionReviewTile(
   );
 };
 
+ReviewTile.Music = function MusicReviewTile(
+  { path, rating, name, img }: Album.Reviewed,
+) {
+  return (
+    <ReviewTile
+      href={path}
+      label={name}
+      rating={rating}
+      img={img}
+    />
+  );
+};
+
 export type DynamicReviewTileProps =
   | Book
   | Game
   | Film
-  | TelevisionReviewTileProps;
+  | TelevisionReviewTileProps
+  | Album.Reviewed;
 
 ReviewTile.Dynamic = function DynamicReviewTile(
   props: DynamicReviewTileProps,
@@ -151,6 +167,8 @@ ReviewTile.Dynamic = function DynamicReviewTile(
       return <ReviewTile.Film {...props} />;
     case "tv":
       return <ReviewTile.Television {...props} />;
+    case "album":
+      return <ReviewTile.Music {...props} />;
   }
 };
 
@@ -183,6 +201,7 @@ export function ReviewTileSetDocs(props: JSX.HTMLAttributes<HTMLElement>) {
             media={[
               vampireSurvivors,
               midsommar,
+              { ...lazarusProject, S: "s1" },
             ]}
           />,
         ],
