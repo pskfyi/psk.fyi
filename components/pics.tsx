@@ -178,9 +178,9 @@ export function PicDocs(props: JSX.HTMLAttributes<HTMLElement>) {
         imgClass: "extra classes to apply to the image element directly",
       }}
       examples={[[
-        <code>{'<Pic src="site.webp" color="soot" desc={...}>'}</code>,
+        <code>{'<Pic src="/about/site.webp" color="soot" desc={...}>'}</code>,
         <Pic
-          src="/site.webp"
+          src="/about/site.webp"
           desc={
             <p class="my-0">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
