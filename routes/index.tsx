@@ -26,7 +26,7 @@ function Header() {
 
 export default function Home() {
   return (
-    <Page tab="Home" header={<Header />}>
+    <Page tab="Patrick Sean Keenan's blog" header={<Header />}>
       <Pic
         hero
         src="/sunset-beach.webp"

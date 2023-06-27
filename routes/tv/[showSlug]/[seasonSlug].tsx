@@ -10,17 +10,19 @@ export default function TelevisionSeasonReview(
   { params }: { params: { showSlug: string; seasonSlug: string } },
 ) {
   const show = TV.bySlug[params.showSlug];
-  const { tab, name, seasons } = show;
-  const season = seasons[params.seasonSlug];
+  const season = show.seasons[params.seasonSlug];
+
+  const S = params.seasonSlug.toUpperCase();
+  const tab = `${show.tab ?? show.name} ${S}`;
 
   if (typeof season === "string") {
     return (
-      <Page tab={tab ?? name} heading={name}>
+      <Page tab={tab} heading={show.name}>
         <SeasonNav show={show} />
         <Pic.Dynamic img={show.img} />
         <TagBlock tags={show.tags} class="my-6" />
         <p class="text(center 3xl) mt-12">
-          {params.seasonSlug.toUpperCase()} not yet reviewed.
+          {S} not yet reviewed.
         </p>
       </Page>
     );
@@ -29,7 +31,7 @@ export default function TelevisionSeasonReview(
   const { released, reviewed, content, img, rating, tags } = season;
 
   return (
-    <Page tab={tab ?? name} heading={name}>
+    <Page tab={tab} heading={show.name}>
       <SeasonNav show={show} season={params.seasonSlug} />
       <Pic.Dynamic img={img} class="mx(6 sm:auto)" />
       <TagBlock tags={tags} class="mt-4 mb-2" />

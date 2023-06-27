@@ -10,7 +10,7 @@ export default function BookReview({ params }: { params: { slug: string } }) {
   const { published, reviewed, ...book } = BOOKS.bySlug[params.slug];
 
   return (
-    <Page tab={book.tab ?? book.name}>
+    <Page tab={`${book.tab ?? book.name} - ${book.author}`} heading={book.name}>
       <ByLine
         type="book"
         href={book.authorUrl}

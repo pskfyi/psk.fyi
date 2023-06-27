@@ -14,8 +14,10 @@ export default function AlbumReview(
 
   const { released } = release;
 
+  const tab = `${release.tab ?? release.name} - ${artist.name}`;
+
   return (
-    <Page tab={release.tab ?? release.name} heading={release.name}>
+    <Page tab={tab} heading={release.name}>
       <ByLine
         type="album"
         href={artist.path}
