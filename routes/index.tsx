@@ -5,16 +5,16 @@ import { Link } from "../components/Link.tsx";
 import { ReviewTile } from "../components/ReviewTile.tsx";
 import { ByLine } from "../components/ByLine.tsx";
 import { PostTile } from "../components/PostTile.tsx";
-import { POSTS } from "../data/post/index.ts";
-import { GAMES } from "../data/game/index.ts";
-import { TV } from "../data/tv/index.ts";
-import { FILMS } from "../data/film/index.ts";
-import { BOOKS } from "../data/book/index.ts";
-import { ARTISTS } from "../data/music/index.ts";
 import { Album } from "../data/music.ts";
-import ratingsSystems from "../data/post/ratings-systems.tsx";
+
 import tiers from "../data/post/tiers.tsx";
 import allInOnDeno from "../data/post/all-in-on-deno.tsx";
+import vampireSurvivors from "../data/game/vampire-survivors.tsx";
+import lazarusProject from "../data/tv/lazarus-project.tsx";
+import martyrs from "../data/film/martyrs.tsx";
+import lastKingdom from "../data/tv/last-kingdom.tsx";
+import effectiveTypescript from "../data/book/effective-typescript.tsx";
+import builtToSpill from "../data/music/built-to-spill.tsx";
 
 function Header() {
   return (
@@ -87,14 +87,13 @@ export default function Home() {
       </h2>
 
       <div className="mt-2 gap-2 grid(& cols-3)">
-        <ReviewTile.Game {...GAMES.bySlug["vampire-survivors"]} />
-        <ReviewTile.Television {...TV.bySlug["lazarus-project"]} S="s1" />
-        <ReviewTile.Film {...FILMS.bySlug.martyrs} />
-        <ReviewTile.Television {...TV.bySlug["last-kingdom"]} S="s2" />
-        <ReviewTile.Book {...BOOKS.bySlug["effective-typescript"]} />
+        <ReviewTile.Game {...vampireSurvivors} />
+        <ReviewTile.Television {...lazarusProject} S="s1" />
+        <ReviewTile.Film {...martyrs} />
+        <ReviewTile.Television {...lastKingdom} S="s2" />
+        <ReviewTile.Book {...effectiveTypescript} />
         <ReviewTile.Music
-          {...ARTISTS.bySlug["built-to-spill"]
-            .releases["keep-it-like-a-secret"] as Album.Reviewed}
+          {...builtToSpill.releases["keep-it-like-a-secret"] as Album.Reviewed}
         />
       </div>
     </Page>
