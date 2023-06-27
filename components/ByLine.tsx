@@ -8,9 +8,11 @@ export type ByLineProps = {
 };
 
 export function ByLine({ class: className, href, name, type }: ByLineProps) {
+  const determiner = type[0].match(/[aeiou]/i) ? "An" : "A";
+
   return (
     <p class={`text(center lg sm:xl) leading(none sm:none) ${className}`}>
-      A {type} by <Link eternal to={href}>{name}</Link>.
+      {determiner} {type} by <Link eternal to={href}>{name}</Link>.
     </p>
   );
 }
