@@ -4,7 +4,9 @@
 
 import { MediaService } from "../media.ts";
 import $0 from "./midsommar.tsx";
+import $1 from "./world-war-z.tsx";
 
 export const FILMS = new MediaService({
-  "midsommar": $0
+  "midsommar": $0,
+  "world-war-z": $1
 });
