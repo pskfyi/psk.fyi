@@ -220,7 +220,7 @@ Char.Badge = function Badge({ class: className, char, border }: {
 Char.Verdict = function Verdict({ rating }: { rating: Tier }) {
   return (
     <a
-      href="/about/tiers"
+      href="/about/ratings"
       class="no-underline float-left ml-1 mr-3 mt-2"
     >
       <Char.TierTile rating={rating} class="w([3.2rem] sm:[3.4rem])" />

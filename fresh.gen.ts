@@ -6,8 +6,8 @@ import config from "./deno.json" assert { type: "json" };
 import * as $0 from "./routes/about/design.tsx";
 import * as $1 from "./routes/about/index.tsx";
 import * as $2 from "./routes/about/me.tsx";
-import * as $3 from "./routes/about/site.tsx";
-import * as $4 from "./routes/about/tiers.tsx";
+import * as $3 from "./routes/about/ratings.tsx";
+import * as $4 from "./routes/about/site.tsx";
 import * as $5 from "./routes/book/[slug].tsx";
 import * as $6 from "./routes/books.tsx";
 import * as $7 from "./routes/film/[slug].tsx";
@@ -31,8 +31,8 @@ const manifest = {
     "./routes/about/design.tsx": $0,
     "./routes/about/index.tsx": $1,
     "./routes/about/me.tsx": $2,
-    "./routes/about/site.tsx": $3,
-    "./routes/about/tiers.tsx": $4,
+    "./routes/about/ratings.tsx": $3,
+    "./routes/about/site.tsx": $4,
     "./routes/book/[slug].tsx": $5,
     "./routes/books.tsx": $6,
     "./routes/film/[slug].tsx": $7,

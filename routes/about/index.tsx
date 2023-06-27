@@ -76,7 +76,7 @@ export default function About() {
 
       <RiverTile
         swap
-        href="/about/tiers"
+        href="/about/ratings"
         text="the Ratings"
         class="mb-2 sm:mb-4"
         img={
