@@ -10,9 +10,16 @@ export default function FilmReview({ params }: { params: { slug: string } }) {
   const { released, reviewed, ...film } = FILMS.bySlug[params.slug];
 
   const tab = `${film.tab ?? film.name} (${year(released)})`;
+  const previewImage = "src" in film.img ? film.img.src : undefined;
 
   return (
-    <Page tab={tab} heading={film.name}>
+    <Page
+      tab={tab}
+      heading={film.name}
+      previewImage={previewImage}
+      largePreviewImage
+      previewDescription="A film review by Patrick Sean Keenan."
+    >
       <div className="px-6">
         <Pic.Dynamic img={film.img} />
       </div>

@@ -6,7 +6,12 @@ import { Pic } from "../../components/pics.tsx";
 
 export default function AboutTheSite() {
   return (
-    <Page tab="About This Site">
+    <Page
+      tab="About This Site"
+      previewImage="/about/site.webp"
+      previewDescription="The technologies used in the site's creation and deployment."
+      largePreviewImage
+    >
       <Pic.Prompted
         color="soot"
         src="/about/site.webp"

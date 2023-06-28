@@ -8,14 +8,22 @@ import { UnratedIndicator } from "../../../data/types.ts";
 export default function Band(
   { params }: { params: { artistSlug: string } },
 ) {
-  const show = ARTISTS.bySlug[params.artistSlug];
-  const { img, tab, name, releases: releasesBySlug } = show;
+  const artist = ARTISTS.bySlug[params.artistSlug];
+  const { img, tab, name, releases: releasesBySlug } = artist;
   const releases = Object.values(releasesBySlug);
 
+  const previewImage = "src" in artist.img ? artist.img.src : undefined;
+
   return (
-    <Page tab={tab ?? name} heading={name}>
+    <Page
+      tab={tab ?? name}
+      heading={name}
+      previewImage={previewImage}
+      previewDescription="Music reviews by Patrick Sean Keenan."
+      largePreviewImage
+    >
       <Pic.Dynamic img={img} />
-      <TagBlock tags={show.tags} class="my-6" />
+      <TagBlock tags={artist.tags} class="my-6" />
 
       <div
         className={`w-[fit-content] mx-auto leading-none text-torch-ash 

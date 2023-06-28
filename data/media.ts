@@ -28,6 +28,7 @@ export type MediaItem = {
   /** The primary heading. */
   name: string | JSX.Element | (() => JSX.Element);
   img?: MediaImgDef;
+  previewImage?: string;
   tags?: string[];
   /** What should appear on the browser tab when on this entity's page.
    * Falls back to the name. */

@@ -34,7 +34,12 @@ const ColorPalette = () => (
 
 export default function DesignSystem() {
   return (
-    <Page tab="Design System">
+    <Page
+      tab="Design System"
+      previewImage="/about/design.webp"
+      previewDescription="Color palette, typography, components, and the thought process behind them."
+      largePreviewImage
+    >
       <Pic.Prompted
         color="smoke"
         src="/about/design.webp"

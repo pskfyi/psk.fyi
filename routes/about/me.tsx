@@ -3,7 +3,12 @@ import { Pic } from "../../components/pics.tsx";
 
 export default function AboutMe() {
   return (
-    <Page tab="About Me" heading="Patrick Sean Keenan">
+    <Page
+      tab="About Me"
+      heading="Patrick Sean Keenan"
+      previewImage="/about/me.jpg"
+      largePreviewImage
+    >
       <Pic
         width="full"
         color="soot"

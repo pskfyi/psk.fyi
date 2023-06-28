@@ -8,8 +8,16 @@ import { GAMES } from "../../data/game/index.ts";
 export default function GameReview({ params }: { params: { slug: string } }) {
   const { released, reviewed, ...game } = GAMES.bySlug[params.slug];
 
+  const previewImage = "src" in game.img ? game.img.src : undefined;
+
   return (
-    <Page tab={game.tab ?? game.name} heading={game.name}>
+    <Page
+      tab={game.tab ?? game.name}
+      heading={game.name}
+      previewImage={previewImage}
+      largePreviewImage
+      previewDescription="A game review by Patrick Sean Keenan."
+    >
       <div className="px-6">
         <Pic.Dynamic img={game.img} />
       </div>

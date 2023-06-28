@@ -49,9 +49,16 @@ export default function TelevisionShow(
   const show = TV.bySlug[params.showSlug];
   const { img, tab, name, seasons } = show;
   const seasonEntries = Object.entries(seasons);
+  const previewImage = "src" in img ? img.src : undefined;
 
   return (
-    <Page tab={tab ?? name} heading={name}>
+    <Page
+      tab={tab ?? name}
+      heading={name}
+      previewImage={previewImage}
+      largePreviewImage
+      previewDescription="Television reviews by Patrick Sean Keenan."
+    >
       <SeasonNav show={show} />
       <Pic.Dynamic img={img} />
       <TagBlock tags={show.tags} class="my-6" />

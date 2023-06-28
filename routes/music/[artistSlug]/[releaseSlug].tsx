@@ -15,9 +15,16 @@ export default function AlbumReview(
   const { released } = release;
 
   const tab = `${release.tab ?? release.name} - ${artist.name}`;
+  const previewImage = "src" in release.img ? release.img.src : undefined;
 
   return (
-    <Page tab={tab} heading={release.name}>
+    <Page
+      tab={tab}
+      heading={release.name}
+      previewImage={previewImage}
+      largePreviewImage
+      previewDescription="A music review by Patrick Sean Keenan."
+    >
       <ByLine
         type="album"
         href={artist.path}

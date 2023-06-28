@@ -28,7 +28,13 @@ const UNRATED_DESCRIPTIONS = [
 
 export default function AboutMediaRatings() {
   return (
-    <Page tab="Media Ratings" heading="Media Ratings">
+    <Page
+      tab="Media Ratings"
+      heading="Media Ratings"
+      previewImage="/tiers.webp"
+      previewDescription="About the tier system."
+      largePreviewImage
+    >
       <p class="mt-0">
         After grappling with star ratings and 10-point scales for decades, I
         found that I only have 7 conceptual buckets for rating media. This

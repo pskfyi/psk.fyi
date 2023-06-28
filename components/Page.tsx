@@ -7,6 +7,10 @@ import { asComponent as Component } from "../utils/asComponent.tsx";
 
 export type PageProps = {
   tab?: string | JSX.Element | (() => JSX.Element);
+  previewTitle?: string;
+  previewDescription?: string;
+  previewImage?: string;
+  largePreviewImage?: boolean;
   /** Override the builtin Skewer header with custom JSX. */
   header?: ComponentChildren;
   /** When using the default Skewer header, provide the text. */
@@ -17,7 +21,17 @@ export type PageProps = {
 };
 
 export default function Page(
-  { tab, header, heading: Heading, children, tight }: PageProps,
+  {
+    tab,
+    header,
+    heading: Heading,
+    children,
+    tight,
+    previewTitle,
+    previewDescription,
+    previewImage = "/pk.png",
+    largePreviewImage,
+  }: PageProps,
 ) {
   if (typeof tab !== "string") tab = "psk.fyi";
   Heading ??= tab;
@@ -27,6 +41,21 @@ export default function Page(
       <Head>
         <title>{tab}</title>
         <meta name="theme-color" content={COLORS.torch.soot} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://psk.fyi" />
+        <meta property="og:site_name" content="psk.fyi" />
+        <meta property="og:title" content={previewTitle ?? tab} />
+        <meta
+          property="og:image"
+          itemProp="image primaryImageOfPage"
+          content={previewImage}
+        />
+        {largePreviewImage && (
+          <meta name="twitter:card" content="summary_large_image" />
+        )}
+        {previewDescription && (
+          <meta property="og:description" content={previewDescription} />
+        )}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -44,13 +73,11 @@ export default function Page(
       </Head>
 
       <main class={`content ${tight ? "" : "pb-16"}`}>
-        {header
-          ? header
-          : (
-            <Skewer as="h1">
-              {typeof Heading === "function" ? <Heading /> : Heading}
-            </Skewer>
-          )}
+        {header ? header : (
+          <Skewer as="h1">
+            {typeof Heading === "function" ? <Heading /> : Heading}
+          </Skewer>
+        )}
         {children}
       </main>
 

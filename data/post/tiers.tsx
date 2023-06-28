@@ -425,6 +425,7 @@ export default post(import.meta, {
       </text>
     </svg>
   ),
+  previewImage: "/tiers.webp",
   tags: ["tiers", "design", "data", "media", "time"],
   teaser: <>How I learned to stop worrying and love the tier&nbsp;list.</>,
   content: <Content />,

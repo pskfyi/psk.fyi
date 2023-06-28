@@ -30,8 +30,16 @@ export default function TelevisionSeasonReview(
 
   const { released, reviewed, content, img, rating, tags } = season;
 
+  const previewImage = "src" in img ? img.src : undefined;
+
   return (
-    <Page tab={tab} heading={show.name}>
+    <Page
+      tab={tab}
+      heading={show.name}
+      previewImage={previewImage}
+      largePreviewImage
+      previewDescription="A television review by Patrick Sean Keenan."
+    >
       <SeasonNav show={show} season={params.seasonSlug} />
       <Pic.Dynamic img={img} class="mx(6 sm:auto)" />
       <TagBlock tags={tags} class="mt-4 mb-2" />
