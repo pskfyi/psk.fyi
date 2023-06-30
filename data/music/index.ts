@@ -4,7 +4,9 @@
 
 import { MusicMediaService } from "../music.ts"
 import $0 from "./built-to-spill.tsx";
+import $1 from "./haim.tsx";
 
 export const ARTISTS = new MusicMediaService({
-  "built-to-spill": $0
+  "built-to-spill": $0,
+  "haim": $1
 })

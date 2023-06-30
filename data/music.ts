@@ -44,7 +44,9 @@ export function musicArtist(meta: ImportMeta, data: ArtistData): MusicArtist {
 
   for (const { name, tab, img: pic, ...release } of _releases) {
     const title = typeof name === "string" ? name : tab!;
-    const slug = title.toLowerCase().replace(/ /g, "-");
+    const slug = title.toLowerCase()
+      .replaceAll(".", "")
+      .replace(/ /g, "-");
     const path = `/music/${artist.slug}/${slug}`;
 
     const img = pic === undefined
