@@ -6,10 +6,7 @@ import { Color } from "./colors.ts";
 
 export type MediaImgDef =
   | string
-  | (
-    & Omit<PicProps, "src">
-    & { badgeBorder?: Color; src?: string }
-  )
+  | (Omit<PicProps, "src"> & { badgeBorder?: Color; src?: string })
   | (() => JSX.Element);
 
 export type MediaImg = PicProps & { badgeBorder?: Color };
