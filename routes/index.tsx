@@ -11,10 +11,10 @@ import tiers from "../data/post/tiers.tsx";
 import allInOnDeno from "../data/post/all-in-on-deno.tsx";
 import vampireSurvivors from "../data/game/vampire-survivors.tsx";
 import lazarusProject from "../data/tv/lazarus-project.tsx";
-import lastKingdom from "../data/tv/last-kingdom.tsx";
 import effectiveTypescript from "../data/book/effective-typescript.tsx";
 import theDayAfter from "../data/film/the-day-after.tsx";
 import haim from "../data/music/haim.tsx";
+import oneCutOfTheDead from "../data/film/one-cut-of-the-dead.tsx";
 
 function Header() {
   return (
@@ -94,13 +94,13 @@ export default function Home() {
       </h2>
 
       <div className="mt-2 gap-2 grid(& cols-3)">
+        <ReviewTile.Film {...oneCutOfTheDead} />
+        <ReviewTile.Game {...vampireSurvivors} />
         <ReviewTile.Film {...theDayAfter} />
+        <ReviewTile.Television {...lazarusProject} S="s1" />
         <ReviewTile.Music
           {...haim.releases["women-in-music-pt-iii"] as Album.Reviewed}
         />
-        <ReviewTile.Game {...vampireSurvivors} />
-        <ReviewTile.Television {...lazarusProject} S="s1" />
-        <ReviewTile.Television {...lastKingdom} S="s2" />
         <ReviewTile.Book {...effectiveTypescript} />
       </div>
     </Page>
