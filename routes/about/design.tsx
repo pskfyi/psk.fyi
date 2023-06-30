@@ -51,6 +51,16 @@ export default function DesignSystem() {
         I hold with those who favor fire
       </p>
 
+      <hr />
+
+      <div class="flex gap-2 justify-center text-lg">
+        <a href="#color">Color</a>
+        <span class="opacity-50">|</span> <a href="#typography">Typography</a>
+        {" "}
+        <span class="opacity-50">|</span> <a href="#elements">Elements</a>{" "}
+        <span class="opacity-50">|</span> <a href="#components">Components</a>
+      </div>
+
       <h2 id="color">Color</h2>
 
       <p>
@@ -150,6 +160,8 @@ export default function DesignSystem() {
         the base font size is increased to 1.125rem (18px) for leisurely
         reading.
       </p>
+
+      <h2 id="elements">Elements</h2>
 
       <hr />
 

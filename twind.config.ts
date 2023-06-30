@@ -46,6 +46,7 @@ export default {
     ${preflight}
 
     html {
+      scroll-behavior: smooth;
       ${apply`bg-torch-soot text(torch-light sm:lg) leading-normal 
               font-[${fontFamily}]`}
     }
