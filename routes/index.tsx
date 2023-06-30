@@ -18,7 +18,7 @@ import haim from "../data/music/haim.tsx";
 
 function Header() {
   return (
-    <Skewer hero top={{ xs: 53, sm: 55 }}>
+    <Skewer hero top={{ xs: 50, sm: 55 }} class="pb(2 sm:2)">
       psk<span class="text-sm">{" "}</span>.fyi
     </Skewer>
   );
