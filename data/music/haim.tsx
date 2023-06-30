@@ -3,6 +3,18 @@ import { musicArtist } from "../music.ts";
 
 export default musicArtist(import.meta, {
   name: "Haim",
+  img: {
+    desc: (
+      <>
+        An edit of{" "}
+        <Link
+          to="http://www.sunqueendesigns.com/haim-greek-theater"
+          text="this poster"
+        />{" "}
+        by Charlene Kaye.
+      </>
+    ),
+  },
   releases: [
     {
       type: "album",
