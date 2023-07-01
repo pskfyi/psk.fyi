@@ -4,13 +4,15 @@
 
 import { MediaService } from "../media.ts";
 import $0 from "./midsommar.tsx";
-import $1 from "./cargo.tsx";
-import $2 from "./martyrs.tsx";
-import $3 from "./world-war-z.tsx";
+import $1 from "./mother.tsx";
+import $2 from "./cargo.tsx";
+import $3 from "./martyrs.tsx";
+import $4 from "./world-war-z.tsx";
 
 export const FILMS = new MediaService({
   "midsommar": $0,
-  "cargo": $1,
-  "martyrs": $2,
-  "world-war-z": $3
+  "mother": $1,
+  "cargo": $2,
+  "martyrs": $3,
+  "world-war-z": $4
 });
