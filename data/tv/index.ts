@@ -4,9 +4,11 @@
 
 import { TelevisionMediaService } from "../tv.ts"
 import $0 from "./lazarus-project.tsx";
-import $1 from "./last-kingdom.tsx";
+import $1 from "./witcher.tsx";
+import $2 from "./last-kingdom.tsx";
 
 export const TV = new TelevisionMediaService({
   "lazarus-project": $0,
-  "last-kingdom": $1
+  "witcher": $1,
+  "last-kingdom": $2
 })
