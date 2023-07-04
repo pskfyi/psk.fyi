@@ -1,31 +1,79 @@
+import type { ComponentChildren } from "preact";
 import { Link } from "./Link.tsx";
+
+function PK() {
+  return (
+    <Link
+      to="/"
+      class={`ratio-square w-full rounded-full center
+        bg-torch-soot font-display no-underline
+        text-torch(flame hover:plasma visited:(flame hover:plasma))`}
+      style="container-type: size"
+    >
+      <span class="text-[65cqw]">PK</span>
+    </Link>
+  );
+}
+
+function FooterLink({
+  to,
+  children,
+  center = false,
+  halo = false,
+  large = false,
+  underline = false,
+}: {
+  to: string;
+  children: ComponentChildren;
+  center?: boolean;
+  halo?: boolean;
+  large?: boolean;
+  underline?: boolean;
+}) {
+  const color = halo ? "halo" : "glow";
+  const className = `block leading-none self-center
+    ${center ? "text-center" : ""}
+    ${underline ? "" : "no-underline"} 
+    ${large ? "text-lg sm:text-xl" : "sm:text-lg"}
+    text-torch(${color} hover:flame visited:(${color} hover:flame))`;
+
+  return <Link to={to} class={className}>{children}</Link>;
+}
 
 export function Footer() {
   return (
-    <footer class="py-3 bg-torch-smoke">
-      <nav class="content items-center flex pl(3 sm:0)">
-        <Link
-          to="/"
-          class={`inline-flex w-20 h-20 rounded-full center
-            bg-torch-soot flex-shrink-0 font-display no-underline
-            text(5xl torch(flame hover:plasma visited:(flame hover:plasma)))`}
-          text="PK"
-        />
+    <footer class="bg-torch-smoke pb-10">
+      <nav class="content pt-4">
+        <div class="sm:w-[fit-content] pl(sm:4 md:0)
+          grid(& cols-3)">
+          <div class="relative gap-y-2 grid(& cols-1) pr(4 sm:0)">
+            <div class="row-span-4 sm:w-32 sm:self-center sm:justify-self-center">
+              <PK />
+            </div>
+            <FooterLink large halo center to="/about">About</FooterLink>
+            <FooterLink large halo center to="/contact">Contact</FooterLink>
 
-        <div class="pl-4 sm:flex-grow
-          sm:flex items-center justify-between
-        ">
-          <div className="flex text-xl relative top(2 sm:0) gap(x-4 y-2)">
-            <a href="/about" class="no-underline">About</a>
-            <a href="/posts" class="no-underline">Posts</a>
-            <a href="/reviews" class="no-underline">Reviews</a>
+            <div class="absolute right([-1px] sm:-4) top-0 bottom-0 row-span-6 
+              border-r(2 torch-warmth) my(2 sm:4)" />
           </div>
 
-          <p class="sm:pr-1 flex-grow
-            text(torch-ash left sm:right)
-          ">
-            ©2023 Patrick Sean Keenan
-          </p>
+          <div class="relative gap-y-2 grid(& cols-1) pl(4 sm:12)">
+            <FooterLink large halo underline to="/posts">Posts</FooterLink>
+            <FooterLink to="/tag/software">#software</FooterLink>
+            <FooterLink to="/tag/design">#design</FooterLink>
+            <FooterLink to="/tag/philosophy">#philosophy</FooterLink>
+            <FooterLink to="/tag/language">#language</FooterLink>
+            <FooterLink to="/tag/arcana">#arcana</FooterLink>
+          </div>
+
+          <div class="relative gap-y-2 grid(& cols-1) pl(4 sm:10)">
+            <FooterLink large halo underline to="/reviews">Reviews</FooterLink>
+            <FooterLink to="/books">#book</FooterLink>
+            <FooterLink to="/films">#film</FooterLink>
+            <FooterLink to="/tv">#tv</FooterLink>
+            <FooterLink to="/games">#game</FooterLink>
+            <FooterLink to="/music">#music</FooterLink>
+          </div>
         </div>
       </nav>
     </footer>
