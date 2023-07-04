@@ -10,6 +10,7 @@ export default film(import.meta, {
     desc: <em>"Action!!!"</em>,
   },
   tags: [
+    "Japanese",
     "comedy",
     "zombie",
     "meta",
