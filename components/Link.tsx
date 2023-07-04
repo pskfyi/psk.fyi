@@ -41,6 +41,11 @@ Link.YT = function YouTubeLink(props: LinkProps) {
 };
 
 Link.Tag = function TagLink(props: LinkProps) {
+  props.children ??= props.to.startsWith("@")
+    ? props.to.slice(1)
+    : `#${props.to}`;
+  props.children ??= `#${props.to}`;
+
   return <Link {...props} to={`/tag/${props.to}`} />;
 };
 
