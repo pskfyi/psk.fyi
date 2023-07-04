@@ -244,7 +244,7 @@ export default post(import.meta, {
     src: "/post/deno.svg",
   },
   previewImage: "/post/deno.webp",
-  tags: ["deno", "typescript", "dx"],
+  tags: ["software", "typescript", "dx", "deno"],
   teaser: <Teaser />,
   content: <Content />,
 });

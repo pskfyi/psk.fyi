@@ -348,7 +348,7 @@ export default post(import.meta, {
     desc: <Caption />,
     color: "smoke",
   },
-  tags: ["media", "data", "design", "language"],
+  tags: ["data", "design", "language", "media"],
   teaser: <>Exploring the ways critics convey their impressions.</>,
   content: <Content />,
 });
