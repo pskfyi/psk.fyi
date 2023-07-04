@@ -94,7 +94,7 @@ export default {
       ${apply`font-bold mt-8 mb-4 text(lg sm:xl)`}
     }
     a {
-      ${apply`underline transition-colors
+      ${apply`underline transition-colors duration-500
               text-torch(halo hover:flame
                 visited:(glow hover:halo))`}
     }
