@@ -9,6 +9,13 @@ import theHardProblems from "../data/post/the-hard-problems.tsx";
 import vampireSurvivors from "../data/game/vampire-survivors.tsx";
 import { ReviewTile } from "../components/ReviewTile.tsx";
 import lazarusProject from "../data/tv/lazarus-project.tsx";
+import oneCutOfTheDead from "../data/film/one-cut-of-the-dead.tsx";
+import druk from "../data/film/druk.tsx";
+import { Album } from "../data/music.ts";
+import haim from "../data/music/haim.tsx";
+import effectiveTypescript from "../data/book/effective-typescript.tsx";
+import allInOnDeno from "../data/post/all-in-on-deno.tsx";
+import tiers from "../data/post/tiers.tsx";
 
 const preview: SocialMediaPreview = {
   title: "psk.fyi",
@@ -88,8 +95,8 @@ export default () => (
 
     <PostTile.Set
       posts={[
-        aboutThisSite,
-        theHardProblems,
+        allInOnDeno,
+        tiers,
       ]}
     />
 
@@ -105,8 +112,14 @@ export default () => (
     </h2>
 
     <div className="mt-2 gap-2 grid(& cols-3)">
+      <ReviewTile.Film {...oneCutOfTheDead} />
       <ReviewTile.Game {...vampireSurvivors} />
+      <ReviewTile.Film {...druk} />
       <ReviewTile.Television {...lazarusProject} S="s1" />
+      <ReviewTile.Music
+        {...haim.releases["women-in-music-pt-iii"] as Album.Reviewed}
+      />
+      <ReviewTile.Book {...effectiveTypescript} />
     </div>
   </Page>
 );

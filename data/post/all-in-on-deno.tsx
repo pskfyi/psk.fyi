@@ -242,7 +242,7 @@ export default post(import.meta, {
   preview: {
     image: "/post/deno.webp",
   },
-  tags: ["software", "typescript", "dx", "deno"],
+  tags: ["tech", "typescript", "dx", "deno"],
   teaser: "Why I decline to write Node.js for my personal projects.",
   content: <Content />,
 });
