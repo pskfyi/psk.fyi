@@ -1,7 +1,7 @@
 #!/usr/bin/env -S deno run -A --watch=static/,routes/
 
 import dev from "$fresh/dev.ts";
-import { basename } from "https://deno.land/std@0.188.0/path/mod.ts";
+import { basename } from "$std/path/mod.ts";
 import { DATA_DIR } from "./constants.ts";
 import { glob } from "https://deno.land/x/handy@0.4.0/fs/glob.ts";
 import { MediaType } from "./data/media.ts";

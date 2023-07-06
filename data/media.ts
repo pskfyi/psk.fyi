@@ -1,6 +1,6 @@
 import type { JSX } from "preact";
 import type { Pic } from "../components/Pic.tsx";
-import { basename } from "https://deno.land/std@0.187.0/path/mod.ts";
+import { basename } from "$std/path/mod.ts";
 import { WELL_KNOWN_TAGS } from "./tags.ts";
 import { Color } from "./colors.ts";
 import { SocialMediaPreview } from "../types.ts";
