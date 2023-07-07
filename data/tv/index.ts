@@ -5,7 +5,7 @@
 import $0 from "./last-kingdom.tsx";
 import $1 from "./lazarus-project.tsx";
 import $2 from "./witcher.tsx";
-import { TelevisionMediaService } from "/data/tv.ts";
+import { TelevisionMediaService } from "/lib/tv.ts";
 
 export const TV = new TelevisionMediaService({
   "last-kingdom": $0,

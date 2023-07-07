@@ -1,5 +1,5 @@
 import { Link } from "/components/Link.tsx";
-import { televisionShow } from "/data/tv.ts";
+import { televisionShow } from "/lib/tv.ts";
 
 export default televisionShow(import.meta, {
   name: "The Last Kingdom",
