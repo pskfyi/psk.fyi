@@ -5,7 +5,7 @@ import Page from "../../components/Page.tsx";
 import { Pic } from "../../components/Pic.tsx";
 import { Tag } from "../../components/Tag.tsx";
 import { POSTS } from "../../data/post/index.ts";
-import { full } from "../../utils/date.ts";
+import { full } from "../../lib/date.ts";
 
 export function previewImage(media: Structured<MediaItem>) {
   return media.preview?.image ||

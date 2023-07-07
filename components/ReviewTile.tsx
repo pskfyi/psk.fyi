@@ -10,7 +10,7 @@ import type { TelevisionSeason, TelevisionShow } from "../data/tv.ts";
 import midsommar from "../data/film/midsommar.tsx";
 import vampireSurvivors from "../data/game/vampire-survivors.tsx";
 import lazarusProject from "../data/tv/lazarus-project.tsx";
-import { year } from "../utils/date.ts";
+import { year } from "../lib/date.ts";
 import { Char } from "./Char.tsx";
 import { Docs } from "./docs/Docs.tsx";
 

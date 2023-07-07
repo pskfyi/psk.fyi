@@ -1,7 +1,7 @@
 import type { JSX } from "preact";
 import type { Pic } from "../components/Pic.tsx";
+import type { Day } from "../lib/date.ts";
 import type { SocialMediaPreview } from "../types.ts";
-import type { Day } from "../utils/date.ts";
 import type { Color } from "./colors.ts";
 import type { Tier } from "./tiers.ts";
 

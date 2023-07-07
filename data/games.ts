@@ -1,4 +1,4 @@
-import type { Day } from "../utils/date.ts";
+import type { Day } from "../lib/date.ts";
 
 import { MediaItem, mediaItem, Review, Structured } from "./media.ts";
 

@@ -1,5 +1,5 @@
 import type { JSX } from "preact";
-import type { Day } from "../utils/date.ts";
+import type { Day } from "../lib/date.ts";
 import { type MediaItem, mediaItem, type Structured } from "./media.ts";
 
 type PostData = MediaItem & {
