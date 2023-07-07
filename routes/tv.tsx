@@ -1,6 +1,6 @@
-import Page from "../components/Page.tsx";
-import { ReviewTile } from "../components/ReviewTile.tsx";
-import { TV } from "../data/tv/index.ts";
+import Page from "/components/Page.tsx";
+import { ReviewTile } from "/components/ReviewTile.tsx";
+import { TV } from "/data/tv/index.ts";
 
 export default () => (
   <Page tab="Television">

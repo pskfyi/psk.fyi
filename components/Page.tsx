@@ -1,10 +1,10 @@
 import type { ComponentChildren, JSX } from "preact";
-import type { SocialMediaPreview } from "../lib/social.ts";
+import type { SocialMediaPreview } from "/lib/social.ts";
 
 import { Head } from "$fresh/runtime.ts";
-import { COLORS } from "../lib/colors.ts";
-import { Footer } from "./Footer.tsx";
-import { Skewer } from "./Skewer.tsx";
+import { Footer } from "/components/Footer.tsx";
+import { Skewer } from "/components/Skewer.tsx";
+import { COLORS } from "/lib/colors.ts";
 
 export type PageProps = {
   /** The text that should appear on the browser tab.

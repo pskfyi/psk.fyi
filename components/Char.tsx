@@ -1,14 +1,14 @@
 import type { JSX } from "preact";
 
-import { PaletteName, PALETTES } from "../lib/colors.ts";
+import { Docs } from "/components/docs/Docs.tsx";
+import { PaletteName, PALETTES } from "/lib/colors.ts";
 import {
   Tier,
   TIER_COLORS,
   UNRATED,
   UNRATED_COLORS,
   UnratedIndicator,
-} from "../lib/tiers.ts";
-import { Docs } from "./docs/Docs.tsx";
+} from "/lib/tiers.ts";
 
 export declare namespace Char {
   export type TileProps = {

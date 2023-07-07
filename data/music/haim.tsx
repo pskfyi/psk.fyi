@@ -1,5 +1,5 @@
-import { Link } from "../../components/Link.tsx";
-import { musicArtist } from "../music.ts";
+import { Link } from "/components/Link.tsx";
+import { musicArtist } from "/data/music.ts";
 
 export default musicArtist(import.meta, {
   name: "Haim",

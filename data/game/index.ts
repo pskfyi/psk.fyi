@@ -2,9 +2,9 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated when running `dev.ts`.
 
-import { MediaService } from "../../lib/media.ts";
 import $0 from "./vampire-survivors.tsx";
+import { MediaService } from "/lib/media.ts";
 
 export const GAMES = new MediaService({
-  "vampire-survivors": $0
+  "vampire-survivors": $0,
 });

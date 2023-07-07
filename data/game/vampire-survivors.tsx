@@ -1,5 +1,5 @@
-import { Link } from "../../components/Link.tsx";
-import { game } from "../games.ts";
+import { Link } from "/components/Link.tsx";
+import { game } from "/data/games.ts";
 
 export default game(import.meta, {
   name: "Vampire Survivors",

@@ -1,9 +1,9 @@
 import type { JSX } from "preact";
-import type { Pic } from "../components/Pic.tsx";
 import type { Color } from "./colors.ts";
 import type { Day } from "./date.ts";
 import type { SocialMediaPreview } from "./social.ts";
 import type { Tier } from "./tiers.ts";
+import type { Pic } from "/components/Pic.tsx";
 
 import { basename } from "$std/path/mod.ts";
 import { WELL_KNOWN_TAGS } from "./tags.ts";

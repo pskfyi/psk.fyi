@@ -2,11 +2,11 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated when running `dev.ts`.
 
-import { MediaService } from "../../lib/media.ts";
 import $0 from "./effective-typescript.tsx";
 import $1 from "./how-to-read-a-book.tsx";
+import { MediaService } from "/lib/media.ts";
 
 export const BOOKS = new MediaService({
   "effective-typescript": $0,
-  "how-to-read-a-book": $1
+  "how-to-read-a-book": $1,
 });

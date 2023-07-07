@@ -1,6 +1,6 @@
-import { Link } from "../../components/Link.tsx";
-import { Pic } from "../../components/Pic.tsx";
-import { post } from "../posts.ts";
+import { Link } from "/components/Link.tsx";
+import { Pic } from "/components/Pic.tsx";
+import { post } from "/data/posts.ts";
 
 function Caption() {
   return (

@@ -1,5 +1,5 @@
-import { Tier } from "../../components/Tier.tsx";
-import { film } from "../films.ts";
+import { Tier } from "/components/Tier.tsx";
+import { film } from "/data/films.ts";
 
 export default film(import.meta, {
   name: "Cargo",

@@ -1,6 +1,6 @@
-import Page from "../components/Page.tsx";
-import { PostTile } from "../components/PostTile.tsx";
-import { POSTS } from "../data/post/index.ts";
+import Page from "/components/Page.tsx";
+import { PostTile } from "/components/PostTile.tsx";
+import { POSTS } from "/data/post/index.ts";
 
 export default () => (
   <Page tab="Posts">

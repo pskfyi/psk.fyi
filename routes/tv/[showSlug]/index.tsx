@@ -1,9 +1,9 @@
-import Page from "../../../components/Page.tsx";
-import { TelevisionShow } from "../../../data/tv.ts";
-import { Char } from "../../../components/Char.tsx";
-import { Tag } from "../../../components/Tag.tsx";
-import { Pic } from "../../../components/Pic.tsx";
-import { TV } from "../../../data/tv/index.ts";
+import { Char } from "/components/Char.tsx";
+import Page from "/components/Page.tsx";
+import { Pic } from "/components/Pic.tsx";
+import { Tag } from "/components/Tag.tsx";
+import { TelevisionShow } from "/data/tv.ts";
+import { TV } from "/data/tv/index.ts";
 
 export function SeasonNav(
   { show, season }: { show: TelevisionShow; season?: string },

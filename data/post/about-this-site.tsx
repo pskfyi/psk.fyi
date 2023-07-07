@@ -1,7 +1,7 @@
 import type { JSX } from "preact";
 
-import { Link } from "../../components/Link.tsx";
-import { post } from "../posts.ts";
+import { Link } from "/components/Link.tsx";
+import { post } from "/data/posts.ts";
 
 function TechTile({
   url,

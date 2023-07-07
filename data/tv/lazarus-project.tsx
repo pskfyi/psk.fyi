@@ -1,4 +1,4 @@
-import { televisionShow } from "../tv.ts";
+import { televisionShow } from "/data/tv.ts";
 
 export default televisionShow(import.meta, {
   name: "The Lazarus Project",

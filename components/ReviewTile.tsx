@@ -1,18 +1,18 @@
 import type { JSX } from "preact";
-import type { Book } from "../data/books.ts";
-import type { Film } from "../data/films.ts";
-import type { Game } from "../data/games.ts";
-import type { Album } from "../data/music.ts";
-import type { TelevisionSeason, TelevisionShow } from "../data/tv.ts";
-import type { MediaImg } from "../lib/media.ts";
-import type { Tier } from "../lib/tiers.ts";
+import type { Book } from "/data/books.ts";
+import type { Film } from "/data/films.ts";
+import type { Game } from "/data/games.ts";
+import type { Album } from "/data/music.ts";
+import type { TelevisionSeason, TelevisionShow } from "/data/tv.ts";
+import type { MediaImg } from "/lib/media.ts";
+import type { Tier } from "/lib/tiers.ts";
 
-import midsommar from "../data/film/midsommar.tsx";
-import vampireSurvivors from "../data/game/vampire-survivors.tsx";
-import lazarusProject from "../data/tv/lazarus-project.tsx";
-import { year } from "../lib/date.ts";
-import { Char } from "./Char.tsx";
-import { Docs } from "./docs/Docs.tsx";
+import { Char } from "/components/Char.tsx";
+import { Docs } from "/components/docs/Docs.tsx";
+import midsommar from "/data/film/midsommar.tsx";
+import vampireSurvivors from "/data/game/vampire-survivors.tsx";
+import lazarusProject from "/data/tv/lazarus-project.tsx";
+import { year } from "/lib/date.ts";
 
 function asComponent(
   stringLike: string | JSX.Element | (() => JSX.Element),

@@ -2,31 +2,31 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated when running `dev.ts`.
 
-import { MediaService } from "../../lib/media.ts";
-import $0 from "./midsommar.tsx";
-import $1 from "./mother.tsx";
-import $2 from "./the-wonder.tsx";
-import $3 from "./one-cut-of-the-dead.tsx";
-import $4 from "./the-day-after.tsx";
-import $5 from "./cargo.tsx";
-import $6 from "./donnie-brasco.tsx";
-import $7 from "./malevolent.tsx";
-import $8 from "./druk.tsx";
-import $9 from "./martyrs.tsx";
-import $10 from "./outlaw-king.tsx";
+import $0 from "./cargo.tsx";
+import $1 from "./donnie-brasco.tsx";
+import $2 from "./druk.tsx";
+import $3 from "./malevolent.tsx";
+import $4 from "./martyrs.tsx";
+import $5 from "./midsommar.tsx";
+import $6 from "./mother.tsx";
+import $7 from "./one-cut-of-the-dead.tsx";
+import $8 from "./outlaw-king.tsx";
+import $9 from "./the-day-after.tsx";
+import $10 from "./the-wonder.tsx";
 import $11 from "./world-war-z.tsx";
+import { MediaService } from "/lib/media.ts";
 
 export const FILMS = new MediaService({
-  "midsommar": $0,
-  "mother": $1,
-  "the-wonder": $2,
-  "one-cut-of-the-dead": $3,
-  "the-day-after": $4,
-  "cargo": $5,
-  "donnie-brasco": $6,
-  "malevolent": $7,
-  "druk": $8,
-  "martyrs": $9,
-  "outlaw-king": $10,
-  "world-war-z": $11
+  "cargo": $0,
+  "donnie-brasco": $1,
+  "druk": $2,
+  "malevolent": $3,
+  "martyrs": $4,
+  "midsommar": $5,
+  "mother": $6,
+  "one-cut-of-the-dead": $7,
+  "outlaw-king": $8,
+  "the-day-after": $9,
+  "the-wonder": $10,
+  "world-war-z": $11,
 });

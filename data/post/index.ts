@@ -2,17 +2,17 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated when running `dev.ts`.
 
-import { MediaService } from "../../lib/media.ts";
-import $0 from "./ratings-systems.tsx";
-import $1 from "./about-this-site.tsx";
-import $2 from "./all-in-on-deno.tsx";
-import $3 from "./tiers.tsx";
-import $4 from "./the-hard-problems.tsx";
+import $0 from "./about-this-site.tsx";
+import $1 from "./all-in-on-deno.tsx";
+import $2 from "./ratings-systems.tsx";
+import $3 from "./the-hard-problems.tsx";
+import $4 from "./tiers.tsx";
+import { MediaService } from "/lib/media.ts";
 
 export const POSTS = new MediaService({
-  "ratings-systems": $0,
-  "about-this-site": $1,
-  "all-in-on-deno": $2,
-  "tiers": $3,
-  "the-hard-problems": $4
+  "about-this-site": $0,
+  "all-in-on-deno": $1,
+  "ratings-systems": $2,
+  "the-hard-problems": $3,
+  "tiers": $4,
 });

@@ -1,6 +1,10 @@
-import type { Day } from "../lib/date.ts";
-
-import { MediaItem, mediaItem, Review, Structured } from "../lib/media.ts";
+import type { Day } from "/lib/date.ts";
+import {
+  type MediaItem,
+  mediaItem,
+  type Review,
+  type Structured,
+} from "/lib/media.ts";
 
 type GameData = MediaItem & Review & { released: Day };
 

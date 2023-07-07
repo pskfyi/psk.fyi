@@ -1,10 +1,10 @@
-import { Char } from "../../../components/Char.tsx";
-import { DateLine } from "../../../components/DateLine.tsx";
-import { Link } from "../../../components/Link.tsx";
-import Page from "../../../components/Page.tsx";
-import { Pic } from "../../../components/Pic.tsx";
-import { Tag } from "../../../components/Tag.tsx";
-import { ARTISTS } from "../../../data/music/index.ts";
+import { Char } from "/components/Char.tsx";
+import { DateLine } from "/components/DateLine.tsx";
+import { Link } from "/components/Link.tsx";
+import Page from "/components/Page.tsx";
+import { Pic } from "/components/Pic.tsx";
+import { Tag } from "/components/Tag.tsx";
+import { ARTISTS } from "/data/music/index.ts";
 
 export default (
   { params }: { params: { artistSlug: string; releaseSlug: string } },

@@ -1,5 +1,5 @@
-import { Link } from "../../components/Link.tsx";
-import { post } from "../posts.ts";
+import { Link } from "/components/Link.tsx";
+import { post } from "/data/posts.ts";
 
 function Prompt() {
   return (

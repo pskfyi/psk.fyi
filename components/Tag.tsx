@@ -1,5 +1,5 @@
-import { formatTag as format, pathForTag } from "../lib/tags.ts";
-import { Link } from "./Link.tsx";
+import { Link } from "/components/Link.tsx";
+import { formatTag as format, pathForTag } from "/lib/tags.ts";
 
 export declare namespace Tag {
   export type Props = { for: string; class?: string };

@@ -1,4 +1,4 @@
-import { type Day, month } from "../lib/date.ts";
+import { type Day, month } from "/lib/date.ts";
 
 function Divider() {
   return (

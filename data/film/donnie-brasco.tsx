@@ -1,4 +1,4 @@
-import { film } from "../films.ts";
+import { film } from "/data/films.ts";
 
 export default film(import.meta, {
   name: "Donnie Brasco",

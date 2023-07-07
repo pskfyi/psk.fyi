@@ -2,11 +2,11 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated when running `dev.ts`.
 
-import { MusicMediaService } from "../music.ts";
 import $0 from "./built-to-spill.tsx";
 import $1 from "./haim.tsx";
+import { MusicMediaService } from "/data/music.ts";
 
 export const ARTISTS = new MusicMediaService({
   "built-to-spill": $0,
-  "haim": $1
+  "haim": $1,
 });

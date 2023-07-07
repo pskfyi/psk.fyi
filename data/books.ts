@@ -1,10 +1,10 @@
-import type { Day } from "../lib/date.ts";
+import type { Day } from "/lib/date.ts";
 import {
   type MediaItem,
   mediaItem,
   type Review,
   type Structured,
-} from "../lib/media.ts";
+} from "/lib/media.ts";
 
 type BookData = MediaItem & Review & {
   author: string;

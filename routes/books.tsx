@@ -1,6 +1,6 @@
-import Page from "../components/Page.tsx";
-import { ReviewTile } from "../components/ReviewTile.tsx";
-import { BOOKS } from "../data/book/index.ts";
+import Page from "/components/Page.tsx";
+import { ReviewTile } from "/components/ReviewTile.tsx";
+import { BOOKS } from "/data/book/index.ts";
 
 export default () => (
   <Page tab="Books">
