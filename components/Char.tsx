@@ -1,6 +1,5 @@
 import type { JSX } from "preact";
 
-import { PaletteName, PALETTES } from "../data/colors.ts";
 import {
   Tier,
   TIER_COLORS,
@@ -8,6 +7,7 @@ import {
   UNRATED_COLORS,
   UnratedIndicator,
 } from "../data/tiers.ts";
+import { PaletteName, PALETTES } from "../lib/colors.ts";
 import { Docs } from "./docs/Docs.tsx";
 
 export declare namespace Char {

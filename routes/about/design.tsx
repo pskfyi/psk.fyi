@@ -8,7 +8,7 @@ import { PostTileSetDocs } from "../../components/PostTile.tsx";
 import { ReviewTileSetDocs } from "../../components/ReviewTile.tsx";
 import { SkewerDocs } from "../../components/Skewer.tsx";
 import { Swatch } from "../../components/docs/Swatch.tsx";
-import { COLORS, isDark } from "../../data/colors.ts";
+import { COLORS, isDark } from "../../lib/colors.ts";
 
 const preview: SocialMediaPreview = {
   description:

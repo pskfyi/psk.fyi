@@ -1,4 +1,4 @@
-import { COLORS, isDark } from "../../data/colors.ts";
+import { COLORS, isDark } from "../../lib/colors.ts";
 
 const NON_BREAKING_HYPHEN = "\u2011";
 
