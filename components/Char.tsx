@@ -8,7 +8,7 @@ import {
   type UnratedIndicator,
 } from "/lib/tiers.ts";
 
-import { Docs } from "/components/docs/Docs.tsx";
+import { Docs } from "/components/Docs.tsx";
 
 declare namespace Char {
   export type TileProps = {

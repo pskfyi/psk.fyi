@@ -8,7 +8,7 @@ import type { Tier } from "/lib/tiers.ts";
 import type { TelevisionSeason, TelevisionShow } from "/lib/tv.ts";
 
 import Char from "/components/Char.tsx";
-import { Docs } from "/components/docs/Docs.tsx";
+import { Docs } from "/components/Docs.tsx";
 import midsommar from "/data/film/midsommar.tsx";
 import vampireSurvivors from "/data/game/vampire-survivors.tsx";
 import lazarusProject from "/data/tv/lazarus-project.tsx";
