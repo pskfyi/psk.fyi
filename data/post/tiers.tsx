@@ -1,4 +1,4 @@
-import { Head } from "https://deno.land/x/fresh@1.1.6/src/runtime/head.ts";
+import { Head } from "$fresh/runtime.ts";
 import { Link } from "../../components/Link.tsx";
 import { post } from "../posts.ts";
 import { TIERS, UNRATED } from "../tiers.ts";
