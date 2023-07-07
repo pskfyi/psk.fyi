@@ -4,7 +4,7 @@ import {
   mediaItem,
   type Review,
   type Structured,
-} from "./media.ts";
+} from "../lib/media.ts";
 
 type BookData = MediaItem & Review & {
   author: string;

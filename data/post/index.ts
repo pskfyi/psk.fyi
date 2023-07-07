@@ -2,7 +2,7 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated when running `dev.ts`.
 
-import { MediaService } from "../media.ts";
+import { MediaService } from "../../lib/media.ts";
 import $0 from "./ratings-systems.tsx";
 import $1 from "./about-this-site.tsx";
 import $2 from "./all-in-on-deno.tsx";

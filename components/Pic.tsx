@@ -1,6 +1,6 @@
 import type { ComponentChildren, JSX } from "preact";
-import type { MediaImg } from "../data/media.ts";
 import type { DarkColor } from "../lib/colors.ts";
+import type { MediaImg } from "../lib/media.ts";
 
 import { Link } from "./Link.tsx";
 import { Docs } from "./docs/Docs.tsx";

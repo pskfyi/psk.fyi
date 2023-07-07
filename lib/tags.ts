@@ -1,4 +1,4 @@
-import type { MediaType } from "../data/media.ts";
+import type { MediaType } from "../lib/media.ts";
 
 export const WELL_KNOWN_TAGS = {
   post: "Post",

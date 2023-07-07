@@ -1,4 +1,4 @@
-import type { MediaItem, Structured } from "../../data/media.ts";
+import type { MediaItem, Structured } from "../../lib/media.ts";
 
 import { DateLine } from "../../components/DateLine.tsx";
 import Page from "../../components/Page.tsx";
