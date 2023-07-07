@@ -1,6 +1,6 @@
 import type { JSX } from "preact";
 
-import { Docs } from "/components/Docs.tsx";
+import Docs from "/components/Docs.tsx";
 import Link from "/components/Link.tsx";
 import Tag from "/components/Tag.tsx";
 import aboutThisSite from "/data/post/about-this-site.tsx";

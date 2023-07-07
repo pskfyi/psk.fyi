@@ -2,7 +2,7 @@ import type { ComponentChildren, JSX } from "preact";
 import type { DarkColor } from "/lib/colors.ts";
 import type { MediaImg } from "/lib/media.ts";
 
-import { Docs, Swatch } from "/components/Docs.tsx";
+import Docs, { Swatch } from "/components/Docs.tsx";
 import Link from "/components/Link.tsx";
 
 declare namespace Pic {

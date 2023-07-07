@@ -27,7 +27,7 @@ export function Swatch(
   );
 }
 
-export declare namespace Docs {
+declare namespace Docs {
   export type Props<
     P extends Record<string, unknown>,
     E extends HTMLElement,
@@ -44,7 +44,7 @@ export declare namespace Docs {
     };
 }
 
-export function Docs<
+function Docs<
   P extends Record<string, unknown>,
   E extends HTMLElement = HTMLElement,
 >({ component, desc, examples, props, ...rest }: Docs.Props<P, E>) {
@@ -79,3 +79,5 @@ export function Docs<
     </section>
   );
 }
+
+export default Docs;
