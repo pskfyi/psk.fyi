@@ -1,9 +1,9 @@
 import type { JSX } from "preact";
-import type { Game } from "/data/games.ts";
 import type { Album } from "/data/music.ts";
 import type { TelevisionSeason, TelevisionShow } from "/data/tv.ts";
 import type { Book } from "/lib/book.ts";
 import type { Film } from "/lib/film.ts";
+import type { Game } from "/lib/game.ts";
 import type { MediaImg } from "/lib/media.ts";
 import type { Tier } from "/lib/tiers.ts";
 
