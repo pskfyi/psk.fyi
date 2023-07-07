@@ -1,4 +1,4 @@
-import { Link } from "/components/Link.tsx";
+import Link from "/components/Link.tsx";
 import { formatTag as format, pathForTag } from "/lib/tags.ts";
 
 declare namespace Tag {

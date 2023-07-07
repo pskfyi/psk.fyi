@@ -1,4 +1,4 @@
-import { Link } from "/components/Link.tsx";
+import Link from "/components/Link.tsx";
 import { televisionShow } from "/lib/tv.ts";
 
 export default televisionShow(import.meta, {

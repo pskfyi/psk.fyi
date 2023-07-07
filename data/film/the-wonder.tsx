@@ -1,4 +1,4 @@
-import { Link } from "/components/Link.tsx";
+import Link from "/components/Link.tsx";
 import { film } from "/lib/film.ts";
 
 export default film(import.meta, {

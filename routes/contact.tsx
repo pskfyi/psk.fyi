@@ -1,5 +1,5 @@
 import type { ComponentChildren } from "preact";
-import { Link } from "/components/Link.tsx";
+import Link from "/components/Link.tsx";
 import Page from "/components/Page.tsx";
 
 function IconLink(

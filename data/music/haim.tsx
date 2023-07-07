@@ -1,4 +1,4 @@
-import { Link } from "/components/Link.tsx";
+import Link from "/components/Link.tsx";
 import { musicArtist } from "/lib/music.ts";
 
 export default musicArtist(import.meta, {

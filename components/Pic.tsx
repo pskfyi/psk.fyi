@@ -2,7 +2,7 @@ import type { ComponentChildren, JSX } from "preact";
 import type { DarkColor } from "/lib/colors.ts";
 import type { MediaImg } from "/lib/media.ts";
 
-import { Link } from "/components/Link.tsx";
+import Link from "/components/Link.tsx";
 import { Docs } from "/components/docs/Docs.tsx";
 import { Swatch } from "/components/docs/Swatch.tsx";
 

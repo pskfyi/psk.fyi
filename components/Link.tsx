@@ -1,6 +1,6 @@
 import type { JSX } from "preact";
 
-export declare namespace Link {
+declare namespace Link {
   export type Props = Omit<JSX.HTMLAttributes<HTMLAnchorElement>, "href"> & {
     eternal?: boolean;
     /** An alternative to `children` */
@@ -10,7 +10,7 @@ export declare namespace Link {
   };
 }
 
-export function Link({ to, text, children, ...props }: Link.Props) {
+function Link({ to, text, children, ...props }: Link.Props) {
   !to.startsWith("/") && (props.target = "_blank");
   children ??= text ?? to;
 
@@ -56,3 +56,5 @@ Link.Openjourney = () => (
     Openjourney
   </Link>
 );
+
+export default Link;

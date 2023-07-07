@@ -1,4 +1,4 @@
-import { Link } from "/components/Link.tsx";
+import Link from "/components/Link.tsx";
 import { game } from "/lib/game.ts";
 
 export default game(import.meta, {
