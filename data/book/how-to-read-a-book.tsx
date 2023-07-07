@@ -1,3 +1,4 @@
+import type { Day } from "../../utils/date.ts";
 import { book } from "../books.ts";
 
 export default book(import.meta, {
@@ -5,7 +6,7 @@ export default book(import.meta, {
   author: "Mortimer J. Adler",
   authorUrl: "https://en.wikipedia.org/wiki/Mortimer_J._Adler",
   tags: ["philosophy", "self-help"],
-  published: "1972",
+  published: "1972" as Day,
   reviewed: "2020-06-28",
   rating: "B",
   content: (
