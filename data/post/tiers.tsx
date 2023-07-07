@@ -5,7 +5,7 @@ import { Char } from "/components/Char.tsx";
 import { Link } from "/components/Link.tsx";
 import { PostTile } from "/components/PostTile.tsx";
 import { Tier } from "/components/Tier.tsx";
-import { post } from "/data/posts.ts";
+import { post } from "/lib/post.ts";
 import { TIERS, UNRATED } from "/lib/tiers.ts";
 
 function Name() {
