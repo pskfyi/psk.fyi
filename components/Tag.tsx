@@ -1,13 +1,13 @@
 import { Link } from "/components/Link.tsx";
 import { formatTag as format, pathForTag } from "/lib/tags.ts";
 
-export declare namespace Tag {
+declare namespace Tag {
   export type Props = { for: string; class?: string };
   export type HeaderProps = Pick<Props, "for">;
   export type BlockProps = { tags: string[]; class?: string };
 }
 
-export function Tag({ for: tag, class: className }: Tag.Props) {
+function Tag({ for: tag, class: className }: Tag.Props) {
   return (
     <Link
       class={`no-underline text-torch-glow ${className}`}
@@ -62,3 +62,5 @@ Tag.InlineBlock = function InlineTagBlock(
     </span>
   );
 };
+
+export default Tag;

@@ -1,7 +1,7 @@
 import Page from "/components/Page.tsx";
 import { PostTile } from "/components/PostTile.tsx";
 import { ReviewTile } from "/components/ReviewTile.tsx";
-import { Tag } from "/components/Tag.tsx";
+import Tag from "/components/Tag.tsx";
 import { BOOKS } from "/data/book/index.ts";
 import { FILMS } from "/data/film/index.ts";
 import { GAMES } from "/data/game/index.ts";

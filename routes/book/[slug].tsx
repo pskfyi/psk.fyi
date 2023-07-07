@@ -3,7 +3,7 @@ import { DateLine } from "/components/DateLine.tsx";
 import { Link } from "/components/Link.tsx";
 import Page from "/components/Page.tsx";
 import { Pic } from "/components/Pic.tsx";
-import { Tag } from "/components/Tag.tsx";
+import Tag from "/components/Tag.tsx";
 import { BOOKS } from "/data/book/index.ts";
 
 export default ({ params }: { params: { slug: string } }) => {
