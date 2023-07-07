@@ -1,4 +1,4 @@
-import { tryMonth } from "../utils/date.ts";
+import { type Day, month } from "../utils/date.ts";
 
 function Divider() {
   return (
@@ -10,6 +10,14 @@ function hasDate(
   entry: [string, string | undefined],
 ): entry is [string, string] {
   return typeof entry[1] === "string";
+}
+
+function tryMonth(date: string) {
+  try {
+    return month(date as Day);
+  } catch {
+    return date;
+  }
 }
 
 export declare namespace DateLine {

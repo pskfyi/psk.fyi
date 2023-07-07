@@ -22,14 +22,6 @@ export function month(day: Day): string {
     .toLocaleString("default", { month: "short", year: "numeric" });
 }
 
-export function tryMonth(date: string) {
-  try {
-    return month(date as Day);
-  } catch {
-    return date;
-  }
-}
-
 export function year(day: Day): string {
   const [yyyy] = day.split("-", 1);
 
