@@ -1,5 +1,5 @@
 import type { ComponentChildren, JSX } from "preact";
-import type { SocialMediaPreview } from "../types.ts";
+import type { SocialMediaPreview } from "../lib/social.ts";
 
 import { Head } from "$fresh/runtime.ts";
 import { COLORS } from "../data/colors.ts";

@@ -1,3 +1,5 @@
+import type { SocialMediaPreview } from "../../lib/social.ts";
+
 import { TierTileDocs } from "../../components/Char.tsx";
 import { Link } from "../../components/Link.tsx";
 import Page from "../../components/Page.tsx";
@@ -7,7 +9,6 @@ import { ReviewTileSetDocs } from "../../components/ReviewTile.tsx";
 import { SkewerDocs } from "../../components/Skewer.tsx";
 import { Swatch } from "../../components/docs/Swatch.tsx";
 import { COLORS, isDark } from "../../data/colors.ts";
-import { SocialMediaPreview } from "../../types.ts";
 
 const preview: SocialMediaPreview = {
   description:

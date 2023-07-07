@@ -1,5 +1,5 @@
 import type { Album } from "../data/music.ts";
-import type { SocialMediaPreview } from "../types.ts";
+import type { SocialMediaPreview } from "../lib/social.ts";
 
 import { Link } from "../components/Link.tsx";
 import Page from "../components/Page.tsx";
