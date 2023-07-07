@@ -15,12 +15,14 @@ function stringify(children: ComponentChildren): string {
   return str.replace(/\s+/g, "-");
 }
 
-export type SkewerProps =
-  & JSX.HTMLAttributes<HTMLHeadingElement>
-  & {
-    /** Either a percentage nudge or an object with responsive percentages. */
-    top?: number | { xs: number; sm: number };
-  };
+export declare namespace Skewer {
+  export type Props =
+    & JSX.HTMLAttributes<HTMLHeadingElement>
+    & {
+      /** Either a percentage nudge or an object with responsive percentages. */
+      top?: number | { xs: number; sm: number };
+    };
+}
 
 export function Skewer({
   children,
@@ -28,7 +30,7 @@ export function Skewer({
   id,
   top = 50,
   ...props
-}: SkewerProps) {
+}: Skewer.Props) {
   const stringified = stringify(children);
 
   const hasLongDescenders = LONG_DESCENDERS_IN_OREGANO.test(stringified);
