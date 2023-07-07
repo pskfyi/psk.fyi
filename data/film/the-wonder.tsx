@@ -1,5 +1,5 @@
 import { Link } from "/components/Link.tsx";
-import { film } from "/data/films.ts";
+import { film } from "/lib/film.ts";
 
 export default film(import.meta, {
   name: "The Wonder",

@@ -1,4 +1,4 @@
-import { film } from "/data/films.ts";
+import { film } from "/lib/film.ts";
 
 function Name() {
   return <em class="pr-1">mother!</em>;
