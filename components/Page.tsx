@@ -3,7 +3,7 @@ import type { SocialMediaPreview } from "/lib/social.ts";
 
 import { Head } from "$fresh/runtime.ts";
 import { Footer } from "/components/Footer.tsx";
-import { Skewer } from "/components/Skewer.tsx";
+import Skewer from "/components/Skewer.tsx";
 import { COLORS } from "/lib/colors.ts";
 
 export type PageProps = {

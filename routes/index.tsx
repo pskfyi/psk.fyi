@@ -6,7 +6,7 @@ import Page from "/components/Page.tsx";
 import Pic from "/components/Pic.tsx";
 import PostTile from "/components/PostTile.tsx";
 import ReviewTile from "/components/ReviewTile.tsx";
-import { Skewer } from "/components/Skewer.tsx";
+import Skewer from "/components/Skewer.tsx";
 import effectiveTypescript from "/data/book/effective-typescript.tsx";
 import druk from "/data/film/druk.tsx";
 import oneCutOfTheDead from "/data/film/one-cut-of-the-dead.tsx";

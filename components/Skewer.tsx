@@ -15,7 +15,7 @@ function stringify(children: ComponentChildren): string {
   return str.replace(/\s+/g, "-");
 }
 
-export declare namespace Skewer {
+declare namespace Skewer {
   export type Props =
     & JSX.HTMLAttributes<HTMLHeadingElement>
     & {
@@ -24,7 +24,7 @@ export declare namespace Skewer {
     };
 }
 
-export function Skewer({
+function Skewer({
   children,
   class: className = "",
   id,
@@ -60,6 +60,8 @@ export function Skewer({
     </h1>
   );
 }
+
+export default Skewer;
 
 export function SkewerDocs(props: JSX.HTMLAttributes<HTMLElement>) {
   return (
