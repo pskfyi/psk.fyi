@@ -3,7 +3,7 @@ import type { SocialMediaPreview } from "/lib/social.ts";
 import { TierTileDocs } from "/components/Char.tsx";
 import { Link } from "/components/Link.tsx";
 import Page from "/components/Page.tsx";
-import { Pic, PicDocs } from "/components/Pic.tsx";
+import Pic, { PicDocs } from "/components/Pic.tsx";
 import { PostTileSetDocs } from "/components/PostTile.tsx";
 import { ReviewTileSetDocs } from "/components/ReviewTile.tsx";
 import { SkewerDocs } from "/components/Skewer.tsx";

@@ -6,7 +6,7 @@ import { Link } from "/components/Link.tsx";
 import { Docs } from "/components/docs/Docs.tsx";
 import { Swatch } from "/components/docs/Swatch.tsx";
 
-export declare namespace Pic {
+declare namespace Pic {
   export type Props = {
     class?: string;
     cardClass?: string;
@@ -46,7 +46,7 @@ function InfoButton({ bg: overlay, id }: { bg: DarkColor; id: string }) {
   );
 }
 
-export function Pic(
+function Pic(
   {
     src,
     class: className = "",
@@ -155,6 +155,8 @@ Pic.Prompted = function PromptedPic({ prompt, ...props }: Pic.PromptedProps) {
     />
   );
 };
+
+export default Pic;
 
 export function PicDocs(props: JSX.HTMLAttributes<HTMLElement>) {
   return (

@@ -18,14 +18,14 @@ function tryMonth(date: Day) {
   }
 }
 
-export declare namespace DateLine {
+declare namespace DateLine {
   export type Props = {
     dates: { [Label: string]: Day | undefined };
     format?: false | ((date: Day) => string);
   };
 }
 
-export function DateLine({ dates, format = tryMonth }: DateLine.Props) {
+function DateLine({ dates, format = tryMonth }: DateLine.Props) {
   const entries = Object.entries(dates);
   const fn = format || ((date: Day) => date);
 
@@ -40,3 +40,5 @@ export function DateLine({ dates, format = tryMonth }: DateLine.Props) {
     </div>
   );
 }
+
+export default DateLine;

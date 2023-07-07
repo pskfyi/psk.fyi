@@ -1,8 +1,8 @@
 import type { MediaItem, Structured } from "/lib/media.ts";
 
-import { DateLine } from "/components/DateLine.tsx";
+import DateLine from "/components/DateLine.tsx";
 import Page from "/components/Page.tsx";
-import { Pic } from "/components/Pic.tsx";
+import Pic from "/components/Pic.tsx";
 import Tag from "/components/Tag.tsx";
 import { POSTS } from "/data/post/index.ts";
 import { full } from "/lib/date.ts";

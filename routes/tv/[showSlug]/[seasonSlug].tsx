@@ -1,8 +1,8 @@
 import { SeasonNav } from "./index.tsx";
 import Char from "/components/Char.tsx";
-import { DateLine } from "/components/DateLine.tsx";
+import DateLine from "/components/DateLine.tsx";
 import Page from "/components/Page.tsx";
-import { Pic } from "/components/Pic.tsx";
+import Pic from "/components/Pic.tsx";
 import Tag from "/components/Tag.tsx";
 import { TV } from "/data/tv/index.ts";
 
