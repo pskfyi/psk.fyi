@@ -1,5 +1,5 @@
 import { Link } from "/components/Link.tsx";
-import { musicArtist } from "/data/music.ts";
+import { musicArtist } from "/lib/music.ts";
 
 function KeepItLikeASecret() {
   return (

@@ -29,7 +29,7 @@ async function createIndexFile(mediaType: MediaType) {
   const mediaServiceFile = isTV
     ? "/lib/tv.ts"
     : isMusic
-    ? "/data/music.ts"
+    ? "/lib/music.ts"
     : "/lib/media.ts";
 
   const fileText = `

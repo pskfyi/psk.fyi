@@ -1,4 +1,4 @@
-import type { Album } from "/data/music.ts";
+import type { Album } from "/lib/music.ts";
 import type { SocialMediaPreview } from "/lib/social.ts";
 
 import { Link } from "/components/Link.tsx";
