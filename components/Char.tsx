@@ -10,7 +10,7 @@ import {
   UnratedIndicator,
 } from "/lib/tiers.ts";
 
-export declare namespace Char {
+declare namespace Char {
   export type TileProps = {
     palette: PaletteName;
     /** The aspect ratio of the tile */
@@ -39,7 +39,7 @@ export declare namespace Char {
   };
 }
 
-export function Char(
+function Char(
   {
     aspectRatio = "3/5",
     class: className,
@@ -238,6 +238,8 @@ Char.Verdict = function Verdict({ rating }: { rating: Tier }) {
     </a>
   );
 };
+
+export default Char;
 
 export function TierTileDocs(props: JSX.HTMLAttributes<HTMLElement>) {
   return (
