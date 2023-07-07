@@ -1,5 +1,5 @@
 import Page from "/components/Page.tsx";
-import { ReviewTile } from "/components/ReviewTile.tsx";
+import ReviewTile from "/components/ReviewTile.tsx";
 import Tag from "/components/Tag.tsx";
 import { BOOKS } from "/data/book/index.ts";
 import { FILMS } from "/data/film/index.ts";

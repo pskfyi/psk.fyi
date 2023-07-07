@@ -24,7 +24,7 @@ function asComponent(
     : () => stringLike;
 }
 
-export declare namespace ReviewTile {
+declare namespace ReviewTile {
   export type Props = {
     href: string;
     label: string | JSX.Element | (() => JSX.Element);
@@ -33,7 +33,7 @@ export declare namespace ReviewTile {
   };
 }
 
-export function ReviewTile(
+function ReviewTile(
   { href, label, rating, img: Img }: ReviewTile.Props,
 ) {
   const imageIsComponent = typeof Img === "function";
@@ -211,3 +211,5 @@ export function ReviewTileSetDocs(props: JSX.HTMLAttributes<HTMLElement>) {
     />
   );
 }
+
+export default ReviewTile;

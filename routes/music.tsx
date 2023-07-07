@@ -1,5 +1,5 @@
 import Page from "/components/Page.tsx";
-import { ReviewTile } from "/components/ReviewTile.tsx";
+import ReviewTile from "/components/ReviewTile.tsx";
 import { ARTISTS } from "/data/music/index.ts";
 
 export default () => (

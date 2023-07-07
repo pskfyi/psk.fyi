@@ -1,5 +1,5 @@
 import Page from "/components/Page.tsx";
-import { ReviewTile } from "/components/ReviewTile.tsx";
+import ReviewTile from "/components/ReviewTile.tsx";
 import { GAMES } from "/data/game/index.ts";
 
 export default () => (
