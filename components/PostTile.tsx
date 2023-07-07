@@ -6,7 +6,7 @@ import { Docs } from "/components/docs/Docs.tsx";
 import aboutThisSite from "/data/post/about-this-site.tsx";
 import { Post } from "/lib/post.ts";
 
-export declare namespace PostTile {
+declare namespace PostTile {
   export type Props = Post & {
     class?: string;
     headingLevel?: 1 | 2 | 3 | 4;
@@ -18,7 +18,7 @@ export declare namespace PostTile {
   };
 }
 
-export function PostTile(
+function PostTile(
   {
     class: className,
     headingLevel = 3,
@@ -85,6 +85,8 @@ PostTile.Set = function PostTileSet({
     </div>
   );
 };
+
+export default PostTile;
 
 export function PostTileSetDocs(props: JSX.HTMLAttributes<HTMLElement>) {
   return (

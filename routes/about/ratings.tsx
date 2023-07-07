@@ -4,7 +4,7 @@ import type { Tier, UnratedIndicator } from "/lib/tiers.ts";
 
 import Char from "/components/Char.tsx";
 import Page from "/components/Page.tsx";
-import { PostTile } from "/components/PostTile.tsx";
+import PostTile from "/components/PostTile.tsx";
 import tiers from "/data/post/tiers.tsx";
 
 const TIER_DESCRIPTIONS: Array<[Tier, JSX.Element]> = [

@@ -4,7 +4,7 @@ import type { SocialMediaPreview } from "/lib/social.ts";
 import Link from "/components/Link.tsx";
 import Page from "/components/Page.tsx";
 import Pic from "/components/Pic.tsx";
-import { PostTile } from "/components/PostTile.tsx";
+import PostTile from "/components/PostTile.tsx";
 import ReviewTile from "/components/ReviewTile.tsx";
 import { Skewer } from "/components/Skewer.tsx";
 import effectiveTypescript from "/data/book/effective-typescript.tsx";

@@ -1,5 +1,5 @@
 import Page from "/components/Page.tsx";
-import { PostTile } from "/components/PostTile.tsx";
+import PostTile from "/components/PostTile.tsx";
 import { POSTS } from "/data/post/index.ts";
 
 export default () => (
