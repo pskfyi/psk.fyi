@@ -41,7 +41,7 @@ function FooterLink({
   return <Link to={to} class={className}>{children}</Link>;
 }
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer class="bg-torch-smoke pb-10">
       <nav class="content pt-4">
