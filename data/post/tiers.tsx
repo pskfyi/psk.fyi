@@ -391,42 +391,43 @@ function Content() {
   );
 }
 
+const img = () => (
+  <svg
+    class={`ratio-square rounded-lg mx-auto max-w-[13rem]
+      text-torch(halo group-hover:flame hover:(flame group-hover:plasma))`}
+    xmlns="http://www.w3.org/2000/svg"
+    height="100%"
+    width="100%"
+    style="container-type: size"
+  >
+    <rect
+      width="100%"
+      height="100%"
+      fill="currentColor"
+      class="transition-colors duration-500"
+    />
+    <text
+      x="50%"
+      y="54%"
+      dominant-baseline="central"
+      text-anchor="middle"
+      font-family="'Oregano'"
+      fill="black"
+      font-size="120cqh"
+    >
+      S
+    </text>
+  </svg>
+);
+
+img.src = "/tiers.webp";
+
 export default post(import.meta, {
   name: "Tiers ≫ Stars",
   heading: <Name />,
   posted: "2023-06-19",
   written: "2023-02-05",
-  img: () => (
-    <svg
-      class={`ratio-square rounded-lg mx-auto max-w-[13rem]
-        text-torch(halo group-hover:flame hover:(flame group-hover:plasma))`}
-      xmlns="http://www.w3.org/2000/svg"
-      height="100%"
-      width="100%"
-      style="container-type: size"
-    >
-      <rect
-        width="100%"
-        height="100%"
-        fill="currentColor"
-        class="transition-colors duration-500"
-      />
-      <text
-        x="50%"
-        y="54%"
-        dominant-baseline="central"
-        text-anchor="middle"
-        font-family="'Oregano'"
-        fill="black"
-        font-size="120cqh"
-      >
-        S
-      </text>
-    </svg>
-  ),
-  preview: {
-    image: "/tiers.webp",
-  },
+  img,
   tags: ["design", "data", "media", "time"],
   teaser: "How I learned to stop worrying and love the tier list.",
   content: <Content />,

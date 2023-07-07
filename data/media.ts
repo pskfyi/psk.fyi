@@ -78,12 +78,6 @@ export function mediaItem<M extends MediaType, T extends MediaItem>(
     ? image
     : { src: `/${type}/${slug}.webp`, ...image };
 
-  if (_preview === undefined && typeof img === "function") {
-    throw new Error(
-      `Media item ${slug} has a component as its image with no fallback for social media previews.`,
-    );
-  }
-
   const preview: SocialMediaPreview = _preview ?? {};
   preview.title ??= media.name;
   preview.large = true;
