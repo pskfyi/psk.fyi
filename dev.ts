@@ -2,7 +2,7 @@
 
 import dev from "$fresh/dev.ts";
 import { basename } from "$std/path/mod.ts";
-import { glob } from "https://deno.land/x/handy@0.4.0/fs/glob.ts";
+import { glob } from "handy/fs/glob.ts";
 import { DATA_DIR } from "/constants.ts";
 import type { MediaType } from "/lib/media.ts";
 

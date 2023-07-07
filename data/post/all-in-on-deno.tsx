@@ -1,5 +1,5 @@
 import { Head } from "$fresh/runtime.ts";
-import { dedent } from "https://deno.land/x/handy@0.4.0/string/utils.ts";
+import { dedent } from "handy/string/utils.ts";
 import Link from "/components/Link.tsx";
 import { post } from "/lib/post.ts";
 
