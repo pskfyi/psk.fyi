@@ -5,7 +5,6 @@ import { Pic } from "../components/Pic.tsx";
 import { SocialMediaPreview } from "../types.ts";
 import { PostTile } from "../components/PostTile.tsx";
 import aboutThisSite from "../data/post/about-this-site.tsx";
-import theHardProblems from "../data/post/the-hard-problems.tsx";
 import vampireSurvivors from "../data/game/vampire-survivors.tsx";
 import { ReviewTile } from "../components/ReviewTile.tsx";
 import lazarusProject from "../data/tv/lazarus-project.tsx";
@@ -95,6 +94,7 @@ export default () => (
 
     <PostTile.Set
       posts={[
+        aboutThisSite,
         allInOnDeno,
         tiers,
       ]}
