@@ -1,12 +1,12 @@
 import { Head } from "$fresh/runtime.ts";
+import { Char } from "../../components/Char.tsx";
 import { Link } from "../../components/Link.tsx";
+import { PostTile } from "../../components/PostTile.tsx";
+import { Tier } from "../../components/Tier.tsx";
 import { post } from "../posts.ts";
 import { TIERS, UNRATED } from "../tiers.ts";
-import { Char } from "../../components/Char.tsx";
-import { PostTile } from "../../components/PostTile.tsx";
-import theHardProblems from "./the-hard-problems.tsx";
 import ratingsSystems from "./ratings-systems.tsx";
-import { Tier } from "../../components/Tier.tsx";
+import theHardProblems from "./the-hard-problems.tsx";
 
 function Name() {
   return (

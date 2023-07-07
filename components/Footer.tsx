@@ -1,4 +1,5 @@
 import type { ComponentChildren } from "preact";
+
 import { Link } from "./Link.tsx";
 
 function PK() {

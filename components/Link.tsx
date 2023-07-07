@@ -1,4 +1,4 @@
-import { JSX } from "preact";
+import type { JSX } from "preact";
 
 export type LinkProps = Omit<JSX.HTMLAttributes<HTMLAnchorElement>, "href"> & {
   eternal?: boolean;

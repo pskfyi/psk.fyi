@@ -1,4 +1,4 @@
-import { PaletteName } from "./colors.ts";
+import type { PaletteName } from "./colors.ts";
 
 export const TIERS = ["F", "E", "D", "C", "B", "A", "S"] as const;
 export type Tier = typeof TIERS[number];

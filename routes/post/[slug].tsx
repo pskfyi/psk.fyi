@@ -1,10 +1,11 @@
-import Page from "../../components/Page.tsx";
+import type { MediaItem, Structured } from "../../data/media.ts";
+
 import { DateLine } from "../../components/DateLine.tsx";
-import { Tag } from "../../components/Tag.tsx";
+import Page from "../../components/Page.tsx";
 import { Pic } from "../../components/Pic.tsx";
-import { full } from "../../utils/date.ts";
+import { Tag } from "../../components/Tag.tsx";
 import { POSTS } from "../../data/post/index.ts";
-import { MediaItem, Structured } from "../../data/media.ts";
+import { full } from "../../utils/date.ts";
 
 export function previewImage(media: Structured<MediaItem>) {
   return media.preview?.image ||

@@ -1,4 +1,5 @@
-import { JSX } from "preact";
+import type { JSX } from "preact";
+
 import { Link } from "../../components/Link.tsx";
 import { post } from "../posts.ts";
 

@@ -1,6 +1,7 @@
-import { JSX } from "preact";
-import Page from "../../components/Page.tsx";
+import type { JSX } from "preact";
+
 import { Char } from "../../components/Char.tsx";
+import Page from "../../components/Page.tsx";
 
 type RiverTileProps =
   & {

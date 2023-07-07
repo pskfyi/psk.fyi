@@ -1,12 +1,12 @@
-import { Day } from "../utils/date.ts";
+import type { Day } from "../utils/date.ts";
 import {
-  MediaItem,
+  type MediaItem,
   mediaItem,
   MediaService,
-  Review,
-  Structured,
+  type Review,
+  type Structured,
 } from "./media.ts";
-import { UnratedIndicator } from "./tiers.ts";
+import type { UnratedIndicator } from "./tiers.ts";
 
 declare namespace AlbumData {
   export type Base = MediaItem & {

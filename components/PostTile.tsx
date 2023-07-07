@@ -1,9 +1,10 @@
-import { JSX } from "preact";
+import type { JSX } from "preact";
+
+import aboutThisSite from "../data/post/about-this-site.tsx";
 import { Post } from "../data/posts.ts";
 import { Link } from "./Link.tsx";
 import { Tag } from "./Tag.tsx";
 import { Docs } from "./docs/Docs.tsx";
-import aboutThisSite from "../data/post/about-this-site.tsx";
 
 export declare namespace PostTile {
   export type Props = Post & {

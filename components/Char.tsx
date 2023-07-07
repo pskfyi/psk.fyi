@@ -1,4 +1,5 @@
-import { JSX } from "preact";
+import type { JSX } from "preact";
+
 import { PaletteName, PALETTES } from "../data/colors.ts";
 import {
   Tier,

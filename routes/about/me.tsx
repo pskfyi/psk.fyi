@@ -1,7 +1,8 @@
+import type { SocialMediaPreview } from "../../types.ts";
+
 import { Link } from "../../components/Link.tsx";
 import Page from "../../components/Page.tsx";
 import { Pic } from "../../components/Pic.tsx";
-import { SocialMediaPreview } from "../../types.ts";
 
 const preview: SocialMediaPreview = {
   image: "/about/me.jpg",

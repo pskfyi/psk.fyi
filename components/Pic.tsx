@@ -1,9 +1,10 @@
-import { ComponentChildren, JSX } from "preact";
-import { DarkColor } from "../data/colors.ts";
-import { Swatch } from "./docs/Swatch.tsx";
-import { Docs } from "./docs/Docs.tsx";
+import type { ComponentChildren, JSX } from "preact";
+import type { DarkColor } from "../data/colors.ts";
+import type { MediaImg } from "../data/media.ts";
+
 import { Link } from "./Link.tsx";
-import { MediaImg } from "../data/media.ts";
+import { Docs } from "./docs/Docs.tsx";
+import { Swatch } from "./docs/Swatch.tsx";
 
 export declare namespace Pic {
   export type Props = {

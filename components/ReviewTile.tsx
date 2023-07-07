@@ -2,16 +2,17 @@ import type { JSX } from "preact";
 import type { Book } from "../data/books.ts";
 import type { Film } from "../data/films.ts";
 import type { Game } from "../data/games.ts";
-import type { Tier } from "../data/tiers.ts";
+import type { MediaImg } from "../data/media.ts";
 import type { Album } from "../data/music.ts";
+import type { Tier } from "../data/tiers.ts";
+import type { TelevisionSeason, TelevisionShow } from "../data/tv.ts";
+
+import midsommar from "../data/film/midsommar.tsx";
+import vampireSurvivors from "../data/game/vampire-survivors.tsx";
+import lazarusProject from "../data/tv/lazarus-project.tsx";
 import { year } from "../utils/date.ts";
 import { Char } from "./Char.tsx";
-import { MediaImg } from "../data/media.ts";
 import { Docs } from "./docs/Docs.tsx";
-import vampireSurvivors from "../data/game/vampire-survivors.tsx";
-import midsommar from "../data/film/midsommar.tsx";
-import { TelevisionSeason, TelevisionShow } from "../data/tv.ts";
-import lazarusProject from "../data/tv/lazarus-project.tsx";
 
 function asComponent(
   stringLike: string | JSX.Element | (() => JSX.Element),

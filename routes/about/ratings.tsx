@@ -1,10 +1,11 @@
-import { JSX } from "preact/jsx-runtime";
+import type { JSX } from "preact/jsx-runtime";
+import type { Tier, UnratedIndicator } from "../../data/tiers.ts";
+import type { SocialMediaPreview } from "../../types.ts";
+
 import { Char } from "../../components/Char.tsx";
 import Page from "../../components/Page.tsx";
 import { PostTile } from "../../components/PostTile.tsx";
 import tiers from "../../data/post/tiers.tsx";
-import { Tier, UnratedIndicator } from "../../data/tiers.ts";
-import { SocialMediaPreview } from "../../types.ts";
 
 const TIER_DESCRIPTIONS: Array<[Tier, JSX.Element]> = [
   ["S", <>Among the best ways I have ever spent my time.</>],

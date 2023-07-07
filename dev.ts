@@ -2,9 +2,9 @@
 
 import dev from "$fresh/dev.ts";
 import { basename } from "$std/path/mod.ts";
-import { DATA_DIR } from "./constants.ts";
 import { glob } from "https://deno.land/x/handy@0.4.0/fs/glob.ts";
-import { MediaType } from "./data/media.ts";
+import { DATA_DIR } from "./constants.ts";
+import type { MediaType } from "./data/media.ts";
 
 async function createIndexFile(mediaType: MediaType) {
   const dir = `${DATA_DIR}/${mediaType}`;

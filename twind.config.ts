@@ -1,8 +1,9 @@
-import { Options } from "$fresh/plugins/twind.ts";
+import type { Options } from "$fresh/plugins/twind.ts";
+
 import { apply } from "twind";
 import { content } from "twind/content";
-import { COLORS } from "./data/colors.ts";
 import { css } from "twind/css";
+import { COLORS } from "./data/colors.ts";
 
 // extracted from preflight object
 const fontFamily =

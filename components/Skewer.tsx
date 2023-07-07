@@ -1,4 +1,5 @@
-import { ComponentChildren, JSX } from "preact";
+import type { ComponentChildren, JSX } from "preact";
+
 import { Docs } from "./docs/Docs.tsx";
 
 const LONG_DESCENDERS_IN_OREGANO = /j|y/;

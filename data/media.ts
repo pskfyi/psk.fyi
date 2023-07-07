@@ -1,11 +1,12 @@
 import type { JSX } from "preact";
 import type { Pic } from "../components/Pic.tsx";
+import type { SocialMediaPreview } from "../types.ts";
+import type { Day } from "../utils/date.ts";
+import type { Color } from "./colors.ts";
+import type { Tier } from "./tiers.ts";
+
 import { basename } from "$std/path/mod.ts";
 import { WELL_KNOWN_TAGS } from "./tags.ts";
-import { Color } from "./colors.ts";
-import { SocialMediaPreview } from "../types.ts";
-import { Day } from "../utils/date.ts";
-import { Tier } from "./tiers.ts";
 
 export type Review = {
   img?:
