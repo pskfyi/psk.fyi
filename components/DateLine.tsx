@@ -6,15 +6,13 @@ function Divider() {
   );
 }
 
-function hasDate(
-  entry: [string, string | undefined],
-): entry is [string, string] {
+function hasDate(entry: [string, Day | undefined]): entry is [string, Day] {
   return typeof entry[1] === "string";
 }
 
-function tryMonth(date: string) {
+function tryMonth(date: Day) {
   try {
-    return month(date as Day);
+    return month(date);
   } catch {
     return date;
   }
@@ -22,14 +20,14 @@ function tryMonth(date: string) {
 
 export declare namespace DateLine {
   export type Props = {
-    dates: { [Label: string]: string | undefined };
-    format?: false | ((date: string) => string);
+    dates: { [Label: string]: Day | undefined };
+    format?: false | ((date: Day) => string);
   };
 }
 
 export function DateLine({ dates, format = tryMonth }: DateLine.Props) {
   const entries = Object.entries(dates);
-  const fn = format || ((date: string) => date);
+  const fn = format || ((date: Day) => date);
 
   return (
     <div className="w-[fit-content] mx-auto text-torch-ash my-2">

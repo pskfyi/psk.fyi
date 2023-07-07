@@ -1,9 +1,7 @@
 export type Day = `${number}-${number}-${number}`;
 
-export function full(day: string): string {
+export function full(day: Day): string {
   const [yyyy, mm, dd] = day.split("-").map(Number);
-
-  if (month === undefined) throw new Error(`Invalid day: ${day}`);
 
   return new Date(yyyy, mm - 1, dd)
     .toLocaleString("default", {
