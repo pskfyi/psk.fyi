@@ -3,7 +3,7 @@ import type { Pic } from "../components/Pic.tsx";
 import type { Color } from "../lib/colors.ts";
 import type { Day } from "../lib/date.ts";
 import type { SocialMediaPreview } from "../lib/social.ts";
-import type { Tier } from "./tiers.ts";
+import type { Tier } from "../lib/tiers.ts";
 
 import { basename } from "$std/path/mod.ts";
 import { WELL_KNOWN_TAGS } from "./tags.ts";

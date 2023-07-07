@@ -1,4 +1,5 @@
 import type { Day } from "../lib/date.ts";
+import type { UnratedIndicator } from "../lib/tiers.ts";
 import {
   type MediaItem,
   mediaItem,
@@ -6,7 +7,6 @@ import {
   type Review,
   type Structured,
 } from "./media.ts";
-import type { UnratedIndicator } from "./tiers.ts";
 
 type TelevisionSeasonData = Review & { released: Day };
 
