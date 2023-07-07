@@ -1,4 +1,4 @@
-import { formatTag as format, pathForTag } from "../data/tags.ts";
+import { formatTag as format, pathForTag } from "../lib/tags.ts";
 import { Link } from "./Link.tsx";
 
 export declare namespace Tag {

@@ -7,8 +7,8 @@ import { FILMS } from "../../data/film/index.ts";
 import { GAMES } from "../../data/game/index.ts";
 import { ARTISTS } from "../../data/music/index.ts";
 import { POSTS } from "../../data/post/index.ts";
-import { formatTag } from "../../data/tags.ts";
 import { TV } from "../../data/tv/index.ts";
+import { formatTag } from "../../lib/tags.ts";
 
 export default ({ params }: { params: { name: string } }) => {
   const tag = params.name;

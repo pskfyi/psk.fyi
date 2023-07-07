@@ -6,7 +6,7 @@ import type { SocialMediaPreview } from "../lib/social.ts";
 import type { Tier } from "../lib/tiers.ts";
 
 import { basename } from "$std/path/mod.ts";
-import { WELL_KNOWN_TAGS } from "./tags.ts";
+import { WELL_KNOWN_TAGS } from "../lib/tags.ts";
 
 export type Review = {
   img?:
