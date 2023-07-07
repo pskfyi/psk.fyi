@@ -1,14 +1,16 @@
 import type { JSX } from "preact";
 
-export type LinkProps = Omit<JSX.HTMLAttributes<HTMLAnchorElement>, "href"> & {
-  eternal?: boolean;
-  /** An alternative to `children` */
-  text?: string;
-  /** An alternative to `href` */
-  to: string;
-};
+export declare namespace Link {
+  export type Props = Omit<JSX.HTMLAttributes<HTMLAnchorElement>, "href"> & {
+    eternal?: boolean;
+    /** An alternative to `children` */
+    text?: string;
+    /** An alternative to `href` */
+    to: string;
+  };
+}
 
-export function Link({ to, text, children, ...props }: LinkProps) {
+export function Link({ to, text, children, ...props }: Link.Props) {
   !to.startsWith("/") && (props.target = "_blank");
   children ??= text ?? to;
 
@@ -18,7 +20,7 @@ export function Link({ to, text, children, ...props }: LinkProps) {
   return <a {...props} href={to}>{children}</a>;
 }
 
-Link.Wiki = function WikiLink(props: LinkProps) {
+Link.Wiki = function WikiLink(props: Link.Props) {
   props.children ??= props.text;
   props.children ??= props.to
     .replace(/_/g, " ") // Replace underscores with spaces
@@ -27,7 +29,7 @@ Link.Wiki = function WikiLink(props: LinkProps) {
   return <Link {...props} to={`https://en.wikipedia.org/wiki/${props.to}`} />;
 };
 
-Link.YT = function YouTubeLink(props: LinkProps) {
+Link.YT = function YouTubeLink(props: Link.Props) {
   return <Link {...props} to={`https://youtu.be/${props.to}`} />;
 };
 
