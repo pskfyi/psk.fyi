@@ -1,6 +1,6 @@
 import type { Day } from "/lib/date.ts";
 
-import { book } from "/data/books.ts";
+import { book } from "/lib/book.ts";
 
 export default book(import.meta, {
   name: "How to Read a Book",
