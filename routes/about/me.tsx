@@ -39,7 +39,8 @@ export default () => (
       I am an experienced software developer and tech lead specializing in web
       technologies. At Intel my team built internal tools for hardware testing,
       and at Apple we architected the future of{" "}
-      <Link to="apple.com" />. I am building a{" "}
+      <Link to="https://www.apple.com/" text="apple.com" />. I am building a
+      {" "}
       <Link.Wiki
         to="https://en.wikipedia.org/wiki/Personal_knowledge_management"
         text="personal"
