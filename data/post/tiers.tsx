@@ -429,6 +429,6 @@ export default post(import.meta, {
   written: "2023-02-05",
   img,
   tags: ["design", "data", "media", "time"],
-  teaser: "How I learned to stop worrying and love the tier list.",
+  teaser: "A postmortem on data modeling and bottom-up design.",
   content: <Content />,
 });
