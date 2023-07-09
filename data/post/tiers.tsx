@@ -428,7 +428,7 @@ export default post(import.meta, {
   posted: "2023-06-19",
   written: "2023-02-05",
   img,
-  tags: ["design", "data", "media", "time"],
+  tags: ["data", "design", "media", "time"],
   teaser: {
     text: "A postmortem on data modeling and bottom-up design.",
     hyphenateOnMobile: true,
