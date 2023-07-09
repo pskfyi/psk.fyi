@@ -67,7 +67,7 @@ function PostTile(
         </div>
         <p
           class={`my-0 duration-500
-          text(left sm:lg md:xl group-hover:torch-flame) leading(5 md:6 lg:7)
+          text(left sm:lg md:xl group-hover:torch-flame) leading-5
           ${teaser.hyphenateOnMobile ? "" : "hyphens-none"}`}
         >
           {teaser.text}
