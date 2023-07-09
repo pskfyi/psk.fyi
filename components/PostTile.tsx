@@ -65,9 +65,12 @@ function PostTile(
           </span>
           <Tag.InlineBlock tags={tags} />
         </div>
-        <p class="my-0 duration-500 hyphens-none
-          text(left sm:lg md:xl group-hover:torch-flame) leading(5 md:6 lg:7)">
-          {teaser}
+        <p
+          class={`my-0 duration-500
+          text(left sm:lg md:xl group-hover:torch-flame) leading(5 md:6 lg:7)
+          ${teaser.hyphenateOnMobile ? "" : "hyphens-none"}`}
+        >
+          {teaser.text}
         </p>
       </div>
     </Link>

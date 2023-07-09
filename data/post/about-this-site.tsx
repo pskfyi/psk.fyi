@@ -200,6 +200,8 @@ export default post(import.meta, {
   written: "2023-06-07",
   posted: "2023-06-07",
   updated: "2023-07-05",
-  teaser: "The technologies used in its creation and deployment.",
+  teaser: {
+    text: "The technologies used in its creation and deployment.",
+  },
   content: <Content />,
 });

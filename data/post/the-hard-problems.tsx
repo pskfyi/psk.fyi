@@ -111,6 +111,9 @@ export default post(import.meta, {
   written: "2020-06-20",
   posted: "2022-02-06",
   updated: "2023-06-21",
-  teaser: "The hardest problem is learning how to live towards death.",
+  teaser: {
+    text: "The hardest problem is learning how to live towards death.",
+    hyphenateOnMobile: true,
+  },
   content: <Content />,
 });
