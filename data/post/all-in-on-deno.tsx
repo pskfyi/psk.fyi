@@ -244,7 +244,7 @@ export default post(import.meta, {
   },
   tags: ["tech", "typescript", "dx", "deno"],
   teaser: {
-    text: "Why I decline to write Node.js for my personal projects.",
+    text: "Why I no longer use Node.js for my personal projects.",
   },
   content: <Content />,
 });
