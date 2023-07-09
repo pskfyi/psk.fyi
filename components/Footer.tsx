@@ -62,8 +62,8 @@ export default function Footer() {
             <FooterLink large halo underline to="/posts">Posts</FooterLink>
             <FooterLink to="/tag/tech">#tech</FooterLink>
             <FooterLink to="/tag/design">#design</FooterLink>
+            <FooterLink to="/tag/media">#media</FooterLink>
             <FooterLink to="/tag/philosophy">#philosophy</FooterLink>
-            <FooterLink to="/tag/language">#language</FooterLink>
             <FooterLink to="/tag/arcana">#arcana</FooterLink>
           </div>
 
