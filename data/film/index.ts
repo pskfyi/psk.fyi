@@ -13,7 +13,8 @@ import $7 from "./one-cut-of-the-dead.tsx";
 import $8 from "./outlaw-king.tsx";
 import $9 from "./the-day-after.tsx";
 import $10 from "./the-wonder.tsx";
-import $11 from "./world-war-z.tsx";
+import $11 from "./traffic.tsx";
+import $12 from "./world-war-z.tsx";
 import { MediaService } from "/lib/media.ts";
 
 export const FILMS = new MediaService({
@@ -28,5 +29,6 @@ export const FILMS = new MediaService({
   "outlaw-king": $8,
   "the-day-after": $9,
   "the-wonder": $10,
-  "world-war-z": $11,
+  "traffic": $11,
+  "world-war-z": $12,
 });
