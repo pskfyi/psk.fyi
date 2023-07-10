@@ -9,7 +9,6 @@ export default film(import.meta, {
     "historical",
     "drama",
     "war",
-    "@Chris Pine",
     "@Florence Pugh",
   ],
   reviewed: "2023-07-03",
