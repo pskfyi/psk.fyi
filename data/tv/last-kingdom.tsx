@@ -63,7 +63,51 @@ export default televisionShow(import.meta, {
         </p>
       ),
     },
-    s3: "?",
+    s3: {
+      img: {
+        desc: (
+          <>
+            If a{" "}
+            <Link to="https://www.dandwiki.com/wiki/3e_SRD:Nymph">
+              3E Nymph
+            </Link>{" "}
+            could be a{" "}
+            <Link
+              to="https://www.dndbeyond.com/classes/warlock"
+              text="5E Warlock"
+            />{" "}
+            with{" "}
+            <Link to="https://en.wikipedia.org/wiki/Count_von_Count">
+              Dracula
+            </Link>{" "}
+            as her patron.
+          </>
+        ),
+      },
+      released: "2018-10-19",
+      reviewed: "2023-07-12",
+      rating: "B",
+      content: (
+        <>
+          <p>
+            This first direct-to-Netflix season benefits tremendously from a
+            denser and more eventful plot, remedying S2's biggest flaw. Staying
+            true to form, the show remains campy, morally one-dimensional,
+            largely predictable, lumpily paced, yet still a fun romp through
+            another arc in the life of a swashbuckling, pil­low­talk­ing
+            literally-who.
+          </p>
+
+          <p>
+            Special mention this season to Skade
+            (<Link.Wiki to="Thea Sofie Loch Næss" />, above) who steals every
+            scene. Through her character the show once again glimpses its
+            greater potential as it did with Isulde in S1, and once again the
+            showrunners unfortunately squander it.
+          </p>
+        </>
+      ),
+    },
     s4: "?",
     s5: "?",
   },
