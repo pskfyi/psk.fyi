@@ -15,7 +15,7 @@ import haim from "/data/music/haim.tsx";
 import aboutThisSite from "/data/post/about-this-site.tsx";
 import allInOnDeno from "/data/post/all-in-on-deno.tsx";
 import tiers from "/data/post/tiers.tsx";
-import lazarusProject from "/data/tv/lazarus-project.tsx";
+import lastKingdom from "/data/tv/last-kingdom.tsx";
 
 const preview: SocialMediaPreview = {
   title: "psk.fyi",
@@ -116,7 +116,7 @@ export default () => (
       <ReviewTile.Film {...oneCutOfTheDead} />
       <ReviewTile.Game {...vampireSurvivors} />
       <ReviewTile.Film {...druk} />
-      <ReviewTile.Television {...lazarusProject} S="s1" />
+      <ReviewTile.Television {...lastKingdom} S="s3" />
       <ReviewTile.Music
         {...haim.releases["women-in-music-pt-iii"] as Album.Reviewed}
       />
