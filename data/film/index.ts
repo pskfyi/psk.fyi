@@ -4,33 +4,35 @@
 
 import $0 from "./cargo.tsx";
 import $1 from "./carriers.tsx";
-import $2 from "./donnie-brasco.tsx";
-import $3 from "./druk.tsx";
-import $4 from "./malevolent.tsx";
-import $5 from "./martyrs.tsx";
-import $6 from "./midsommar.tsx";
-import $7 from "./mother.tsx";
-import $8 from "./one-cut-of-the-dead.tsx";
-import $9 from "./outlaw-king.tsx";
-import $10 from "./the-day-after.tsx";
-import $11 from "./the-wonder.tsx";
-import $12 from "./traffic.tsx";
-import $13 from "./world-war-z.tsx";
+import $2 from "./deadstream.tsx";
+import $3 from "./donnie-brasco.tsx";
+import $4 from "./druk.tsx";
+import $5 from "./malevolent.tsx";
+import $6 from "./martyrs.tsx";
+import $7 from "./midsommar.tsx";
+import $8 from "./mother.tsx";
+import $9 from "./one-cut-of-the-dead.tsx";
+import $10 from "./outlaw-king.tsx";
+import $11 from "./the-day-after.tsx";
+import $12 from "./the-wonder.tsx";
+import $13 from "./traffic.tsx";
+import $14 from "./world-war-z.tsx";
 import { MediaService } from "/lib/media.ts";
 
 export const FILMS = new MediaService({
   "cargo": $0,
   "carriers": $1,
-  "donnie-brasco": $2,
-  "druk": $3,
-  "malevolent": $4,
-  "martyrs": $5,
-  "midsommar": $6,
-  "mother": $7,
-  "one-cut-of-the-dead": $8,
-  "outlaw-king": $9,
-  "the-day-after": $10,
-  "the-wonder": $11,
-  "traffic": $12,
-  "world-war-z": $13,
+  "deadstream": $2,
+  "donnie-brasco": $3,
+  "druk": $4,
+  "malevolent": $5,
+  "martyrs": $6,
+  "midsommar": $7,
+  "mother": $8,
+  "one-cut-of-the-dead": $9,
+  "outlaw-king": $10,
+  "the-day-after": $11,
+  "the-wonder": $12,
+  "traffic": $13,
+  "world-war-z": $14,
 });
