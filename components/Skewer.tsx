@@ -49,7 +49,8 @@ function Skewer({
   return (
     <h1
       {...props}
-      class={`relative text-center ${className} 
+      class={`relative text-center ${className}
+        mx(-2 sm:0)
         ${nudge}
         before::(absolute top-[${top.xs}%] sm:top-[${top.sm}%]
           content-[""] bg-torch-plasma h-[2px] w-full left-0)`}

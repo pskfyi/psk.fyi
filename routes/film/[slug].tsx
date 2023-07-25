@@ -12,7 +12,7 @@ export default ({ params }: { params: { slug: string } }) => {
   return (
     <Page
       tab={`${film.name} (${year(released)})`}
-      heading={film.name}
+      heading={film.heading || film.name}
       preview={{
         image: film.img.src,
         large: true,
