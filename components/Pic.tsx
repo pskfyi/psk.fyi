@@ -155,6 +155,8 @@ Pic.Prompted = function PromptedPic({ prompt, ...props }: Pic.PromptedProps) {
   );
 };
 
+export { Pic };
+
 export default Pic;
 
 export function PicDocs(props: JSX.HTMLAttributes<HTMLElement>) {
