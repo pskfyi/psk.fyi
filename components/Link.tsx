@@ -33,6 +33,16 @@ Link.YT = function YouTubeLink(props: Link.Props) {
   return <Link {...props} to={`https://youtu.be/${props.to}`} />;
 };
 
+Link.Reddit = function SubRedditLink(props: Link.Props) {
+  return (
+    <Link
+      text={`r/${props.to}`}
+      {...props}
+      to={`https://www.reddit.com/r/${props.to}`}
+    />
+  );
+};
+
 Link.DallE = () => (
   <Link to="https://openai.com/dall-e-2">
     DALL·E&nbsp;2

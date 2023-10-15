@@ -14,7 +14,7 @@ import vampireSurvivors from "/data/game/vampire-survivors.tsx";
 import haim from "/data/music/haim.tsx";
 import aboutThisSite from "/data/post/about-this-site.tsx";
 import allInOnDeno from "/data/post/all-in-on-deno.tsx";
-import tiers from "/data/post/tiers.tsx";
+import antiClutter from "/data/post/anti-clutter.tsx";
 import lastKingdom from "/data/tv/last-kingdom.tsx";
 
 const preview: SocialMediaPreview = {
@@ -95,9 +95,9 @@ export default () => (
 
     <PostTile.Set
       posts={[
+        antiClutter,
         aboutThisSite,
         allInOnDeno,
-        tiers,
       ]}
     />
 

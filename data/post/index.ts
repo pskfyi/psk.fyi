@@ -4,15 +4,17 @@
 
 import $0 from "./about-this-site.tsx";
 import $1 from "./all-in-on-deno.tsx";
-import $2 from "./ratings-systems.tsx";
-import $3 from "./the-hard-problems.tsx";
-import $4 from "./tiers.tsx";
+import $2 from "./anti-clutter.tsx";
+import $3 from "./ratings-systems.tsx";
+import $4 from "./the-hard-problems.tsx";
+import $5 from "./tiers.tsx";
 import { MediaService } from "/lib/media.ts";
 
 export const POSTS = new MediaService({
   "about-this-site": $0,
   "all-in-on-deno": $1,
-  "ratings-systems": $2,
-  "the-hard-problems": $3,
-  "tiers": $4,
+  "anti-clutter": $2,
+  "ratings-systems": $3,
+  "the-hard-problems": $4,
+  "tiers": $5,
 });
