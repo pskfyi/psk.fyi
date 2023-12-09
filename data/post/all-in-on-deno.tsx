@@ -243,8 +243,5 @@ export default post(import.meta, {
     image: "/post/deno.webp",
   },
   tags: ["tech", "typescript", "dx", "deno"],
-  teaser: {
-    text: "Why I no longer use Node.js for my personal projects.",
-  },
   content: <Content />,
 });

@@ -253,6 +253,5 @@ export default post(import.meta, {
     ),
   },
   content: <Content />,
-  teaser: { text: "Simplicity begets clarity." },
   tags: ["minimalism", "slice of life"],
 });

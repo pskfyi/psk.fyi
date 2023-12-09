@@ -1,9 +1,9 @@
 import type { JSX } from "preact";
 import type { Day } from "/lib/date.ts";
 import { type MediaItem, mediaItem, type Structured } from "/lib/media.ts";
+import { formatTag } from "/lib/tags.ts";
 
 type PostData = MediaItem & {
-  teaser: { text: string; hyphenateOnMobile?: boolean };
   head?: JSX.Element;
   content: JSX.Element;
   written: Day;
@@ -18,7 +18,7 @@ export function post(meta: ImportMeta, data: PostData): Post {
 
   post.preview ??= {};
   post.preview.title ??= post.name;
-  post.preview.description ??= post.teaser.text;
+  post.preview.description ??= post.tags.map(formatTag).join(", ");
   post.preview.large = true;
 
   if (!post.preview.image && typeof post.img !== "function") {

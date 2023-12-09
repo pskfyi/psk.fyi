@@ -196,12 +196,9 @@ export default post(import.meta, {
     color: "wood",
     prompt: "mdjrny-v4 style, a blueprint for a time machine",
   },
-  tags: ["meta", "deno", "fresh", "dx", "typescript", "tailwind"],
+  tags: ["meta", "dx", "tooling"],
   written: "2023-06-07",
   posted: "2023-06-07",
   updated: "2023-07-05",
-  teaser: {
-    text: "The technologies used in its creation and deployment.",
-  },
   content: <Content />,
 });

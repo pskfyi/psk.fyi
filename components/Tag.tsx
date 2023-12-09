@@ -25,9 +25,7 @@ Tag.Header = function TagHeader({ for: tag }: Tag.HeaderProps) {
   );
 };
 
-Tag.Block = function TagBlock(
-  { tags, class: className }: Tag.BlockProps,
-) {
+Tag.Block = function TagBlock({ tags, class: className }: Tag.BlockProps) {
   const finalPair = tags.slice(-2);
   tags = tags.slice(0, -2);
 
@@ -41,25 +39,6 @@ Tag.Block = function TagBlock(
         <Tag for={finalPair[1]} class="pl-2" />
       </div>
     </div>
-  );
-};
-
-Tag.InlineBlock = function InlineTagBlock(
-  { tags, class: className }: Tag.BlockProps,
-) {
-  const [first, second, third, fourth] = tags;
-
-  return (
-    <span class={`inline-flex gap-2 leading-none ${className}`}>
-      <span for={first}>{format(first)}</span>
-      <span for={second} class="hidden sm:inline">{format(second)}</span>
-      {third && (
-        <span for={third} class="hidden md:inline">{format(third)}</span>
-      )}
-      {fourth && (
-        <span for={fourth} class="hidden lg:inline">{format(fourth)}</span>
-      )}
-    </span>
   );
 };
 

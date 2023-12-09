@@ -2,9 +2,9 @@ import type { JSX } from "preact";
 
 import Docs from "/components/Docs.tsx";
 import Link from "/components/Link.tsx";
-import Tag from "/components/Tag.tsx";
 import aboutThisSite from "/data/post/about-this-site.tsx";
 import { Post } from "/lib/post.ts";
+import { formatTag as format } from "/lib/tags.ts";
 
 declare namespace PostTile {
   export type Props = Post & {
@@ -25,7 +25,6 @@ function PostTile(
     img: Img,
     path,
     tags,
-    teaser,
     name,
     heading,
     written,
@@ -50,27 +49,23 @@ function PostTile(
         ? <Img />
         : <img src={Img.src} class="rounded-lg" />}
       <div class="pl(2 sm:3 lg:4) my-auto col-span-2">
+        <div className="leading-none! mb(2 sm:2) duration-500 flex items-center
+          text(sm:md md:lg md:base torch(ash group-hover:halo))">
+          {written}
+        </div>
         <El
           class={`mt-0 font-display leading-none duration-700
-          text(3xl sm:4xl md:5xl group-hover:torch-plasma) 
+          text(4xl sm:5xl md:6xl group-hover:torch-plasma) 
           ${nudge}`}
         >
           {heading || name}
         </El>
-        <div className="leading-none! my(1 sm:2) duration-500 flex items-center
-          text(xs sm:sm md:base torch(ash group-hover:halo))">
-          {written}
-          <span class="px-2 opacity-50 text-[0.7rem] relative bottom-px">
-            |
-          </span>
-          <Tag.InlineBlock tags={tags} />
-        </div>
         <p
           class={`my-0 duration-500
-          text(left sm:lg md:xl group-hover:torch-flame) leading-5
-          ${teaser.hyphenateOnMobile ? "" : "hyphens-none"}`}
+          text(left sm:lg md:xl torch-ash group-hover:torch-flame)
+          inline-flex gap-x-2 leading-none flex-wrap`}
         >
-          {teaser.text}
+          {tags.map((tag) => <span>{format(tag)}</span>)}
         </p>
       </div>
     </Link>
