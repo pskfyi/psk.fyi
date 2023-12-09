@@ -46,13 +46,6 @@ export default musicArtist(import.meta, {
   releases: [
     {
       type: "album",
-      name: "Perfect from Now On",
-      tags: ["indie rock", "alt rock", "dream pop"],
-      released: "1997-01-28",
-      impression: "!",
-    },
-    {
-      type: "album",
       name: "Keep it Like a Secret",
       tags: ["indie rock", "dream pop", "fantano"],
       released: "1999-02-02",

@@ -3,18 +3,6 @@ import { musicArtist } from "/lib/music.ts";
 
 export default musicArtist(import.meta, {
   name: "Haim",
-  img: {
-    desc: (
-      <>
-        An edit of{" "}
-        <Link
-          to="http://www.sunqueendesigns.com/haim-greek-theater"
-          text="this poster"
-        />{" "}
-        by Charlene Kaye.
-      </>
-    ),
-  },
   releases: [
     {
       type: "album",
@@ -49,13 +37,6 @@ export default musicArtist(import.meta, {
           </ul>
         </>
       ),
-    },
-    {
-      type: "album",
-      name: "Something to Tell You",
-      tags: ["indie pop", "indie rock"],
-      released: "2017-07-07",
-      impression: "!",
     },
     {
       type: "album",

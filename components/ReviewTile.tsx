@@ -124,7 +124,7 @@ ReviewTile.Television = function TelevisionReviewTile(
 };
 
 ReviewTile.Music = function MusicReviewTile(
-  { path, rating, name, img }: Album.Reviewed,
+  { path, rating, name, img }: Album,
 ) {
   return (
     <ReviewTile
@@ -141,7 +141,7 @@ export type DynamicReviewTileProps =
   | Game
   | Film
   | TelevisionSeason
-  | Album.Reviewed;
+  | Album;
 
 ReviewTile.Dynamic = function DynamicReviewTile(
   props: DynamicReviewTileProps,

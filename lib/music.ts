@@ -6,29 +6,17 @@ import {
   type Review,
   type Structured,
 } from "/lib/media.ts";
-import type { UnratedIndicator } from "/lib/tiers.ts";
 
-declare namespace AlbumData {
-  export type Base = MediaItem & {
-    type: "album";
-    released: Day;
-    tags: string[];
-  };
-  export type Reviewed = Base & Review;
-  export type Unreviewed = Base & { impression: UnratedIndicator };
-}
-
-type AlbumData = AlbumData.Reviewed | AlbumData.Unreviewed;
+export type AlbumData = MediaItem & Review & {
+  type: "album";
+  released: Day;
+  tags: string[];
+};
 type ReleaseData = AlbumData;
 
 type ArtistData = MediaItem & { name: string; releases: Array<ReleaseData> };
 
-export declare namespace Album {
-  export type Reviewed = Structured<AlbumData.Reviewed>;
-  export type Unreviewed = Structured<AlbumData.Unreviewed>;
-}
-
-export type Album = Album.Reviewed | Album.Unreviewed;
+export type Album = Structured<AlbumData>;
 type Release = Album;
 
 export type MusicArtist = Structured<Omit<ArtistData, "releases">> & {
@@ -68,30 +56,25 @@ export function musicArtist(meta: ImportMeta, data: ArtistData): MusicArtist {
       if (!artist.tags.includes(tag)) artist.tags.push(tag);
     }
 
-    releases[slug].tags.unshift("Music");
+    releases[slug].tags.unshift("music");
+    releases[slug].tags.push(`@${artist.name}`);
   }
 
   return { ...artist, releases: releases };
 }
 
-function isReviewed(album: Album): album is Album.Reviewed {
-  return "rating" in album;
-}
-
 export class MusicMediaService extends MediaService<MusicArtist> {
   get reviewedAlbums() {
     return this.values
-      .flatMap((band) => Object.values(band.releases).filter(isReviewed));
+      .flatMap((band) =>
+        Object.values(band.releases)
+          .filter((release) => release.type === "album")
+      );
   }
 
-  reviewedAlbumsBy(
-    key: keyof Album.Reviewed,
-    direction: "asc" | "desc" = "desc",
-  ) {
+  reviewedAlbumsBy(key: keyof Album, direction: "asc" | "desc" = "desc") {
     return this.reviewedAlbums.toSorted((a, b) =>
-      // deno-lint-ignore ban-ts-comment
-      // @ts-ignore
-      a[key] > b[key]
+      a[key]! > b[key]!
         ? (direction === "asc" ? 1 : -1)
         : (direction === "asc" ? -1 : 1)
     );

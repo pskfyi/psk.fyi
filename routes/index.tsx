@@ -1,4 +1,3 @@
-import type { Album } from "/lib/music.ts";
 import type { SocialMediaPreview } from "/lib/social.ts";
 
 import Link from "/components/Link.tsx";
@@ -117,9 +116,7 @@ export default () => (
       <ReviewTile.Game {...vampireSurvivors} />
       <ReviewTile.Film {...druk} />
       <ReviewTile.Television {...lastKingdom.seasons.s3} />
-      <ReviewTile.Music
-        {...haim.releases["women-in-music-pt-iii"] as Album.Reviewed}
-      />
+      <ReviewTile.Music {...haim.releases["women-in-music-pt-iii"]} />
       <ReviewTile.Book {...effectiveTypescript} />
     </div>
   </Page>
