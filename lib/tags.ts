@@ -1,11 +1,11 @@
 import type { MediaType } from "/lib/media.ts";
 
-export const BOOK_TAG = "Book";
-export const FILM_TAG = "Film";
-export const GAME_TAG = "Game";
-export const MUSIC_TAG = "Music";
-export const POST_TAG = "Post";
-export const TV_TAG = "TV";
+export const BOOK_TAG = "book";
+export const FILM_TAG = "film";
+export const GAME_TAG = "game";
+export const MUSIC_TAG = "music";
+export const POST_TAG = "post";
+export const TV_TAG = "tv";
 
 export const WELL_KNOWN_TAGS = {
   post: POST_TAG,
