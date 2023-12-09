@@ -1,12 +1,6 @@
 import type { JSX } from "preact";
 import { type PaletteName, PALETTES } from "/lib/colors.ts";
-import {
-  type Tier,
-  TIER_COLORS,
-  UNRATED,
-  UNRATED_COLORS,
-  type UnratedIndicator,
-} from "/lib/tiers.ts";
+import { type Tier, TIER_COLORS } from "/lib/tiers.ts";
 
 import Docs from "/components/Docs.tsx";
 
@@ -31,11 +25,6 @@ declare namespace Char {
 
   export type TierBadgeProps = Char.TierTileProps & {
     border?: boolean | "inner" | "outer";
-  };
-
-  export type UnratedTileProps = {
-    class?: string;
-    indicator: UnratedIndicator;
   };
 }
 
@@ -121,9 +110,6 @@ const CHAR_BADGE_NUDGE = {
   E: "sm:(relative right-[2cqw])",
   F: "relative right([6cqw] sm:[4cqw])",
   S: "relative right([-2cqw])",
-  "-": "relative top-[-10cqh]",
-  "?": "relative top-[5cqh]",
-  "!": "",
 };
 
 Char.TierBadge = function TierBadge(
@@ -143,97 +129,9 @@ Char.TierBadge = function TierBadge(
   );
 };
 
-const UNRATED_LABEL = {
-  "-": "PASS",
-  "!": "WANT",
-};
-
-Char.UnratedTile = function UnratedTile(
-  { indicator, class: className }: Char.UnratedTileProps,
-) {
-  const color = UNRATED_COLORS[indicator];
-  className = `rounded-lg ${className}`;
-
-  return indicator === "-"
-    ? (
-      <Char
-        palette={color}
-        char="-"
-        charClass="mt-[-10cqh]"
-        class={className}
-        label={UNRATED_LABEL[indicator]}
-      />
-    )
-    : indicator === "?"
-    ? (
-      <Char
-        palette={color}
-        char="?"
-        class={className}
-        charClass="top-[5cqh]"
-      />
-    )
-    : (
-      <Char
-        palette={color}
-        char="!"
-        class={className}
-        label={UNRATED_LABEL[indicator]}
-      />
-    );
-};
-
-Char.UnratedBadge = function UnratedBadge(
-  { class: className, indicator }: Char.UnratedTileProps,
-) {
-  const nudge = indicator === "-"
-    ? "-mt-[15cqh]"
-    : indicator === "?"
-    ? "mt-[10cqh]"
-    : "mt([10cqh])";
-
-  return (
-    <Char
-      aspectRatio="4/5"
-      char={indicator}
-      palette={UNRATED_COLORS[indicator]}
-      charClass={`font-fake-black text-[100cqh] ${nudge}`}
-      class={className}
-    />
-  );
-};
-
-Char.Tile = function Tile({ class: className, char }: {
-  class?: string;
-  char: UnratedIndicator | Tier;
-}) {
-  const isUnrated = (char: string): char is UnratedIndicator =>
-    UNRATED.includes(char as UnratedIndicator);
-
-  return isUnrated(char)
-    ? <Char.UnratedTile indicator={char} class={className} />
-    : <Char.TierTile rating={char} class={className} />;
-};
-
-Char.Badge = function Badge({ class: className, char, border }: {
-  class?: string;
-  char: UnratedIndicator | Tier;
-  border?: boolean;
-}) {
-  const isUnrated = (char: string): char is UnratedIndicator =>
-    UNRATED.includes(char as UnratedIndicator);
-
-  return isUnrated(char)
-    ? <Char.UnratedBadge indicator={char} class={className} />
-    : <Char.TierBadge rating={char} class={className} border={border} />;
-};
-
 Char.Verdict = function Verdict({ rating }: { rating: Tier }) {
   return (
-    <a
-      href="/about/ratings"
-      class="no-underline float-left ml-1 mr-3 mt-2"
-    >
+    <a href="/about/ratings" class="no-underline float-left ml-1 mr-3 mt-2">
       <Char.TierTile rating={rating} class="w([3.2rem] sm:[3.4rem])" />
     </a>
   );

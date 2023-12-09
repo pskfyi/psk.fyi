@@ -1,6 +1,6 @@
 import type { JSX } from "preact/jsx-runtime";
 import type { SocialMediaPreview } from "/lib/social.ts";
-import type { Tier, UnratedIndicator } from "/lib/tiers.ts";
+import type { Tier } from "/lib/tiers.ts";
 
 import Char from "/components/Char.tsx";
 import Page from "/components/Page.tsx";
@@ -15,12 +15,6 @@ const TIER_DESCRIPTIONS: Array<[Tier, JSX.Element]> = [
   ["D", <>Mostly worse than silence.</>],
   ["E", <>Regrettable. I want my time back.</>],
   ["F", <>Unbearable. I bailed out early.</>],
-];
-
-const UNRATED_DESCRIPTIONS: Array<[UnratedIndicator, JSX.Element]> = [
-  ["!", <>It's on my todo list.</>],
-  ["?", <>Haven't watched, and undecided about doing so.</>],
-  ["-", <>I am not interested in watching this.</>],
 ];
 
 const preview: SocialMediaPreview = {
@@ -38,16 +32,6 @@ export default () => (
       {TIER_DESCRIPTIONS.map(([tier, text]) => (
         <>
           <Char.TierTile rating={tier} class="w(10 12)" />
-          <span class="self-center sm:text-xl">{text}</span>
-        </>
-      ))}
-
-      {UNRATED_DESCRIPTIONS.map(([indicator, text], i) => (
-        <>
-          <Char.UnratedTile
-            indicator={indicator}
-            class="w(10 sm:12)"
-          />
           <span class="self-center sm:text-xl">{text}</span>
         </>
       ))}

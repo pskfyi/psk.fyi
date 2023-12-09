@@ -6,7 +6,7 @@ import Link from "/components/Link.tsx";
 import PostTile from "/components/PostTile.tsx";
 import { Tier } from "/components/Tier.tsx";
 import { post } from "/lib/post.ts";
-import { TIERS, UNRATED } from "/lib/tiers.ts";
+import { TIERS } from "/lib/tiers.ts";
 
 function Name() {
   return (
@@ -373,20 +373,11 @@ function Content() {
       />
 
       <p class="mt-8">
-        I'm prototyping three categories representing a negative expectation,
-        neutral or unknown expectation, and a positive expectation:
+        I prototyped additional categories representing a negative expectation,
+        neutral or unknown expectation, and a positive expectation, but I have
+        since removed them because they were not worth the cognitive and
+        architectural overhead. I will revisit this in the future.
       </p>
-
-      <div className="grid(& cols-7) gap-2 my-8">
-        {UNRATED.map((indicator, i) => (
-          <Char.UnratedTile
-            indicator={indicator}
-            class={`col-start-${i + 3}`}
-          />
-        ))}
-      </div>
-
-      <p>Much work will be required to determine if these are sufficient.</p>
     </>
   );
 }
