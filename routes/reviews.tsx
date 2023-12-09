@@ -22,10 +22,7 @@ export default () => (
     <ReviewTile.Set media={FILMS.sortedBy("reviewed")} />
 
     <Tag.Header for={TV_TAG} />
-    <ReviewTile.Set
-      media={TV.reviewedSeasonsBy("reviewed")
-        .map(([show, { slug: S }]) => ({ ...show, S }))}
-    />
+    <ReviewTile.Set media={TV.reviewedSeasonsBy("reviewed")} />
 
     <Tag.Header for={GAME_TAG} />
     <ReviewTile.Set media={GAMES.sortedBy("reviewed")} />

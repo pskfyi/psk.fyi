@@ -116,7 +116,7 @@ export default () => (
       <ReviewTile.Film {...oneCutOfTheDead} />
       <ReviewTile.Game {...vampireSurvivors} />
       <ReviewTile.Film {...druk} />
-      <ReviewTile.Television {...lastKingdom} S="s3" />
+      <ReviewTile.Television {...lastKingdom.seasons.s3} />
       <ReviewTile.Music
         {...haim.releases["women-in-music-pt-iii"] as Album.Reviewed}
       />

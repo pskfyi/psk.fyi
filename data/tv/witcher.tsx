@@ -68,6 +68,6 @@ export default televisionShow(import.meta, {
         </>
       ),
     },
-    s3: "!",
   },
+  seasonsNotReviewed: ["s3"],
 });

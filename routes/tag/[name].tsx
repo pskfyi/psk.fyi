@@ -22,10 +22,7 @@ export default ({ params }: { params: { name: string } }) => {
   const tag = params.name;
   const hasTag = (media: { tags: string[] }) => media.tags.includes(tag);
 
-  const tvSeasons = TV.reviewedSeasonsBy("reviewed")
-    .filter(([, S]) => hasTag(S))
-    .map(([show, { slug: S }]) => ({ ...show, S }));
-
+  const tvSeasons = TV.reviewedSeasonsBy("reviewed").filter(hasTag);
   const albums = ARTISTS.reviewedAlbumsBy("reviewed").filter(hasTag);
 
   const mediaTypes = [

@@ -3,17 +3,12 @@ import { televisionShow } from "/lib/tv.ts";
 export default televisionShow(import.meta, {
   name: "The Lazarus Project",
   tags: ["time travel", "drama", "thriller"],
-  img: {
-    src: "/tv/lazarus-project/index.webp",
-    color: "wood",
-  },
   seasons: {
     s1: {
       rating: "E",
       released: "2022-06-16",
       reviewed: "2023-06-16",
       img: {
-        src: "/tv/lazarus-project/s1.webp",
         color: "wood",
         desc: (
           <>
@@ -34,6 +29,6 @@ export default televisionShow(import.meta, {
         </p>
       ),
     },
-    s2: "-",
   },
+  seasonsNotReviewed: ["s2"],
 });

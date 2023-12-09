@@ -1,20 +1,23 @@
 import type { Day } from "./date.ts";
 import {
-  type MediaItem,
+  MediaItem,
   mediaItem,
   MediaService,
   type Review,
   type Structured,
 } from "./media.ts";
-import type { UnratedIndicator } from "./tiers.ts";
 
-type TelevisionSeasonData = Review & { released: Day };
+type TelevisionSeasonData = Review & MediaItem & { released: Day };
 
-type TelevisionShowData =
-  & MediaItem
-  & { seasons: Record<string, TelevisionSeasonData | UnratedIndicator> };
+type TelevisionShowData = {
+  name: string;
+  tags: string[];
+  seasons: Record<string, Omit<TelevisionSeasonData, "name">>;
+  seasonsNotReviewed?: string[];
+};
 
 export type TelevisionSeason = Structured<TelevisionSeasonData> & {
+  type: "tv-season";
   tags: string[];
 };
 
@@ -23,23 +26,8 @@ export type TelevisionShow =
   & {
     type: "tv";
     reviewed: Day;
-    seasons: Record<
-      string,
-      TelevisionSeason | UnratedIndicator
-    >;
+    seasons: Record<string, TelevisionSeason>;
   };
-
-function isReviewed(
-  season: TelevisionSeason | UnratedIndicator,
-): season is TelevisionSeason {
-  return typeof season !== "string";
-}
-
-function entryIsReviewed(
-  entry: [string, TelevisionSeasonData | UnratedIndicator],
-): entry is [string, TelevisionSeasonData] {
-  return typeof entry[1] !== "string";
-}
 
 const TAG_SHOULD_BE_AT_START = /^[A-Z@]/;
 
@@ -79,6 +67,8 @@ export function televisionShow(
 
     show.seasons[slug] = {
       ...season,
+      name: `${show.name} ${slug.toUpperCase()}`,
+      type: "tv-season",
       slug,
       path,
       tags,
@@ -100,7 +90,6 @@ export function televisionShow(
   }
 
   show.reviewed = seasonEntries
-    .filter(entryIsReviewed)
     .map(([, season]) => season.reviewed)
     .reduce((latest, next) => next > latest ? next : latest);
 
@@ -109,21 +98,15 @@ export function televisionShow(
 
 export class TelevisionMediaService extends MediaService<TelevisionShow> {
   get reviewedSeasons() {
-    return this.values.flatMap((show) =>
-      Object.values(show.seasons)
-        .filter(isReviewed)
-        .map((season) => [show, season] as const)
-    );
+    return this.values.flatMap((show) => Object.values(show.seasons));
   }
 
   reviewedSeasonsBy(
     key: keyof TelevisionSeason,
     direction: "asc" | "desc" = "desc",
   ) {
-    return this.reviewedSeasons.toSorted(([, a], [, b]) =>
-      // deno-lint-ignore ban-ts-comment
-      // @ts-ignore
-      a[key] > b[key]
+    return this.reviewedSeasons.toSorted((a, b) =>
+      a[key]! > b[key]!
         ? (direction === "asc" ? 1 : -1)
         : (direction === "asc" ? -1 : 1)
     );

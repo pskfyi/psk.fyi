@@ -108,7 +108,6 @@ export default televisionShow(import.meta, {
         </>
       ),
     },
-    s4: "?",
-    s5: "?",
   },
+  seasonsNotReviewed: ["s4", "s5"],
 });

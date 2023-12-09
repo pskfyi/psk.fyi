@@ -7,8 +7,7 @@ export default () => (
     <p class="text-center mt-0">by review date</p>
 
     <ReviewTile.Set
-      media={TV.reviewedSeasonsBy("reviewed")
-        .map(([show, { slug: S }]) => ({ ...show, S }))}
+      media={TV.reviewedSeasonsBy("reviewed")}
     />
 
     <blockquote>

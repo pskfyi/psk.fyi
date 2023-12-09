@@ -1,10 +1,43 @@
-import { SeasonNav } from "./index.tsx";
 import Char from "/components/Char.tsx";
 import DateLine from "/components/DateLine.tsx";
 import Page from "/components/Page.tsx";
 import Pic from "/components/Pic.tsx";
 import Tag from "/components/Tag.tsx";
 import { TV } from "/data/tv/index.ts";
+import { TelevisionShow } from "/lib/tv.ts";
+
+const seasonTextSize = "text(xl sm:2xl)";
+
+export function SeasonNav(
+  { show, season: activeSeason }: { show: TelevisionShow; season?: string },
+) {
+  const root = `/tv/${show.slug}`;
+  const activeClasses =
+    "underline font-bold text-torch(flame hover:plasma visited:(flame hover:plasma))";
+  const inactiveClasses =
+    "no-underline text-torch(glow hover:halo visited:(glow hover:halo))";
+  const notReviewedClasses = "text-torch-ash cursor-not-allowed";
+
+  return (
+    <nav className="flex w-[fit-content] mx-auto mb-2
+      -mt-1 gap(2 sm:4)">
+      {Object.keys(show.seasons).map((s) => {
+        const classes = s === activeSeason ? activeClasses : inactiveClasses;
+
+        return (
+          <a href={`${root}/${s}`} className={`${seasonTextSize} ${classes}`}>
+            {s.toUpperCase()}
+          </a>
+        );
+      })}
+      {show.seasonsNotReviewed?.map((s) => (
+        <span className={`${seasonTextSize} text-torch-ash cursor-not-allowed`}>
+          {s.toUpperCase()}
+        </span>
+      ))}
+    </nav>
+  );
+}
 
 export default function TelevisionSeasonReview(
   { params }: { params: { showSlug: string; seasonSlug: string } },
