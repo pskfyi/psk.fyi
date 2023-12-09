@@ -8,7 +8,15 @@ import { GAMES } from "/data/game/index.ts";
 import { ARTISTS } from "/data/music/index.ts";
 import { POSTS } from "/data/post/index.ts";
 import { TV } from "/data/tv/index.ts";
-import { formatTag } from "/lib/tags.ts";
+import {
+  BOOK_TAG,
+  FILM_TAG,
+  formatTag,
+  GAME_TAG,
+  MUSIC_TAG,
+  POST_TAG,
+  TV_TAG,
+} from "/lib/tags.ts";
 
 export default ({ params }: { params: { name: string } }) => {
   const tag = params.name;
@@ -21,12 +29,12 @@ export default ({ params }: { params: { name: string } }) => {
   const albums = ARTISTS.reviewedAlbumsBy("reviewed").filter(hasTag);
 
   const mediaTypes = [
-    ["Post", POSTS.sortedBy("written").filter(hasTag)] as const,
-    ["Book", BOOKS.sortedBy("reviewed").filter(hasTag)] as const,
-    ["Film", FILMS.sortedBy("reviewed").filter(hasTag)] as const,
-    ["TV", tvSeasons] as const,
-    ["Music", albums] as const,
-    ["Game", GAMES.sortedBy("reviewed").filter(hasTag)] as const,
+    [POST_TAG, POSTS.sortedBy("written").filter(hasTag)] as const,
+    [BOOK_TAG, BOOKS.sortedBy("reviewed").filter(hasTag)] as const,
+    [FILM_TAG, FILMS.sortedBy("reviewed").filter(hasTag)] as const,
+    [TV_TAG, tvSeasons] as const,
+    [MUSIC_TAG, albums] as const,
+    [GAME_TAG, GAMES.sortedBy("reviewed").filter(hasTag)] as const,
   ].filter(([, media]) => media.length > 0);
 
   return (
@@ -34,7 +42,7 @@ export default ({ params }: { params: { name: string } }) => {
       {mediaTypes.map(([type, media]) => (
         <>
           <Tag.Header for={type} />
-          {type === "Post"
+          {type === POST_TAG
             ? <PostTile.Set posts={media} />
             : <ReviewTile.Set media={media} />}
         </>

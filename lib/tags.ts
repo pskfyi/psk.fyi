@@ -1,21 +1,28 @@
 import type { MediaType } from "/lib/media.ts";
 
+export const BOOK_TAG = "Book";
+export const FILM_TAG = "Film";
+export const GAME_TAG = "Game";
+export const MUSIC_TAG = "Music";
+export const POST_TAG = "Post";
+export const TV_TAG = "TV";
+
 export const WELL_KNOWN_TAGS = {
-  post: "Post",
-  game: "Game",
-  film: "Film",
-  tv: "TV",
-  music: "Music",
-  book: "Book",
+  post: POST_TAG,
+  game: GAME_TAG,
+  film: FILM_TAG,
+  tv: TV_TAG,
+  music: MUSIC_TAG,
+  book: BOOK_TAG,
 } satisfies Record<MediaType, string>;
 
 export const WELL_KNOWN_TAG_ROUTES = {
-  Post: "/posts",
-  Game: "/games",
-  Film: "/films",
-  TV: "/tv",
-  Music: "/music",
-  Book: "/books",
+  [POST_TAG]: "/posts",
+  [GAME_TAG]: "/games",
+  [FILM_TAG]: "/films",
+  [TV_TAG]: "/tv",
+  [MUSIC_TAG]: "/music",
+  [BOOK_TAG]: "/books",
 };
 
 export function pathForTag(tag: string) {
