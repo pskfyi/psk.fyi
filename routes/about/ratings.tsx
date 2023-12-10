@@ -9,8 +9,8 @@ import tiers from "/data/post/tiers.tsx";
 
 const TIER_DESCRIPTIONS: Array<[Tier, JSX.Element]> = [
   ["S", <>Among the best ways I have ever spent my time.</>],
-  ["A", <>Worthwhile, with minor issues only.</>],
-  ["B", <>Worthwhile, but with major issues.</>],
+  ["A", <>Worthwhile.</>],
+  ["B", <>Honorable mention.</>],
   ["C", <>Background noise.</>],
   ["D", <>Mostly worse than silence.</>],
   ["E", <>Regrettable. I want my time back.</>],
@@ -39,10 +39,10 @@ export default () => (
 
     <hr />
 
-    <p>
+    <p class="sm:text-xl">
       The system is elaborated upon in this blog post:
     </p>
 
-    <PostTile.Set posts={[tiers]} class="my-6" />
+    <PostTile.Set posts={[tiers]} class="my-6" filled />
   </Page>
 );

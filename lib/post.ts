@@ -3,7 +3,7 @@ import type { Day } from "/lib/date.ts";
 import { type MediaItem, mediaItem, type Structured } from "/lib/media.ts";
 import { formatTag } from "/lib/tags.ts";
 
-type PostData = MediaItem & {
+type PostData = Omit<MediaItem, "released"> & {
   head?: JSX.Element;
   content: JSX.Element;
   written: Day;

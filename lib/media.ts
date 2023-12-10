@@ -62,7 +62,10 @@ export type Structured<T extends Record<string, unknown>> =
     img: MediaImg | ((() => JSX.Element) & { src: string });
   };
 
-export function mediaItem<M extends MediaType, T extends MediaItem>(
+export function mediaItem<
+  M extends MediaType,
+  T extends Omit<MediaItem, "released">,
+>(
   media: T,
   type: M,
   filePath: string,

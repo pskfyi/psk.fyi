@@ -249,7 +249,7 @@ function Content() {
         </p>
         <Char.TierTile rating="B" class="self-center" />
         <p class="self-center my-0">
-          Holistically worthwhile, occasionally captivating, but it disappoints
+          An honorable mention. Occasionally captivating, but it disappoints
           with severe, obvious stumbling blocks that feel more like mistakes and
           lost potential than differences of opinion.
         </p>
@@ -281,8 +281,6 @@ function Content() {
 
       <h3>Errata</h3>
 
-      <p>I will take a moment to explain the edge cases, or lack thereof:</p>
-
       <ul class="pr-2">
         <li>No fractional scores.</li>
         <li>No empty scores.</li>
@@ -308,11 +306,6 @@ function Content() {
           An <span class="font-display">A</span> or{" "}
           <span class="font-display">B</span>{" "}
           review must elaborate on my complaints.
-        </li>
-        <li>
-          A <span class="font-display">D</span>{" "}
-          review must elaborate on the worthwhile aspects of the work which
-          differentiate it from an <span class="font-display">E</span> rating.
         </li>
       </ul>
 
