@@ -9,9 +9,9 @@ export default film(import.meta, {
   heading: <Name />,
   released: "2017-09-15",
   tags: [
-    "psychological horror",
+    "horror",
     "religion",
-    "@Arnofsky",
+    "@Aronofsky",
     "@JLaw",
     "@Javier Bardem",
     "@Michelle Pfeiffer",

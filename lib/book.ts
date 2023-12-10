@@ -1,4 +1,3 @@
-import type { Day } from "/lib/date.ts";
 import {
   type MediaItem,
   mediaItem,
@@ -9,7 +8,6 @@ import {
 type BookData = MediaItem & Review & {
   author: string;
   authorUrl: string;
-  published: Day;
 };
 
 export type Book = Structured<BookData> & { type: "book" };

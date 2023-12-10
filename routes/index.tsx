@@ -102,7 +102,7 @@ export default () => (
 
     <h2 class="flex justify-between items-center
         mb-2 text(torch-ash lg sm:xl) leading([0.8] sm:[0.8])">
-      Latest Reviews
+      Highlighted Reviews
       <Link
         to="/reviews"
         class="text(sm md:base torch(halo hover:flame visited(halo hover:flame)))"

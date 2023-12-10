@@ -7,7 +7,7 @@ import {
   type Structured,
 } from "./media.ts";
 
-type TelevisionSeasonData = Review & MediaItem & { released: Day };
+type TelevisionSeasonData = Review & MediaItem;
 
 type TelevisionShowData = {
   name: string;
@@ -33,10 +33,11 @@ const TAG_SHOULD_BE_AT_START = /^[A-Z@]/;
 
 export function televisionShow(
   meta: ImportMeta,
-  data: TelevisionShowData,
+  _data: TelevisionShowData,
 ): TelevisionShow {
+  const data = { ..._data, released: _data.seasons.s1.released };
   const showData = mediaItem(data, "tv", meta.url);
-  const show = showData as TelevisionShow;
+  const show = showData as unknown as TelevisionShow;
 
   const seasonEntries = Object.entries(showData.seasons);
   const originalShowTags = showData.tags.slice();

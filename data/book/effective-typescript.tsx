@@ -4,7 +4,7 @@ export default book(import.meta, {
   name: "Effective TypeScript",
   author: "Dan Vanderkam",
   authorUrl: "https://www.danvk.org",
-  published: "2020-01-01",
+  released: "2020-01-01",
   reviewed: "2023-06-12",
   tags: ["O'Reilly", "reference", "typescript"],
   rating: "A",

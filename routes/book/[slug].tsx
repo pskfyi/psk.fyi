@@ -7,7 +7,7 @@ import Tag from "/components/Tag.tsx";
 import { BOOKS } from "/data/book/index.ts";
 
 export default ({ params }: { params: { slug: string } }) => {
-  const { published, reviewed, ...book } = BOOKS.bySlug[params.slug];
+  const { released, reviewed, ...book } = BOOKS.bySlug[params.slug];
 
   return (
     <Page
@@ -26,7 +26,7 @@ export default ({ params }: { params: { slug: string } }) => {
         <Pic.Dynamic img={book.img} />
       </div>
       <Tag.Block tags={book.tags} class="mt-4 mb-2" />
-      <DateLine dates={{ published, reviewed }} />
+      <DateLine dates={{ released, reviewed }} />
       <Char.Verdict rating={book.rating} />
       {book.content}
     </Page>

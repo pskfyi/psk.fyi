@@ -49,6 +49,7 @@ export type MediaItem = {
   img?: MediaImgDef;
   preview?: Omit<SocialMediaPreview, "large">;
   tags?: string[];
+  released: Day;
 };
 
 export type Structured<T extends Record<string, unknown>> =

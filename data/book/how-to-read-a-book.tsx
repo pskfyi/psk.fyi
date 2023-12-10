@@ -7,7 +7,7 @@ export default book(import.meta, {
   author: "Mortimer J. Adler",
   authorUrl: "https://en.wikipedia.org/wiki/Mortimer_J._Adler",
   tags: ["philosophy", "self-help"],
-  published: "1972" as Day,
+  released: "1972" as Day,
   reviewed: "2020-06-28",
   rating: "B",
   content: (

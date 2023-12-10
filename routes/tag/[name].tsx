@@ -1,6 +1,6 @@
+import { ReviewList } from "../../components/ReviewList.tsx";
 import Page from "/components/Page.tsx";
 import PostTile from "/components/PostTile.tsx";
-import ReviewTile from "/components/ReviewTile.tsx";
 import Tag from "/components/Tag.tsx";
 import { BOOKS } from "/data/book/index.ts";
 import { FILMS } from "/data/film/index.ts";
@@ -36,14 +36,16 @@ export default ({ params }: { params: { name: string } }) => {
 
   return (
     <Page tab={formatTag(tag)}>
-      {mediaTypes.map(([type, media]) => (
-        <>
-          <Tag.Header for={type} />
-          {type === POST_TAG
-            ? <PostTile.Set posts={media} />
-            : <ReviewTile.Set media={media} />}
-        </>
-      ))}
+      <div class="sm:w-[fit-content] mx-auto">
+        {mediaTypes.map(([type, media]) => (
+          <>
+            <Tag.Header for={type} />
+            {type === POST_TAG
+              ? <PostTile.Set posts={media} />
+              : <ReviewList reviews={media} />}
+          </>
+        ))}
+      </div>
     </Page>
   );
 };

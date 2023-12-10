@@ -2,7 +2,7 @@ import { film } from "/lib/film.ts";
 
 export default film(import.meta, {
   name: "Martyrs",
-  tags: ["French", "psychological horror", "supernatural", "secret society"],
+  tags: ["French", "horror", "supernatural", "secret society"],
   img: {
     desc: <>This is as tame as the movie gets. You have been warned.</>,
   },

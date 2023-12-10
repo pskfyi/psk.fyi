@@ -1,4 +1,3 @@
-import type { Day } from "/lib/date.ts";
 import {
   type MediaItem,
   mediaItem,
@@ -9,7 +8,6 @@ import {
 
 export type AlbumData = MediaItem & Review & {
   type: "album";
-  released: Day;
   tags: string[];
 };
 type ReleaseData = AlbumData;

@@ -7,7 +7,7 @@ export default film(import.meta, {
   img: {
     badgeBorder: "smoke",
   },
-  tags: ["TV movie", "nuclear war", "drama", "@Jason Robards", "@John Lithgow"],
+  tags: ["TV movie", "nuclear war", "drama", "@John Lithgow", "@Jason Robards"],
   reviewed: "2023-06-29",
   rating: "B",
   content: (
