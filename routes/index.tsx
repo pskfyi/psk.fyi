@@ -6,15 +6,29 @@ import Pic from "/components/Pic.tsx";
 import PostTile from "/components/PostTile.tsx";
 import ReviewTile from "/components/ReviewTile.tsx";
 import Skewer from "/components/Skewer.tsx";
-import effectiveTypescript from "/data/book/effective-typescript.tsx";
-import druk from "/data/film/druk.tsx";
-import oneCutOfTheDead from "/data/film/one-cut-of-the-dead.tsx";
-import vampireSurvivors from "/data/game/vampire-survivors.tsx";
-import haim from "/data/music/haim.tsx";
+import { BOOKS } from "/data/book/index.ts";
+import { FILMS } from "/data/film/index.ts";
+import { GAMES } from "/data/game/index.ts";
+import { ARTISTS } from "/data/music/index.ts";
 import aboutThisSite from "/data/post/about-this-site.tsx";
 import allInOnDeno from "/data/post/all-in-on-deno.tsx";
 import antiClutter from "/data/post/anti-clutter.tsx";
-import lastKingdom from "/data/tv/last-kingdom.tsx";
+import { TV } from "/data/tv/index.ts";
+import { MediaItem, Review } from "/lib/media.ts";
+
+function highlyRated(media: MediaItem & Review) {
+  return ["S", "A"].includes(media.rating);
+}
+
+const FEATURED_REVIEWS = [
+  BOOKS.sortedBy("reviewed").find(highlyRated)!,
+  TV.reviewedSeasonsBy("reviewed").find(highlyRated)!,
+  ARTISTS.reviewedAlbumsBy("reviewed").find(highlyRated)!,
+  GAMES.sortedBy("reviewed").find(highlyRated)!,
+  ...FILMS.sortedBy("reviewed").filter(highlyRated).slice(0, 2),
+].sort((a, b) =>
+  new Date(b.reviewed).valueOf() - new Date(a.reviewed).valueOf()
+);
 
 const preview: SocialMediaPreview = {
   title: "psk.fyi",
@@ -112,12 +126,19 @@ export default () => (
     </h2>
 
     <div className="mt-2 gap-2 grid(& cols-3)">
-      <ReviewTile.Film {...oneCutOfTheDead} />
-      <ReviewTile.Game {...vampireSurvivors} />
-      <ReviewTile.Film {...druk} />
-      <ReviewTile.Television {...lastKingdom.seasons.s3} />
-      <ReviewTile.Music {...haim.releases["women-in-music-pt-iii"]} />
-      <ReviewTile.Book {...effectiveTypescript} />
+      {FEATURED_REVIEWS.map((review) => {
+        return review.type === "book"
+          ? <ReviewTile.Book {...review} />
+          : review.type === "film"
+          ? <ReviewTile.Film {...review} />
+          : review.type === "game"
+          ? <ReviewTile.Game {...review} />
+          : review.type === "album"
+          ? <ReviewTile.Music {...review} />
+          : review.type === "tv-season"
+          ? <ReviewTile.Television {...review} />
+          : null;
+      })}
     </div>
   </Page>
 );
