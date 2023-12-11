@@ -21,7 +21,9 @@ export default (
         description: "A music review by Patrick Sean Keenan.",
       }}
     >
-      <Pic.Dynamic img={release.img} class="mx(6 sm:auto)" />
+      {["S", "A", "B"].includes(release.rating) && (
+        <Pic.Dynamic img={release.img} class="mx(6 sm:auto)" />
+      )}
       <Tag.Block tags={release.tags} class="mt-4 mb-2" />
       <DateLine
         dates={{ released: release.released, reviewed: release.reviewed }}

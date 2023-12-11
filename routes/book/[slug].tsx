@@ -22,9 +22,9 @@ export default ({ params }: { params: { slug: string } }) => {
       <p class="text(center lg sm:xl) leading(none sm:none) mt-1 mb-3">
         A book by <Link eternal to={book.authorUrl}>{book.author}</Link>.
       </p>
-      <div className="px-6">
-        <Pic.Dynamic img={book.img} />
-      </div>
+      {["S", "A", "B"].includes(book.rating) && (
+        <Pic.Dynamic img={book.img} class="mx(6 sm:auto)" />
+      )}
       <Tag.Block tags={book.tags} class="mt-4 mb-2" />
       <DateLine dates={{ released, reviewed }} />
       <Char.Verdict rating={book.rating} />

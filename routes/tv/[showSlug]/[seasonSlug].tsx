@@ -73,7 +73,9 @@ export default function TelevisionSeasonReview(
       }}
     >
       <SeasonNav show={show} season={params.seasonSlug} />
-      <Pic.Dynamic img={img} class="mx(6 sm:auto)" />
+      {["S", "A", "B"].includes(rating) && (
+        <Pic.Dynamic img={img} class="mx(6 sm:auto)" />
+      )}
       <Tag.Block tags={tags} class="mt-4 mb-2" />
       <DateLine dates={{ released, reviewed }} />
       <Char.Verdict rating={rating} />

@@ -18,9 +18,9 @@ export default ({ params }: { params: { slug: string } }) => {
         description: "A game review by Patrick Sean Keenan.",
       }}
     >
-      <div className="px-6">
-        <Pic.Dynamic img={game.img} />
-      </div>
+      {["S", "A", "B"].includes(game.rating) && (
+        <Pic.Dynamic img={game.img} class="mx(6 sm:auto)" />
+      )}
       <Tag.Block tags={game.tags} class="mt-4 mb-2" />
       <DateLine dates={{ released, reviewed }} />
       <Char.Verdict rating={game.rating} />
