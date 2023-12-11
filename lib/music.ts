@@ -54,8 +54,8 @@ export function musicArtist(meta: ImportMeta, data: ArtistData): MusicArtist {
       if (!artist.tags.includes(tag)) artist.tags.push(tag);
     }
 
+    releases[slug].tags.unshift(`@${artist.name}`);
     releases[slug].tags.unshift("music");
-    releases[slug].tags.push(`@${artist.name}`);
   }
 
   return { ...artist, releases: releases };

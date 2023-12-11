@@ -13,5 +13,9 @@ type BookData = MediaItem & Review & {
 export type Book = Structured<BookData> & { type: "book" };
 
 export function book(meta: ImportMeta, data: BookData): Book {
-  return mediaItem(data, "book", meta.url);
+  const book = mediaItem(data, "book", meta.url);
+
+  book.tags.splice(1, 0, `@${book.author}`);
+
+  return book;
 }

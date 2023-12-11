@@ -1,6 +1,5 @@
 import Char from "/components/Char.tsx";
 import DateLine from "/components/DateLine.tsx";
-import Link from "/components/Link.tsx";
 import Page from "/components/Page.tsx";
 import Pic from "/components/Pic.tsx";
 import Tag from "/components/Tag.tsx";
@@ -19,9 +18,6 @@ export default ({ params }: { params: { slug: string } }) => {
         large: true,
       }}
     >
-      <p class="text(center lg sm:xl) leading(none sm:none) mt-1 mb-3">
-        A book by <Link eternal to={book.authorUrl}>{book.author}</Link>.
-      </p>
       {["S", "A", "B"].includes(book.rating) && (
         <Pic.Dynamic img={book.img} class="mx(6 sm:auto)" />
       )}
