@@ -46,12 +46,24 @@ export function ReviewList({ reviews, typed = false }: ReviewTableProps) {
               </div>
 
               <div class="-mb-1 self-end" style={{ gridArea: "title" }}>
-                <Link
-                  to={path}
-                  class="no-underline text(lg sm:xl) leading-none sm:leading-none"
-                >
-                  {name}
-                </Link>
+                {rest.content
+                  ? (
+                    <Link
+                      to={path}
+                      class="no-underline text(lg sm:xl) leading-none sm:leading-none"
+                      eternal
+                    >
+                      {name}
+                    </Link>
+                  )
+                  : (
+                    <span
+                      class="text(lg sm:xl torch-ash) leading-none sm:leading-none"
+                      title="This review has no content and is only a rating."
+                    >
+                      {name}
+                    </span>
+                  )}
               </div>
 
               <div

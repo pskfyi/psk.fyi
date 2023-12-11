@@ -1,6 +1,6 @@
 import type { JSX } from "preact";
 import { type PaletteName, PALETTES } from "/lib/colors.ts";
-import { type Tier, TIER_COLORS } from "/lib/tiers.ts";
+import { type Tier, TIER_COLORS } from "/lib/tiers.tsx";
 
 import Docs from "/components/Docs.tsx";
 

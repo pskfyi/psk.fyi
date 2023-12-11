@@ -4,6 +4,7 @@ import Page from "/components/Page.tsx";
 import Pic from "/components/Pic.tsx";
 import Tag from "/components/Tag.tsx";
 import { ARTISTS } from "/data/music/index.ts";
+import { PLACEHOLDER_CONTENT } from "/lib/tiers.tsx";
 
 export default (
   { params }: { params: { artistSlug: string; releaseSlug: string } },
@@ -29,7 +30,7 @@ export default (
         dates={{ released: release.released, reviewed: release.reviewed }}
       />
       <Char.Verdict rating={release.rating} />
-      {release.content}
+      {release.content || PLACEHOLDER_CONTENT[release.rating]}
     </Page>
   );
 };

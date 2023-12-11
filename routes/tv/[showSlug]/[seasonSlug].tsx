@@ -4,6 +4,7 @@ import Page from "/components/Page.tsx";
 import Pic from "/components/Pic.tsx";
 import Tag from "/components/Tag.tsx";
 import { TV } from "/data/tv/index.ts";
+import { PLACEHOLDER_CONTENT } from "/lib/tiers.tsx";
 import { TelevisionShow } from "/lib/tv.ts";
 
 const seasonTextSize = "text(xl sm:2xl)";
@@ -79,7 +80,7 @@ export default function TelevisionSeasonReview(
       <Tag.Block tags={tags} class="mt-4 mb-2" />
       <DateLine dates={{ released, reviewed }} />
       <Char.Verdict rating={rating} />
-      {content}
+      {content || PLACEHOLDER_CONTENT[rating]}
     </Page>
   );
 }

@@ -1,6 +1,6 @@
 import type { JSX } from "preact/jsx-runtime";
 import type { SocialMediaPreview } from "/lib/social.ts";
-import type { Tier } from "/lib/tiers.ts";
+import type { Tier } from "/lib/tiers.tsx";
 
 import Char from "/components/Char.tsx";
 import Page from "/components/Page.tsx";

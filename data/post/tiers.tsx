@@ -6,7 +6,7 @@ import Link from "/components/Link.tsx";
 import PostTile from "/components/PostTile.tsx";
 import { Tier } from "/components/Tier.tsx";
 import { post } from "/lib/post.ts";
-import { TIERS } from "/lib/tiers.ts";
+import { TIERS } from "/lib/tiers.tsx";
 
 function Name() {
   return (

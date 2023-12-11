@@ -4,7 +4,7 @@ import type { Film } from "/lib/film.ts";
 import type { Game } from "/lib/game.ts";
 import type { MediaImg } from "/lib/media.ts";
 import type { Album } from "/lib/music.ts";
-import type { Tier } from "/lib/tiers.ts";
+import type { Tier } from "/lib/tiers.tsx";
 import type { TelevisionSeason } from "/lib/tv.ts";
 
 import Char from "/components/Char.tsx";

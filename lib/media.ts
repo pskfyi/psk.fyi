@@ -2,7 +2,7 @@ import type { JSX } from "preact";
 import type { Color } from "./colors.ts";
 import type { Day } from "./date.ts";
 import type { SocialMediaPreview } from "./social.ts";
-import type { Tier } from "./tiers.ts";
+import type { Tier } from "./tiers.tsx";
 import type { Pic } from "/components/Pic.tsx";
 
 import { basename } from "$std/path/mod.ts";
@@ -14,7 +14,7 @@ export type Review = {
     | (Omit<Pic.Props, "src"> & { src?: string; badgeBorder?: Color });
   reviewed: Day;
   modified?: Day;
-  content: string | JSX.Element;
+  content?: string | JSX.Element;
   rating: Tier;
   tags?: string[];
 };

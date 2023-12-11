@@ -5,6 +5,7 @@ import Pic from "/components/Pic.tsx";
 import Tag from "/components/Tag.tsx";
 import { FILMS } from "/data/film/index.ts";
 import { year } from "/lib/date.ts";
+import { PLACEHOLDER_CONTENT } from "/lib/tiers.tsx";
 
 export default ({ params }: { params: { slug: string } }) => {
   const { released, reviewed, ...film } = FILMS.bySlug[params.slug];
@@ -25,7 +26,7 @@ export default ({ params }: { params: { slug: string } }) => {
       <Tag.Block tags={film.tags} class="mt-4 mb-2" />
       <DateLine dates={{ released, reviewed }} />
       <Char.Verdict rating={film.rating} />
-      {film.content}
+      {film.content || PLACEHOLDER_CONTENT[film.rating]}
     </Page>
   );
 };

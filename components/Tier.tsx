@@ -1,4 +1,4 @@
-import type { Tier } from "/lib/tiers.ts";
+import type { Tier } from "/lib/tiers.tsx";
 
 export function Tier({ rank }: { rank: Tier }) {
   return (

@@ -4,6 +4,7 @@ import Page from "/components/Page.tsx";
 import Pic from "/components/Pic.tsx";
 import Tag from "/components/Tag.tsx";
 import { BOOKS } from "/data/book/index.ts";
+import { PLACEHOLDER_CONTENT } from "/lib/tiers.tsx";
 
 export default ({ params }: { params: { slug: string } }) => {
   const { released, reviewed, ...book } = BOOKS.bySlug[params.slug];
@@ -24,7 +25,7 @@ export default ({ params }: { params: { slug: string } }) => {
       <Tag.Block tags={book.tags} class="mt-4 mb-2" />
       <DateLine dates={{ released, reviewed }} />
       <Char.Verdict rating={book.rating} />
-      {book.content}
+      {book.content || PLACEHOLDER_CONTENT[book.rating]}
     </Page>
   );
 };
