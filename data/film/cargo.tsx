@@ -3,9 +3,6 @@ import { film } from "/lib/film.ts";
 export default film(import.meta, {
   name: "Cargo",
   released: "2017-05-18",
-  img: {
-    badgeBorder: "smoke",
-  },
   tags: [
     "Australian",
     "zombie",
