@@ -17,7 +17,7 @@ import { TV } from "/data/tv/index.ts";
 import { MediaItem, Review } from "/lib/media.ts";
 
 function highlyRated(media: MediaItem & Review) {
-  return ["S", "A"].includes(media.rating);
+  return ["S", "A", "B"].includes(media.rating);
 }
 
 const FEATURED_REVIEWS = [
